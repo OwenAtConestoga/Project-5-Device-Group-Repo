@@ -1,0 +1,3 @@
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.AssemblyReference.cache
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.CoreCompileInputs.cache
