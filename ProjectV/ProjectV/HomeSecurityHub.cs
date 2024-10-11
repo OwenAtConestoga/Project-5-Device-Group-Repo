@@ -11,6 +11,7 @@ namespace ProjectV
     public abstract class HomeSecurityHub
     {
         public string Name { get; set; }
+        public int Id { get; set; }
         public bool IsActive { get; set; }
         public List<Device> ConnectedDevices { get; set; }
 

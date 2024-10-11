@@ -14,7 +14,6 @@ namespace ProjectV
         {
             Console.WriteLine("Hello, World!");
 
-            // Your code here
             var lockHub = new LockHub();
             var sensorHub = new SensorHub();
             var cameraHub = new CameraHub();
