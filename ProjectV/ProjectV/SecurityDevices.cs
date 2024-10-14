@@ -59,9 +59,11 @@ namespace ProjectV
         public bool motionDetected { get; set; }
 
         // constructor for the Camera class
-        public Camera(int deviceID, string deviceName) : base(deviceID, deviceName)
+        public Camera(int deviceID, string deviceName)
         {
-
+            this.deviceID = deviceID;
+            this.deviceName = deviceName;
+            this.isOn = false; 
         }
 
         public Camera() // non param constructor
@@ -72,6 +74,7 @@ namespace ProjectV
         }
 
     }
+
 
     internal class Lock : SecurityDevice
     {
@@ -92,7 +95,15 @@ namespace ProjectV
             return this.isLocked;
         }
 
+        public Lock(int deviceId, string deviceName)
+        {
+            this.deviceID= deviceID;
+            this.deviceName= deviceName;
+            this.isOn = false;
+        }
+
     }
+
 
     internal class Sensor : SecurityDevice
     {
