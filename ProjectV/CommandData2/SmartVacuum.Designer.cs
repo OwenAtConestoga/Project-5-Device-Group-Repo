@@ -30,7 +30,7 @@
         {
             this.powerButton = new System.Windows.Forms.Button();
             this.statusTitle = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // powerButton
@@ -57,15 +57,15 @@
             this.statusTitle.TabIndex = 2;
             this.statusTitle.Text = "STATUS:";
             // 
-            // textBox1
+            // statusTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Maroon;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(111, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "OFF";
+            this.statusTextBox.BackColor = System.Drawing.Color.Maroon;
+            this.statusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusTextBox.Location = new System.Drawing.Point(111, 139);
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.Size = new System.Drawing.Size(100, 22);
+            this.statusTextBox.TabIndex = 3;
+            this.statusTextBox.Text = "OFF";
             // 
             // SmartVacuum
             // 
@@ -73,7 +73,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(234, 211);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.statusTextBox);
             this.Controls.Add(this.statusTitle);
             this.Controls.Add(this.powerButton);
             this.Name = "SmartVacuum";
@@ -87,6 +87,6 @@
 
         private System.Windows.Forms.Button powerButton;
         private System.Windows.Forms.Label statusTitle;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox statusTextBox;
     }
 }
