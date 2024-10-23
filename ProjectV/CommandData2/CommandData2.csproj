@@ -40,14 +40,56 @@
     <Compile Include="Device.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="SmartFridge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartFridge.Designer.cs">
+      <DependentUpon>SmartFridge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartOven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartOven.Designer.cs">
+      <DependentUpon>SmartOven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartThermostat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartThermostat.Designer.cs">
+      <DependentUpon>SmartThermostat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartVacuum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartVacuum.Designer.cs">
+      <DependentUpon>SmartVacuum.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SmartFridge.resx">
+      <DependentUpon>SmartFridge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartOven.resx">
+      <DependentUpon>SmartOven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartThermostat.resx">
+      <DependentUpon>SmartThermostat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SmartVacuum.resx">
+      <DependentUpon>SmartVacuum.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
