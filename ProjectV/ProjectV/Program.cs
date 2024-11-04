@@ -1,51 +1,31 @@
-﻿using MQTTnet;
-using MQTTnet.Client;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class LockReceiver
+using System;
+
+namespace ProjectV
 {
-    private static bool isLocked = false;
-
-    public static async Task Main(string[] args)
+    class Program
     {
-        var factory = new MqttFactory();
-        var mqttClient = factory.CreateMqttClient();
-
-        // Configure connection options with TLS
-        var mqttClientOptions = new MqttClientOptionsBuilder()
-            .WithClientId("LockReceiver")
-            .WithTcpServer("741443276d504742a780ebb38fa36465.s1.eu.hivemq.cloud", 8883)
-            .WithCredentials("tester", "projectvtester")
-            .WithTls() // Use TLS directly without further options
-            .Build();
-
-        // Handle received lock/unlock messages
-        mqttClient.ApplicationMessageReceivedAsync += e =>
+        static void Main(string[] args)
         {
-            string payload = Encoding.UTF8.GetString(e.ApplicationMessage.PayloadSegment.ToArray());
-            if (payload.ToLower() == "true")
-            {
-                isLocked = true;
-                Console.WriteLine("System is now locked.");
-            }
-            else if (payload.ToLower() == "false")
-            {
-                isLocked = false;
-                Console.WriteLine("System is now unlocked.");
-            }
-            return Task.CompletedTask;
-        };
+            Console.WriteLine("Hello, World!");
 
-        // Connect to the broker and subscribe
-        await mqttClient.ConnectAsync(mqttClientOptions);
-        await mqttClient.SubscribeAsync("sensor/lock");
+            //var lockHub = new LockHub();
+            //var sensorHub = new SensorHub();
+            //var cameraHub = new CameraHub();
 
-        Console.WriteLine("Connected to HiveMQ broker and listening for lock/unlock commands...");
-        Console.WriteLine("Press Ctrl+C to exit.");
+            Camera washroomCamera = new Camera(123, "WashroomCamera");
+            washroomCamera.turnDeviceOn();
 
-        // Keep running to receive messages
-        await Task.Delay(System.Threading.Timeout.InfiniteTimeSpan);
+            Camera bedroomCamera = new Camera();
+
+            // this line ensures that the console stays open
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
+        }
     }
 }
