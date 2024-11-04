@@ -1,157 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
+﻿using MQTTnet;
+using MQTTnet.Client;
+using MQTTnet.Protocol; // Ensure this is included for MqttQualityOfServiceLevel
+using System;
+using System.Text.Json;
 using System.Threading.Tasks;
-
-// Group 7 Main 
-// Security Device 
 
 namespace ProjectV
 {
-    // create parent SecurityDevice class 
-    public class SecurityDevice
+    internal class Lock
     {
-        public int deviceID { get; set; }
-        public string deviceName { get; set; }
-        public bool isOn { get; set; }
+        public bool IsLocked { get; private set; }
+        private readonly IMqttClient _mqttClient;
 
-        public virtual void turnDeviceOn()
+        public Lock(int deviceId, string deviceName, IMqttClient mqttClient)
         {
-            isOn = true;
-            Console.WriteLine(this.deviceName + this.deviceID + " is now ON");
+            _mqttClient = mqttClient;
+            IsLocked = false;
         }
 
-        public virtual void turnDeviceOff()
+        public async Task LockDevice()
         {
-            isOn = false;
-            Console.WriteLine(this.deviceName + this.deviceID + " is now OFF");
+            IsLocked = true;
+            await PublishLockStatus();
         }
 
-        public bool devicePowerStatus()
+        public async Task UnlockDevice()
         {
-            return this.isOn; 
+            IsLocked = false;
+            await PublishLockStatus();
         }
 
-        public SecurityDevice() // non param constructor 
+        private async Task PublishLockStatus()
         {
-            this.deviceID = 0;
-            this.deviceName = "Unknown";
-            this.isOn = false;
+            if (_mqttClient.IsConnected)
+            {
+                string topic = $"home/locks/lock";
+                string payload = IsLocked ? "true" : "false";
+
+                var message = new MqttApplicationMessageBuilder()
+                    .WithTopic(topic)
+                    .WithPayload(payload)
+                    .WithQualityOfServiceLevel(MqttQualityOfServiceLevel.ExactlyOnce) // Use QoS level
+                    .Build();
+
+                await _mqttClient.PublishAsync(message);
+                Console.WriteLine($"Published to MQTT: {topic} - {payload}");
+            }
+            else
+            {
+                Console.WriteLine("MQTT client not connected.");
+            }
         }
-
-        public SecurityDevice(int deviceID, string deviceName) // param constructor
-        {
-            this.deviceID = deviceID;
-            this.deviceName = deviceName;
-            isOn = false;
-
-            Console.WriteLine("New security deviced created!");
-        }
-
-
-    }
-
-    // subclass for Camera
-    internal class Camera : SecurityDevice
-    {
-        public bool motionDetected { get; set; }
-
-        // constructor for the Camera class
-        public Camera(int deviceID, string deviceName)
-        {
-            this.deviceID = deviceID;
-            this.deviceName = deviceName;
-            this.isOn = false; 
-        }
-
-        public Camera() // non param constructor
-        {
-            this.deviceID = 0;
-            this.deviceName = "Unknown";
-            this.isOn = false;
-        }
-
-    }
-
-
-    internal class Lock : SecurityDevice
-    {
-        public bool isLocked { get; set;}
-
-        public void lockLock()
-        {
-            this.isLocked = true;
-        }
-
-        public void unlockLock()
-        {
-            this.isLocked = false;
-        }
-
-        public bool checkLockStatus()
-        {
-            return this.isLocked;
-        }
-
-        public Lock(int deviceId, string deviceName)
-        {
-            this.deviceID= deviceID;
-            this.deviceName= deviceName;
-            this.isOn = false;
-        }
-
-    }
-
-
-    internal class Sensor : SecurityDevice
-    {
-        public bool isTriggered { get; set;}
-
-        public void triggerSensor() 
-        { 
-            this.isTriggered = true;
-        }
-
-        public void resetSensor()
-        {
-            this.isTriggered = false;
-        }
-
-        public bool getSensorStatus()
-        {
-            return this.isTriggered;
-        }
-
-        // implement send alarm function somehow 
-
-    }
-
-    internal class Alarm : SecurityDevice 
-    { 
-        public bool isActivated { get; set;}
-
-        public void activateAlarm()
-        {
-            this.isActivated = true;
-        }
-
-        public void deactivateAlarm()
-        {
-            this.isActivated = false;
-        }
-    }
-
-    internal class Tracker : SecurityDevice
-    {
-        public bool isActivated { get; set;}
-        public double location { get; set;}
-
-        public bool getTrackerStatus()
-        {
-                return this.isActivated;
-        }
-
     }
 }
