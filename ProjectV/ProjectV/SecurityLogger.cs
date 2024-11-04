@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using System.Text.Json;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 
 namespace ProjectV
@@ -68,7 +68,7 @@ namespace ProjectV
                 Timestamp = DateTime.Now
             };
 
-            string jsonStatus = JsonSerializer.Serialize(statusUpdate);
+            string jsonStatus = JsonConvert.SerializeObject(statusUpdate);
             _logger.LogTransmission(hubName, jsonStatus);
 
             // TODO: Replace with actual API call

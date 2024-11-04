@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ProjectV
 {
@@ -9,7 +10,7 @@ namespace ProjectV
         public string Name { get; set; }
         public int Id { get; set; }
         public bool IsActive { get; set; }
-        public List<Device> ConnectedDevices { get; set; }
+        public List<SecurityDevice> ConnectedDevices { get; set; }
 
         // Add these new fields
         protected readonly SecurityHubLogger Logger;
@@ -20,7 +21,7 @@ namespace ProjectV
         {
             Name = name;
             IsActive = false;
-            ConnectedDevices = new List<Device>();
+            ConnectedDevices = new List<SecurityDevice>();
             Logger = logger;
             StatusReporter = statusReporter;
         }
@@ -40,16 +41,16 @@ namespace ProjectV
             await StatusReporter.SendStatusUpdateAsync(Name, "Inactive");
         }
 
-        public virtual async Task AddDevice(Device device)
+        public virtual async Task AddDevice(SecurityDevice device)
         {
             ConnectedDevices.Add(device);
-            Logger.LogOperation(Name, $"Device added: {device.Name}");
-            await StatusReporter.SendStatusUpdateAsync(Name, $"Device added: {device.Name}");
+            Logger.LogOperation(Name, $"Device added: {device.deviceName}");
+            await StatusReporter.SendStatusUpdateAsync(Name, $"Device added: {device.deviceName}");
         }
 
         public virtual async Task RemoveDevice(string deviceName)
         {
-            Device deviceToRemove = ConnectedDevices.FirstOrDefault(d => d.Name == deviceName);
+            SecurityDevice deviceToRemove = ConnectedDevices.FirstOrDefault(d => d.deviceName == deviceName);
             if (deviceToRemove != null)
             {
                 ConnectedDevices.Remove(deviceToRemove);
@@ -64,7 +65,7 @@ namespace ProjectV
             Console.WriteLine($"Devices connected to {Name} hub:");
             foreach (var device in ConnectedDevices)
             {
-                Console.WriteLine($"- {device.Name}");
+                Console.WriteLine($"- {device.deviceName}");
             }
         }
     }

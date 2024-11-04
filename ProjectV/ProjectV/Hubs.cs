@@ -8,27 +8,36 @@ namespace ProjectV
 {
     public class LockHub : HomeSecurityHub
     {
-        // not sure if i should ahve them set to false
-        public LockHub(bool isActive = false) : base("Lock") { }
+        public LockHub(SecurityHubLogger logger, IStatusReporter statusReporter, bool isActive = false)
+            : base("Lock", logger, statusReporter)
+        {
+            IsActive = isActive;
+        }
     }
+
 
     public class SensorHub : HomeSecurityHub
     {
-        public SensorHub() : base("Sensor") { }
+        public SensorHub(SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base("Sensor", logger, statusReporter) { }
     }
 
     public class CameraHub : HomeSecurityHub
     {
-        public CameraHub() : base("Camera") { }
+        public CameraHub(SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base("Camera", logger, statusReporter) { }
     }
 
     public class AlarmHub : HomeSecurityHub
     {
-        public AlarmHub() : base("Alarm") { }
+        public AlarmHub(SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base("Alarm", logger, statusReporter) { }
     }
 
     public class TrackerHub : HomeSecurityHub
     {
-        public TrackerHub() : base("Tracker") { }
+        public TrackerHub(SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base("Tracker", logger, statusReporter) { }
     }
+
 }

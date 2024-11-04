@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace ProjectV
 {
     // create parent SecurityDevice class 
-    internal class SecurityDevice
+    public class SecurityDevice
     {
         public int deviceID { get; set; }
         public string deviceName { get; set; }
@@ -153,20 +153,5 @@ namespace ProjectV
                 return this.isActivated;
         }
 
-    }
-
-    class MainProgram
-    {
-        static void Main(string[] args)
-        {
-            Camera washroomCamera = new Camera(123, "WashroomCamera");
-            washroomCamera.turnDeviceOn();
-
-            Camera bedroomCamera = new Camera();
-
-            // this line ensures that the console stays open
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
-        }
     }
 }
