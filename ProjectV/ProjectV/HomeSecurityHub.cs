@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProjectV
 {
-
     public abstract class HomeSecurityHub
     {
         public string Name { get; set; }
@@ -15,48 +11,56 @@ namespace ProjectV
         public bool IsActive { get; set; }
         public List<Device> ConnectedDevices { get; set; }
 
-        public HomeSecurityHub(string name)
+        // Add these new fields
+        protected readonly SecurityHubLogger Logger;
+        protected readonly IStatusReporter StatusReporter;
+
+        // Update the constructor
+        public HomeSecurityHub(string name, SecurityHubLogger logger, IStatusReporter statusReporter)
         {
             Name = name;
             IsActive = false;
             ConnectedDevices = new List<Device>();
+            Logger = logger;
+            StatusReporter = statusReporter;
         }
 
-        public virtual void Activate()
+        // Update methods to be async and include logging
+        public virtual async Task Activate()
         {
             IsActive = true;
-            Console.WriteLine($"{Name} hub activated");
+            Logger.LogOperation(Name, "Hub activated");
+            await StatusReporter.SendStatusUpdateAsync(Name, "Active");
         }
 
-        public virtual void Deactivate()
+        public virtual async Task Deactivate()
         {
             IsActive = false;
-            Console.WriteLine($"{Name} hub deactivated");
+            Logger.LogOperation(Name, "Hub deactivated");
+            await StatusReporter.SendStatusUpdateAsync(Name, "Inactive");
         }
 
-        public void AddDevice(string device)
+        public virtual async Task AddDevice(Device device)
         {
-            // ie lockHub.AddDevice("Front Door Lock");
             ConnectedDevices.Add(device);
-            Console.WriteLine($"{device} connected to {Name} hub.");
+            Logger.LogOperation(Name, $"Device added: {device.Name}");
+            await StatusReporter.SendStatusUpdateAsync(Name, $"Device added: {device.Name}");
         }
 
-        public virtual void RemoveDevice(string deviceName)
+        public virtual async Task RemoveDevice(string deviceName)
         {
             Device deviceToRemove = ConnectedDevices.FirstOrDefault(d => d.Name == deviceName);
             if (deviceToRemove != null)
             {
                 ConnectedDevices.Remove(deviceToRemove);
-                Console.WriteLine($"{deviceName} removed from {Name} hub.");
-            }
-            else
-            {
-                Console.WriteLine($"{deviceName} not found in {Name} hub.");
+                Logger.LogOperation(Name, $"Device removed: {deviceName}");
+                await StatusReporter.SendStatusUpdateAsync(Name, $"Device removed: {deviceName}");
             }
         }
 
         public virtual void ListDevices()
         {
+            Logger.LogOperation(Name, "Listing all devices");
             Console.WriteLine($"Devices connected to {Name} hub:");
             foreach (var device in ConnectedDevices)
             {
@@ -64,4 +68,4 @@ namespace ProjectV
             }
         }
     }
-    }
+}
