@@ -1,31 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using MQTTnet;
+using MQTTnet.Client;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 
-using System;
-
-namespace ProjectV
+class LockReceiver
 {
-    class Program
+    private static bool isLocked = false;
+
+    public static async Task Main(string[] args)
     {
-        static void Main(string[] args)
+        var factory = new MqttFactory();
+        var mqttClient = factory.CreateMqttClient();
+
+        // Configure connection options with TLS
+        var mqttClientOptions = new MqttClientOptionsBuilder()
+            .WithClientId("LockReceiver")
+            .WithTcpServer("741443276d504742a780ebb38fa36465.s1.eu.hivemq.cloud", 8883)
+            .WithCredentials("tester", "projectvtester")
+            .WithTls() // Use TLS directly without further options
+            .Build();
+
+        // Handle received lock/unlock messages
+        mqttClient.ApplicationMessageReceivedAsync += e =>
         {
-            Console.WriteLine("Hello, World!");
+            string payload = Encoding.UTF8.GetString(e.ApplicationMessage.PayloadSegment.ToArray());
+            if (payload.ToLower() == "true")
+            {
+                isLocked = true;
+                Console.WriteLine("System is now locked.");
+            }
+            else if (payload.ToLower() == "false")
+            {
+                isLocked = false;
+                Console.WriteLine("System is now unlocked.");
+            }
+            return Task.CompletedTask;
+        };
 
-            //var lockHub = new LockHub();
-            //var sensorHub = new SensorHub();
-            //var cameraHub = new CameraHub();
+        // Connect to the broker and subscribe
+        await mqttClient.ConnectAsync(mqttClientOptions);
+        await mqttClient.SubscribeAsync("sensor/lock");
 
-            Camera washroomCamera = new Camera(123, "WashroomCamera");
-            washroomCamera.turnDeviceOn();
+        Console.WriteLine("Connected to HiveMQ broker and listening for lock/unlock commands...");
+        Console.WriteLine("Press Ctrl+C to exit.");
 
-            Camera bedroomCamera = new Camera();
-
-            // this line ensures that the console stays open
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
-        }
+        // Keep running to receive messages
+        await Task.Delay(System.Threading.Timeout.InfiniteTimeSpan);
     }
 }
