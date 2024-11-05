@@ -65,7 +65,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        // this test will calling the motion detected function will set the boolean value
+        // this test will call the motion detected function will set the boolean value
         // of motionDetected to be true 
         public void Test005_CameraMotionDetection()
         {
@@ -83,8 +83,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        // this test will calling the motion detected function will set the boolean value
-        // of motionDetected to be true 
+        // this test will power on the alarm and check device power status 
         public void Test006_AlarmPowersOn()
         {
             Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
@@ -99,8 +98,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        // this test will calling the motion detected function will set the boolean value
-        // of motionDetected to be true 
+        // this test will activate the alarm and check if it is activated 
         public void Test007_AlarmIsActivated()
         {
             Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
@@ -117,8 +115,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        // this test will calling the motion detected function will set the boolean value
-        // of motionDetected to be true 
+        // this test will activate and then deactivate alarm, ensuring that deactivate works 
         public void Test008_AlarmCanBeDeactivated()
         {
             Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
@@ -137,8 +134,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        // this test will calling the motion detected function will set the boolean value
-        // of motionDetected to be true 
+        // this test will trigger a sensor and check the isTriggered status
         public void Test009_SensorIsTriggered()
         {
             Sensor windowSensor = new Sensor(007, "WindowSensor1", null, null);
@@ -155,6 +151,7 @@ namespace DeviceTests
         }
 
         [TestMethod]
+        // this test checks to see if the logger file exists 
         public void Test010_LoggerFileAndDirectoryExist()
         {
             // Arrange
