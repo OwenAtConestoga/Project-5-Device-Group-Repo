@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Devices
 {
-    internal class Device
+    public class Device
     {
         public State CurrentState { get; private set; }
         public Guid DeviceId { get; private set; }
