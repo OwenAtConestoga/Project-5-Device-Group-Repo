@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandData1", "ProjectV\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandData2", "CommandData2\CommandData2.csproj", "{22E00673-2A4C-4BC4-A971-D2C38BC346F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttGuiApp", "MqttGuiApp\MqttGuiApp.csproj", "{DDFAAA69-AA26-4CC1-9981-F8E065E343BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LockerControlForm", "LockerControlForm\LockerControlForm.csproj", "{FD8A79E3-E441-4100-895C-F5083859D448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{22E00673-2A4C-4BC4-A971-D2C38BC346F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E00673-2A4C-4BC4-A971-D2C38BC346F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E00673-2A4C-4BC4-A971-D2C38BC346F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DDFAAA69-AA26-4CC1-9981-F8E065E343BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DDFAAA69-AA26-4CC1-9981-F8E065E343BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DDFAAA69-AA26-4CC1-9981-F8E065E343BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DDFAAA69-AA26-4CC1-9981-F8E065E343BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8A79E3-E441-4100-895C-F5083859D448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8A79E3-E441-4100-895C-F5083859D448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8A79E3-E441-4100-895C-F5083859D448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8A79E3-E441-4100-895C-F5083859D448}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
