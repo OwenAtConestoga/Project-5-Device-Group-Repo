@@ -83,7 +83,79 @@ namespace DeviceTests
         }
 
         [TestMethod]
-        public void Test006_LoggerFileAndDirectoryExist()
+        // this test will calling the motion detected function will set the boolean value
+        // of motionDetected to be true 
+        public void Test006_AlarmPowersOn()
+        {
+            Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
+
+            frontDoorAlarm.turnDeviceOn();
+
+            bool expected = true;
+
+            bool actual = frontDoorAlarm.devicePowerStatus();
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // this test will calling the motion detected function will set the boolean value
+        // of motionDetected to be true 
+        public void Test007_AlarmIsActivated()
+        {
+            Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
+
+            frontDoorAlarm.turnDeviceOn();
+
+            frontDoorAlarm.activateAlarm(); 
+
+            bool expected = true;
+
+            bool actual = frontDoorAlarm.isActivated;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // this test will calling the motion detected function will set the boolean value
+        // of motionDetected to be true 
+        public void Test008_AlarmCanBeDeactivated()
+        {
+            Alarm frontDoorAlarm = new Alarm(789, "FrontDoorAlarm", null, null);
+
+            frontDoorAlarm.turnDeviceOn();
+
+            frontDoorAlarm.activateAlarm();
+
+            frontDoorAlarm.deactivateAlarm(); 
+
+            bool expected = false;
+
+            bool actual = frontDoorAlarm.isActivated;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // this test will calling the motion detected function will set the boolean value
+        // of motionDetected to be true 
+        public void Test009_SensorIsTriggered()
+        {
+            Sensor windowSensor = new Sensor(007, "WindowSensor1", null, null);
+
+            windowSensor.turnDeviceOn();
+
+            windowSensor.triggerSensor(); 
+
+            bool expected = true;
+
+            bool actual = windowSensor.isTriggered;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void Test010_LoggerFileAndDirectoryExist()
         {
             // Arrange
             var logger = new SecurityHubLogger();
