@@ -6,38 +6,39 @@ using System.Threading.Tasks;
 
 namespace ProjectV
 {
-    public class LockHub : HomeSecurityHub
-    {
+    public class LockHub : HomeSecurityHub {
         public LockHub(SecurityHubLogger logger, IStatusReporter statusReporter, bool isActive = false)
-            : base("Lock", logger, statusReporter)
-        {
+            : base("Lock", logger, statusReporter) {
             IsActive = isActive;
+            Logger?.LogOperation("LockHub", $"LockHub initialized with IsActive set to {IsActive}");
         }
     }
 
-
-    public class SensorHub : HomeSecurityHub
-    {
+    public class SensorHub : HomeSecurityHub {
         public SensorHub(SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base("Sensor", logger, statusReporter) { }
+            : base("Sensor", logger, statusReporter) { 
+            Logger?.LogOperation("SensorHub", "SensorHub initialized");
+        }
     }
 
-    public class CameraHub : HomeSecurityHub
-    {
+    public class CameraHub : HomeSecurityHub {
         public CameraHub(SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base("Camera", logger, statusReporter) { }
+            : base("Camera", logger, statusReporter) {
+            Logger?.LogOperation("CameraHub", "CameraHub initialized");
+        }
     }
 
-    public class AlarmHub : HomeSecurityHub
-    {
+    public class AlarmHub : HomeSecurityHub {
         public AlarmHub(SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base("Alarm", logger, statusReporter) { }
+            : base("Alarm", logger, statusReporter) {
+            Logger?.LogOperation("AlarmHub", "AlarmHub initialized");
+        }
     }
 
-    public class TrackerHub : HomeSecurityHub
-    {
+    public class TrackerHub : HomeSecurityHub {
         public TrackerHub(SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base("Tracker", logger, statusReporter) { }
+            : base("Tracker", logger, statusReporter) {
+            Logger?.LogOperation("TrackerHub", "TrackerHub initialized");
+        }
     }
-
 }

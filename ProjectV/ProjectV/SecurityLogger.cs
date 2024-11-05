@@ -13,9 +13,30 @@ namespace ProjectV
 
         public SecurityHubLogger(string operationsLogPath = "operations.log", string transmissionLogPath = "transmission.log")
         {
-            _operationsLogPath = operationsLogPath;
-            _transmissionLogPath = transmissionLogPath;
+            // Ensure paths are absolute and logs directory exists
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string logsDirectory = Path.Combine(baseDirectory, "logs");
+            
+            // Create full paths
+            _operationsLogPath = Path.Combine(logsDirectory, operationsLogPath);
+            _transmissionLogPath = Path.Combine(logsDirectory, transmissionLogPath);
+            
+            // Ensure directory exists
+            EnsureLogDirectoryExists();
         }
+
+        private void EnsureLogDirectoryExists()
+        {
+            string logDirectory = Path.GetDirectoryName(_operationsLogPath);
+            if (!Directory.Exists(logDirectory))
+            {
+                Directory.CreateDirectory(logDirectory);
+                LogOperation("Logger", $"Created log directory: {logDirectory}");
+            }
+        }
+
+        public string GetOperationsLogPath() => _operationsLogPath;
+        public string GetTransmissionLogPath() => _transmissionLogPath;
 
         public void LogOperation(string hubName, string message)
         {
@@ -43,38 +64,5 @@ namespace ProjectV
                 }
             }
         }
-    }
-
-    public class SecurityHubStatusReporter : IStatusReporter
-    {
-        private readonly string _apiEndpoint;
-        private readonly SecurityHubLogger _logger;
-        private string _currentStatus;
-
-        public SecurityHubStatusReporter(string apiEndpoint, SecurityHubLogger logger)
-        {
-            _apiEndpoint = apiEndpoint;
-            _logger = logger;
-            _currentStatus = "Initializing";
-        }
-
-        public async Task SendStatusUpdateAsync(string hubName, string status)
-        {
-            _currentStatus = status;
-            var statusUpdate = new
-            {
-                HubName = hubName,
-                Status = status,
-                Timestamp = DateTime.Now
-            };
-
-            string jsonStatus = JsonConvert.SerializeObject(statusUpdate);
-            _logger.LogTransmission(hubName, jsonStatus);
-
-            // TODO: Replace with actual API call
-            await Task.Delay(100); 
-        }
-
-        public string GetCurrentStatus() => _currentStatus;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectV;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -16,21 +17,26 @@ namespace ProjectV
         public int deviceID { get; set; }
         public string deviceName { get; set; }
         public bool isOn { get; set; }
+        protected readonly SecurityHubLogger Logger;
+        protected readonly IStatusReporter StatusReporter;
 
         public virtual void turnDeviceOn()
         {
             isOn = true;
+            Logger?.LogOperation(deviceName, $"Device {deviceID} turned ON");
             Console.WriteLine(this.deviceName + this.deviceID + " is now ON");
         }
 
         public virtual void turnDeviceOff()
         {
             isOn = false;
+            Logger?.LogOperation(deviceName, $"Device {deviceID} turned OFF");
             Console.WriteLine(this.deviceName + this.deviceID + " is now OFF");
         }
 
         public bool devicePowerStatus()
         {
+            Logger?.LogOperation(deviceName, $"Device {deviceID} power status checked: {isOn}");
             return this.isOn; 
         }
 
@@ -41,13 +47,16 @@ namespace ProjectV
             this.isOn = false;
         }
 
-        public SecurityDevice(int deviceID, string deviceName) // param constructor
+        public SecurityDevice(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
         {
             this.deviceID = deviceID;
             this.deviceName = deviceName;
             isOn = false;
+            this.Logger = logger;
+            this.StatusReporter = statusReporter;
 
-            Console.WriteLine("New security deviced created!");
+            Logger?.LogOperation(deviceName, $"New security device created: ID {deviceID}");
+            Console.WriteLine("New security device created!");
         }
 
 
@@ -58,100 +67,113 @@ namespace ProjectV
     {
         public bool motionDetected { get; set; }
 
-        // constructor for the Camera class
-        public Camera(int deviceID, string deviceName)
+        public Camera(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base(deviceID, deviceName, logger, statusReporter)
         {
-            this.deviceID = deviceID;
-            this.deviceName = deviceName;
-            this.isOn = false; 
+            Logger?.LogOperation(deviceName, "Camera device created");
         }
 
-        public Camera() // non param constructor
+        public void DetectMotion()
         {
-            this.deviceID = 0;
-            this.deviceName = "Unknown";
-            this.isOn = false;
+            motionDetected = true;
+            Logger?.LogOperation(deviceName, "Motion detected by camera");
+            StatusReporter?.SendStatusUpdateAsync(deviceName, "Motion detected");
         }
-
     }
 
 
     internal class Lock : SecurityDevice
     {
-        public bool isLocked { get; set;}
+        public bool isLocked { get; set; }
+
+        public Lock(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base(deviceID, deviceName, logger, statusReporter)
+        {
+            Logger?.LogOperation(deviceName, "Lock device created");
+        }
 
         public void lockLock()
         {
-            this.isLocked = true;
+            isLocked = true;
+            Logger?.LogOperation(deviceName, "Lock is now locked");
         }
 
         public void unlockLock()
         {
-            this.isLocked = false;
+            isLocked = false;
+            Logger?.LogOperation(deviceName, "Lock is now unlocked");
         }
-
-        public bool checkLockStatus()
-        {
-            return this.isLocked;
-        }
-
-        public Lock(int deviceId, string deviceName)
-        {
-            this.deviceID= deviceID;
-            this.deviceName= deviceName;
-            this.isOn = false;
-        }
-
     }
 
 
     internal class Sensor : SecurityDevice
     {
-        public bool isTriggered { get; set;}
+        public bool isTriggered { get; set; }
 
-        public void triggerSensor() 
-        { 
-            this.isTriggered = true;
+        public Sensor(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+            : base(deviceID, deviceName, logger, statusReporter)
+        {
+            Logger?.LogOperation(deviceName, "Sensor device created");
+        }
+
+        public void triggerSensor()
+        {
+            isTriggered = true;
+            Logger?.LogOperation(deviceName, "Sensor triggered");
         }
 
         public void resetSensor()
         {
-            this.isTriggered = false;
+            isTriggered = false;
+            Logger?.LogOperation(deviceName, "Sensor reset");
         }
-
-        public bool getSensorStatus()
-        {
-            return this.isTriggered;
-        }
-
-        // implement send alarm function somehow 
-
-    }
-
-    internal class Alarm : SecurityDevice 
-    { 
-        public bool isActivated { get; set;}
-
-        public void activateAlarm()
-        {
-            this.isActivated = true;
-        }
-
-        public void deactivateAlarm()
-        {
-            this.isActivated = false;
-        }
-    }
-
-    internal class Tracker : SecurityDevice
-    {
-        public bool isActivated { get; set;}
-        public double location { get; set;}
-
-        public bool getTrackerStatus()
-        {
-                return this.isActivated;
-        }
-
     }
 }
+
+internal class Alarm : SecurityDevice
+{
+    public bool isActivated { get; set; }
+
+    public Alarm(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+        : base(deviceID, deviceName, logger, statusReporter)
+    {
+        Logger?.LogOperation(deviceName, "Alarm device created");
+    }
+
+    public void activateAlarm()
+    {
+        isActivated = true;
+        Logger?.LogOperation(deviceName, "Alarm activated");
+    }
+
+    public void deactivateAlarm()
+    {
+        isActivated = false;
+        Logger?.LogOperation(deviceName, "Alarm deactivated");
+    }
+}
+
+internal class Tracker : SecurityDevice
+{
+    public bool isActivated { get; set; }
+    public double location { get; set; }
+
+    public Tracker(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+        : base(deviceID, deviceName, logger, statusReporter)
+    {
+        Logger?.LogOperation(deviceName, "Tracker device created");
+    }
+
+    public void activateTracker()
+    {
+        isActivated = true;
+        Logger?.LogOperation(deviceName, "Tracker activated");
+    }
+
+    public void deactivateTracker()
+    {
+        isActivated = false;
+        Logger?.LogOperation(deviceName, "Tracker deactivated");
+    }
+}
+
