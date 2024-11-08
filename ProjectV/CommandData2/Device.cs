@@ -126,5 +126,28 @@ namespace Devices
                 }
             }
         }
+
+        public async Task SendCustomDataAsync(string data)
+        {
+            if (_tcpClient.Connected)
+            {
+                try
+                {
+                    var stream = _tcpClient.GetStream();
+                    var encodedData = Encoding.UTF8.GetBytes(data);
+
+                    await stream.WriteAsync(encodedData, 0, encodedData.Length);
+                    Logger.Log($"Custom data sent: {data}", Logger.LogType.Info);
+                }
+                catch (Exception e)
+                {
+                    Logger.Log($"Error sending custom data: {e.Message}", Logger.LogType.Error);
+                }
+            }
+            else
+            {
+                Logger.Log("TCP client not connected. Unable to send data.", Logger.LogType.Error);
+            }
+        }
     }
 }

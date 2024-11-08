@@ -1,13 +1,12 @@
-﻿using Devices;
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Devices; // Ensure correct namespace
 
 namespace CommandData2
 {
     public partial class SmartFridge : Form
     {
-        //Initial values
         private int fridgeTemperature = 35;
         private int freezerTemperature = 0;
         private Device fridgeDevice;
@@ -15,14 +14,15 @@ namespace CommandData2
         public SmartFridge()
         {
             InitializeComponent();
-            fridgeDevice = new Device();
+            fridgeDevice = new Device(); // Initialize the Device instance
             UpdateTemperatureLabels();
         }
+
         private void UpdateTemperatureLabels()
         {
-            //Update WPF with internal variables
             fridgeTempLabel.Text = fridgeTemperature + "°";
             freezerTempLabel.Text = freezerTemperature + "°";
+            Logger.Log("Fridge UI Updated", Logger.LogType.Info);
         }
 
         private void fridgeTempUpButton_Click(object sender, EventArgs e)
@@ -49,22 +49,29 @@ namespace CommandData2
             UpdateTemperatureLabels();
         }
 
+        public void UpdateFridgeDeviceState(Device.State newState)
+        {
+            fridgeDevice.UpdateState(newState);
+            Console.WriteLine($"Fridge device state updated to {newState}");
+            Logger.Log("Device State Updated", Logger.LogType.Info);
+        }
+
         public async Task StartFridgeDeviceAsync(string serverIp, int port)
         {
             await fridgeDevice.StartDeviceAsync(serverIp, port);
-            Logger.Log("SmartFridge started", Logger.LogType.Info);
         }
 
         public void StopFridgeDevice()
         {
             fridgeDevice.StopDevice();
-            Logger.Log("SmartFridge stopped", Logger.LogType.Info);
         }
 
-        public void UpdateFridgeDeviceState(Device.State newState)
+        public async Task SendCustomMessageAsync(string message)
         {
-            fridgeDevice.UpdateState(newState);
-            Logger.Log($"Fridge device state updated to {newState}", Logger.LogType.Info);
+            if (fridgeDevice != null)
+            {
+                await fridgeDevice.SendCustomDataAsync(message);
+            }
         }
     }
 }
