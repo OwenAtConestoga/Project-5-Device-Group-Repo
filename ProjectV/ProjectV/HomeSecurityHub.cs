@@ -11,11 +11,8 @@ namespace ProjectV
         public int Id { get; set; }
         public bool IsActive { get; set; }
         public List<SecurityDevice> ConnectedDevices { get; set; }
-
-        // Add these new fields
         protected readonly SecurityHubLogger Logger;
 
-        // Update the constructor
         public HomeSecurityHub(string name, SecurityHubLogger logger)
         {
             Name = name;
@@ -24,26 +21,28 @@ namespace ProjectV
             Logger = logger;
         }
 
-        // Update methods to be async and include logging
-        public virtual async Task Activate()
+        public virtual Task Activate()
         {
             IsActive = true;
             Logger.LogOperation(Name, "Hub activated");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task Deactivate()
+        public virtual Task Deactivate()
         {
             IsActive = false;
             Logger.LogOperation(Name, "Hub deactivated");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task AddDevice(SecurityDevice device)
+        public virtual Task AddDevice(SecurityDevice device)
         {
             ConnectedDevices.Add(device);
             Logger.LogOperation(Name, $"Device added: {device.deviceName}");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task RemoveDevice(string deviceName)
+        public virtual Task RemoveDevice(string deviceName)
         {
             SecurityDevice deviceToRemove = ConnectedDevices.FirstOrDefault(d => d.deviceName == deviceName);
             if (deviceToRemove != null)
@@ -51,8 +50,10 @@ namespace ProjectV
                 ConnectedDevices.Remove(deviceToRemove);
                 Logger.LogOperation(Name, $"Device removed: {deviceName}");
             }
+            return Task.CompletedTask;
         }
 
+        // This method doesn't need to be async since it's just writing to console
         public virtual void ListDevices()
         {
             Logger.LogOperation(Name, "Listing all devices");
