@@ -63,7 +63,7 @@ namespace CommandData2
             await fridgeDevice.StartDeviceAsync(serverIp, port);
         }
 
-        public void StopFridgeDevice()
+        public void StopDevice()
         {
             fridgeDevice.StopDevice();
         }

@@ -54,11 +54,10 @@ namespace CommandData2
             UpdateDehumidifierUI();
         }
 
-        public void StopDehumidifierDevice()
+        public void StopDevice()
         {
             dehumidifierDevice.StopDevice();
             isPowerOn = false;
-            UpdateDehumidifierUI();
         }
 
         public async Task SendCustomMessageAsync(string message)

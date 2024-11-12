@@ -18,12 +18,15 @@ namespace Devices
             //Initialize Devices
             var smartFridge = new SmartFridge();
             var smartDehumidifier = new SmartDehumidifier();
+            var smartThermostat = new SmartThermostat();
 
             //Start Devices
             Logger.Log("SmartFridge running", Logger.LogType.Info);
             smartFridge.Show();
             Logger.Log("SmartDehumidifier running", Logger.LogType.Info);
             smartDehumidifier.Show();
+            Logger.Log("SmartThermostat running", Logger.LogType.Info);
+            smartThermostat.Show();
 
             // Run the main message loop
             Application.Run();
@@ -31,8 +34,9 @@ namespace Devices
             // Close devices before ending program
             AppDomain.CurrentDomain.ProcessExit += (s, e) =>
             {
-                smartFridge.StopFridgeDevice();
-                smartDehumidifier.StopDehumidifierDevice();
+                smartFridge.StopDevice();
+                smartDehumidifier.StopDevice();
+                smartThermostat.StopDevice();
                 Logger.Log("Devices stopped", Logger.LogType.Info);
             };
         }
