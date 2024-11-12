@@ -38,20 +38,55 @@ namespace ProjectV
 
             //Camera bedroomCamera = new Camera(456, "FrontDoorCamera", null);
 
-            var tracker = new TrackerHub(logger);
-            var sensor = new SensorHub(logger);
-            var camera = new CameraHub(logger);
-            var alarmHub = new AlarmHub(logger);
+
+            // Initialize all hubs
             var lockHub = new LockHub(logger);
+            var sensorHub = new SensorHub(logger);
+            var cameraHub = new CameraHub(logger);
+            var alarmHub = new AlarmHub(logger);
+            var trackerHub = new TrackerHub(logger);
 
-            tracker.Activate();
-            sensor.Activate();
-            camera.Activate();
-            alarmHub.Activate();
+            // Configure Lock Hub
             lockHub.Activate();
+            lockHub.AddDevice(new Lock(1, "Front Door Lock", logger));
+            lockHub.AddDevice(new Lock(2, "Back Door Lock", logger));
+            lockHub.AddDevice(new Lock(3, "Garage Door Lock", logger));
+            Console.WriteLine("\n=== Lock Hub Devices ===");
+            lockHub.ListDevices();
 
+            // Configure Sensor Hub
+            sensorHub.Activate();
+            sensorHub.AddDevice(new Sensor(4, "Living Room Motion Sensor", logger));
+            sensorHub.AddDevice(new Sensor(5, "Kitchen Window Sensor", logger));
+            sensorHub.AddDevice(new Sensor(6, "Basement Door Sensor", logger));
+            sensorHub.AddDevice(new Sensor(7, "Garage Motion Sensor", logger));
+            Console.WriteLine("\n=== Sensor Hub Devices ===");
+            sensorHub.ListDevices();
 
+            // Configure Camera Hub
+            cameraHub.Activate();
+            cameraHub.AddDevice(new Camera(8, "Front Door Camera", logger));
+            cameraHub.AddDevice(new Camera(9, "Back Door Camera", logger));
+            cameraHub.AddDevice(new Camera(10, "Driveway Camera", logger));
+            cameraHub.AddDevice(new Camera(11, "Garage Camera", logger));
+            Console.WriteLine("\n=== Camera Hub Devices ===");
+            cameraHub.ListDevices();
 
+            // Configure Alarm Hub
+            alarmHub.Activate();
+            alarmHub.AddDevice(new Alarm(12, "Main Siren", logger));
+            alarmHub.AddDevice(new Alarm(13, "Backup Siren", logger));
+            alarmHub.AddDevice(new Alarm(14, "Panic Button", logger));
+            Console.WriteLine("\n=== Alarm Hub Devices ===");
+            alarmHub.ListDevices();
+
+            // Configure Tracker Hub
+            trackerHub.Activate();
+            trackerHub.AddDevice(new Tracker(15, "Vehicle GPS Tracker", logger));
+            trackerHub.AddDevice(new Tracker(16, "Pet Collar Tracker", logger));
+            trackerHub.AddDevice(new Tracker(17, "Asset Tracker", logger));
+            Console.WriteLine("\n=== Tracker Hub Devices ===");
+            trackerHub.ListDevices();
             // this line ensures that the console stays open
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
