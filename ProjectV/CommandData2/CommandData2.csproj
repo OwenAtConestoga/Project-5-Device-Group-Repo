@@ -52,23 +52,11 @@
     <Compile Include="SmartFridge.Designer.cs">
       <DependentUpon>SmartFridge.cs</DependentUpon>
     </Compile>
-    <Compile Include="SmartOven.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SmartOven.Designer.cs">
-      <DependentUpon>SmartOven.cs</DependentUpon>
-    </Compile>
     <Compile Include="SmartThermostat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SmartThermostat.Designer.cs">
       <DependentUpon>SmartThermostat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SmartVacuum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SmartVacuum.Designer.cs">
-      <DependentUpon>SmartVacuum.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,14 +78,8 @@
     <EmbeddedResource Include="SmartFridge.resx">
       <DependentUpon>SmartFridge.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SmartOven.resx">
-      <DependentUpon>SmartOven.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SmartThermostat.resx">
       <DependentUpon>SmartThermostat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SmartVacuum.resx">
-      <DependentUpon>SmartVacuum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
