@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Devices; // Ensure correct namespace
+using Devices;
 
 namespace CommandData2
 {
@@ -18,13 +18,7 @@ namespace CommandData2
             UpdateTemperatureLabels();
         }
 
-        private void UpdateTemperatureLabels()
-        {
-            fridgeTempLabel.Text = fridgeTemperature + "°";
-            freezerTempLabel.Text = freezerTemperature + "°";
-            Logger.Log("Fridge UI Updated", Logger.LogType.Info);
-        }
-
+        //UI Button Handlers
         private void fridgeTempUpButton_Click(object sender, EventArgs e)
         {
             fridgeTemperature++;
@@ -49,6 +43,14 @@ namespace CommandData2
             UpdateTemperatureLabels();
         }
 
+        private void UpdateTemperatureLabels()
+        {
+            fridgeTempLabel.Text = fridgeTemperature + "°";
+            freezerTempLabel.Text = freezerTemperature + "°";
+            Logger.Log("Fridge UI Updated", Logger.LogType.Info);
+        }
+
+        //External Controls
         public void UpdateFridgeDeviceState(Device.State newState)
         {
             fridgeDevice.UpdateState(newState);

@@ -40,6 +40,12 @@
     <Compile Include="Device.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="SmartDehumidifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SmartDehumidifier.Designer.cs">
+      <DependentUpon>SmartDehumidifier.cs</DependentUpon>
+    </Compile>
     <Compile Include="SmartFridge.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="SmartDehumidifier.resx">
+      <DependentUpon>SmartDehumidifier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SmartFridge.resx">
       <DependentUpon>SmartFridge.cs</DependentUpon>
     </EmbeddedResource>
