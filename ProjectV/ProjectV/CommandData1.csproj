@@ -39,7 +39,6 @@
   <ItemGroup>
     <Compile Include="HomeSecurityHub.cs" />
     <Compile Include="Hubs.cs" />
-    <Compile Include="IStatusReport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SecurityDevices.cs" />
     <Compile Include="SecurityLogger.cs" />

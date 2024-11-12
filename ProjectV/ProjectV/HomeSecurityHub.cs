@@ -14,16 +14,14 @@ namespace ProjectV
 
         // Add these new fields
         protected readonly SecurityHubLogger Logger;
-        protected readonly IStatusReporter StatusReporter;
 
         // Update the constructor
-        public HomeSecurityHub(string name, SecurityHubLogger logger, IStatusReporter statusReporter)
+        public HomeSecurityHub(string name, SecurityHubLogger logger)
         {
             Name = name;
             IsActive = false;
             ConnectedDevices = new List<SecurityDevice>();
             Logger = logger;
-            StatusReporter = statusReporter;
         }
 
         // Update methods to be async and include logging
@@ -31,21 +29,18 @@ namespace ProjectV
         {
             IsActive = true;
             Logger.LogOperation(Name, "Hub activated");
-            await StatusReporter.SendStatusUpdateAsync(Name, "Active");
         }
 
         public virtual async Task Deactivate()
         {
             IsActive = false;
             Logger.LogOperation(Name, "Hub deactivated");
-            await StatusReporter.SendStatusUpdateAsync(Name, "Inactive");
         }
 
         public virtual async Task AddDevice(SecurityDevice device)
         {
             ConnectedDevices.Add(device);
             Logger.LogOperation(Name, $"Device added: {device.deviceName}");
-            await StatusReporter.SendStatusUpdateAsync(Name, $"Device added: {device.deviceName}");
         }
 
         public virtual async Task RemoveDevice(string deviceName)
@@ -55,7 +50,6 @@ namespace ProjectV
             {
                 ConnectedDevices.Remove(deviceToRemove);
                 Logger.LogOperation(Name, $"Device removed: {deviceName}");
-                await StatusReporter.SendStatusUpdateAsync(Name, $"Device removed: {deviceName}");
             }
         }
 

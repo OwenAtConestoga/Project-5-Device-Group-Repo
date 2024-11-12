@@ -18,7 +18,6 @@ namespace ProjectV
         public string deviceName { get; set; }
         public bool isOn { get; set; }
         protected readonly SecurityHubLogger Logger;
-        protected readonly IStatusReporter StatusReporter;
 
         public virtual void turnDeviceOn()
         {
@@ -47,13 +46,12 @@ namespace ProjectV
             this.isOn = false;
         }
 
-        public SecurityDevice(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
+        public SecurityDevice(int deviceID, string deviceName, SecurityHubLogger logger)
         {
             this.deviceID = deviceID;
             this.deviceName = deviceName;
             isOn = false;
             this.Logger = logger;
-            this.StatusReporter = statusReporter;
 
             Logger?.LogOperation(deviceName, $"New security device created: ID {deviceID}");
             Console.WriteLine("New security device created!");
@@ -67,8 +65,8 @@ namespace ProjectV
     {
         public bool motionDetected { get; set; }
 
-        public Camera(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base(deviceID, deviceName, logger, statusReporter)
+        public Camera(int deviceID, string deviceName, SecurityHubLogger logger)
+            : base(deviceID, deviceName, logger)
         {
             Logger?.LogOperation(deviceName, "Camera device created");
         }
@@ -77,7 +75,6 @@ namespace ProjectV
         {
             motionDetected = true;
             Logger?.LogOperation(deviceName, "Motion detected by camera");
-            StatusReporter?.SendStatusUpdateAsync(deviceName, "Motion detected");
         }
     }
 
@@ -86,8 +83,8 @@ namespace ProjectV
     {
         public bool isLocked { get; set; }
 
-        public Lock(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base(deviceID, deviceName, logger, statusReporter)
+        public Lock(int deviceID, string deviceName, SecurityHubLogger logger)
+            : base(deviceID, deviceName, logger)
         {
             Logger?.LogOperation(deviceName, "Lock device created");
         }
@@ -110,8 +107,8 @@ namespace ProjectV
     {
         public bool isTriggered { get; set; }
 
-        public Sensor(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
-            : base(deviceID, deviceName, logger, statusReporter)
+        public Sensor(int deviceID, string deviceName, SecurityHubLogger logger)
+            : base(deviceID, deviceName, logger)
         {
             Logger?.LogOperation(deviceName, "Sensor device created");
         }
@@ -134,8 +131,8 @@ internal class Alarm : SecurityDevice
 {
     public bool isActivated { get; set; }
 
-    public Alarm(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
-        : base(deviceID, deviceName, logger, statusReporter)
+    public Alarm(int deviceID, string deviceName, SecurityHubLogger logger)
+        : base(deviceID, deviceName, logger)
     {
         Logger?.LogOperation(deviceName, "Alarm device created");
     }
@@ -158,8 +155,8 @@ internal class Tracker : SecurityDevice
     public bool isActivated { get; set; }
     public double location { get; set; }
 
-    public Tracker(int deviceID, string deviceName, SecurityHubLogger logger, IStatusReporter statusReporter)
-        : base(deviceID, deviceName, logger, statusReporter)
+    public Tracker(int deviceID, string deviceName, SecurityHubLogger logger)
+        : base(deviceID, deviceName, logger)
     {
         Logger?.LogOperation(deviceName, "Tracker device created");
     }
