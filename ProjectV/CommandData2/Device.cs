@@ -57,13 +57,14 @@ namespace Devices
         {
             while (CurrentState != State.Off)
             {
-                var data = GenerateData();
+                var data = GenerateDeviceData();
                 SendDataAsync(data).Wait();
                 Thread.Sleep(1000);
             }
         }
 
-        private string GenerateData()
+        // This method generates data specific to each device (e.g., fridge, dehumidifier)
+        public virtual string GenerateDeviceData()
         {
             return $"Data from device {DeviceId} at {DateTime.Now}";
         }
