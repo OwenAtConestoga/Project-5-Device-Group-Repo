@@ -87,6 +87,14 @@ namespace ProjectV
             trackerHub.AddDevice(new Tracker(17, "Asset Tracker", logger));
             Console.WriteLine("\n=== Tracker Hub Devices ===");
             trackerHub.ListDevices();
+
+            Console.WriteLine("\n=== Deactivation Of Devices ===");
+
+            // Instantiate the Receiver and deactivate tracker with ID 15
+            var receiver = new Receiver(trackerHub, logger);
+            receiver.TurnOffTracker(16);  // This will deactivate the tracker with ID 16
+
+
             // this line ensures that the console stays open
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();

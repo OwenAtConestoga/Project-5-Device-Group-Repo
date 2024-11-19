@@ -63,5 +63,12 @@ namespace ProjectV
                 Console.WriteLine($"- {device.deviceName}");
             }
         }
+
+        // Method to get a device by its ID
+        public SecurityDevice GetDeviceById(int DeviceId)
+        {
+            return ConnectedDevices.FirstOrDefault(d => d.deviceID == DeviceId);
+        }
+
     }
 }
