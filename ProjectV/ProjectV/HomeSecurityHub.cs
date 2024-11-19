@@ -11,54 +11,51 @@ namespace ProjectV
         public int Id { get; set; }
         public bool IsActive { get; set; }
         public List<SecurityDevice> ConnectedDevices { get; set; }
-
-        // Add these new fields
         protected readonly SecurityHubLogger Logger;
-        protected readonly IStatusReporter StatusReporter;
 
-        // Update the constructor
-        public HomeSecurityHub(string name, SecurityHubLogger logger, IStatusReporter statusReporter)
+        public HomeSecurityHub(string name, SecurityHubLogger logger)
         {
             Name = name;
             IsActive = false;
             ConnectedDevices = new List<SecurityDevice>();
             Logger = logger;
-            StatusReporter = statusReporter;
         }
 
-        // Update methods to be async and include logging
-        public virtual async Task Activate()
+        public virtual Task Activate()
         {
             IsActive = true;
             Logger.LogOperation(Name, "Hub activated");
-            await StatusReporter.SendStatusUpdateAsync(Name, "Active");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task Deactivate()
+        public virtual Task Deactivate()
         {
             IsActive = false;
             Logger.LogOperation(Name, "Hub deactivated");
-            await StatusReporter.SendStatusUpdateAsync(Name, "Inactive");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task AddDevice(SecurityDevice device)
+        public virtual Task AddDevice(SecurityDevice device)
         {
             ConnectedDevices.Add(device);
             Logger.LogOperation(Name, $"Device added: {device.deviceName}");
-            await StatusReporter.SendStatusUpdateAsync(Name, $"Device added: {device.deviceName}");
+            return Task.CompletedTask;
         }
 
-        public virtual async Task RemoveDevice(string deviceName)
+        public virtual Task RemoveDevice(string deviceName)
         {
             SecurityDevice deviceToRemove = ConnectedDevices.FirstOrDefault(d => d.deviceName == deviceName);
             if (deviceToRemove != null)
             {
                 ConnectedDevices.Remove(deviceToRemove);
                 Logger.LogOperation(Name, $"Device removed: {deviceName}");
-                await StatusReporter.SendStatusUpdateAsync(Name, $"Device removed: {deviceName}");
+                Console.WriteLine($"Device removed: {deviceName}");
+
             }
+            return Task.CompletedTask;
         }
 
+        // This method doesn't need to be async since it's just writing to console
         public virtual void ListDevices()
         {
             Logger.LogOperation(Name, "Listing all devices");
@@ -68,5 +65,12 @@ namespace ProjectV
                 Console.WriteLine($"- {device.deviceName}");
             }
         }
+
+        // Method to get a device by its ID
+        public SecurityDevice GetDeviceById(int DeviceId)
+        {
+            return ConnectedDevices.FirstOrDefault(d => d.deviceID == DeviceId);
+        }
+
     }
 }
