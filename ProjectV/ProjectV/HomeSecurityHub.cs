@@ -49,6 +49,8 @@ namespace ProjectV
             {
                 ConnectedDevices.Remove(deviceToRemove);
                 Logger.LogOperation(Name, $"Device removed: {deviceName}");
+                Console.WriteLine($"Device removed: {deviceName}");
+
             }
             return Task.CompletedTask;
         }

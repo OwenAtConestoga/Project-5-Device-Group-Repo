@@ -26,6 +26,7 @@ namespace ProjectV
                 {
                     Console.WriteLine($"Deactivating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
                     tracker.deactivateTracker();  // Deactivate the tracker
+                    //trackerHub.RemoveDevice(tracker.deviceName);
                 }
                 else
                 {
@@ -36,6 +37,24 @@ namespace ProjectV
             {
                 Console.WriteLine($"Tracker with ID {trackerId} not found.");
             }
+
+
         }
-    }
+
+
+        public void CheckTrackerState(int trackerId)
+        {
+            var tracker = trackerHub.GetDeviceById(trackerId);
+            if (tracker != null)
+            {
+                Console.WriteLine($"Tracker {tracker.deviceName} is currently {(tracker.isOn ? "ON" : "OFF")}.");
+            }
+            else
+            {
+                Console.WriteLine($"Tracker with ID {trackerId} not found.");
+            }
+        }
+
+
+        }
 }

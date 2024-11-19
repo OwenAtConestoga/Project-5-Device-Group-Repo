@@ -90,13 +90,28 @@ namespace ProjectV
 
             Console.WriteLine("\n=== Deactivation Of Devices ===");
 
-            // Instantiate the Receiver and deactivate tracker with ID 15
+            // Instantiate Receiver
             var receiver = new Receiver(trackerHub, logger);
-            receiver.TurnOffTracker(16);  // This will deactivate the tracker with ID 16
+
+            receiver.TurnOffTracker(16);
+            receiver.CheckTrackerState(16);  // This will print if the tracker is ON or OFF
+            Console.WriteLine();
+
+
+            // List all devices and their statuses
+            trackerHub.ListDevices();
+
+            Console.WriteLine(); 
+
+            trackerHub.RemoveDevice("Pet Collar Tracker");
+            Console.WriteLine();
+
+            trackerHub.ListDevices();
+
 
 
             // this line ensures that the console stays open
-            Console.WriteLine("Press any key to exit...");
+            Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
         }
 
