@@ -1,7 +1,9 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Net.Sockets;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using CommandData2;
 using Devices;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
@@ -20,80 +22,339 @@ namespace Devices.Tests
         }
 
         [TestMethod]
-        public async Task Test_ConnectionSetup_Success()
+        public async Task Test_1()
         {
-            // Test Case 1: Verify connection setup between SmartFridge and Home module in TCP
+            // Verify connection setup between Device and server in TCP
             await _device.StartDeviceAsync("127.0.0.1", 8080);
-            Assert.IsTrue(_device._tcpClient.Connected, "Device should be connected to the server.");
+            Assert.IsTrue(_device.IsConnected, "Device should be connected to the server.");
         }
 
         [TestMethod]
-        public async Task Test_DataFormat_Success()
+        public async Task Test_2()
         {
-            // Test Case 2: Validate data format being sent
+            // Validate data format being sent
             await _device.StartDeviceAsync("127.0.0.1", 8080);
             string data = _device.GenerateData();
-            StringAssert.Matches(data, new System.Text.RegularExpressions.Regex(@"Data from device [a-f0-9\-]+ at [\d\-\s:]+"));
+            StringAssert.Matches(data, new Regex(@"Data from device [a-f0-9\-]+ at [\d\-\s:]+"));
         }
 
         [TestMethod]
-        public void Test_StateChange_On_Success()
+        public void Test_3()
         {
-            // Test Case 3: Verify the SmartFridge responds to state change to "On"
+            // Verify the device responds to state change to "On"
             _device.UpdateState(Device.State.On);
             Assert.AreEqual(Device.State.On, _device.CurrentState);
         }
 
         [TestMethod]
-        public void Test_StateChange_Off_FunctionalityStopped()
+        public void Test_4()
         {
-            // Test Case 4: Verify if changing the state to "Off" stops functionality
+            // Verify if changing the state to "Off" stops functionality
             _device.UpdateState(Device.State.Off);
             Assert.AreEqual(Device.State.Off, _device.CurrentState);
-
-            // Verify the device stops functionality (e.g., TCP disconnection)
-            Assert.IsFalse(_device._tcpClient.Connected, "Device functionality should stop when turned off.");
+            Assert.IsFalse(_device.IsConnected, "Device functionality should stop when turned off.");
         }
 
         [TestMethod]
-        public void Test_Logging_ErrorFormat_Failure()
+        public void Test_5()
         {
-            // Test Case 5: Check logging format for error events
+            // Check logging format for error events
             string logFilePath = "log.txt";
             if (File.Exists(logFilePath)) File.Delete(logFilePath);
-
             Logger.Log("Test error message", Logger.LogType.Error);
             string lastLog = File.ReadLines(logFilePath).Last();
             StringAssert.Contains(lastLog, "Error");
-            StringAssert.Matches(lastLog, new System.Text.RegularExpressions.Regex(@"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}, Error, Test error message"));
+            StringAssert.Matches(lastLog, new Regex(@"\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}, Error, Test error message"));
         }
 
         [TestMethod]
-        public void Test_Functionality_InDifferentStates()
+        public void Test_6()
         {
-            // Test Case 6: Verify SmartFridge functionality in different states
+            // Verify device functionality in different states
             _device.UpdateState(Device.State.On);
             Assert.AreEqual(Device.State.On, _device.CurrentState);
-
             _device.UpdateState(Device.State.Charging);
             Assert.AreEqual(Device.State.Charging, _device.CurrentState);
-
             _device.UpdateState(Device.State.Off);
             Assert.AreEqual(Device.State.Off, _device.CurrentState);
         }
 
         [TestMethod]
-        public void Test_StateChange_AndLogging()
+        public void Test_7()
         {
-            // Test Case 7: Validate if state changes and functionality are logged correctly
+            // Validate if state changes and functionality are logged correctly
             string logFilePath = "log.txt";
             if (File.Exists(logFilePath)) File.Delete(logFilePath);
-
             _device.UpdateState(Device.State.On);
             _device.PrintCurrentState();
-
             string lastLog = File.ReadLines(logFilePath).Last();
             StringAssert.Contains(lastLog, "Current state: On");
+        }
+
+        // Additional unit tests (8-15)
+        [TestMethod]
+        public void Test_8()
+        {
+            _device.UpdateState(Device.State.Charging);
+            Assert.AreEqual(Device.State.Charging, _device.CurrentState);
+        }
+
+        [TestMethod]
+        public void Test_9()
+        {
+            string data = _device.GenerateData();
+            Assert.IsTrue(data.Contains("Data from device"));
+        }
+
+        [TestMethod]
+        public void Test_10()
+        {
+            _device.UpdateState(Device.State.Off);
+            Assert.AreEqual(Device.State.Off, _device.CurrentState);
+            _device.UpdateState(Device.State.On);
+            Assert.AreEqual(Device.State.On, _device.CurrentState);
+        }
+
+        [TestMethod]
+        public void Test_11()
+        {
+            Assert.IsFalse(_device.IsConnected, "Device should not be connected initially.");
+        }
+
+        [TestMethod]
+        public void Test_12()
+        {
+            Assert.AreEqual("Initial Data", _device.GenerateData());
+        }
+
+        [TestMethod]
+        public void Test_13()
+        {
+            _device.UpdateState(Device.State.Charging);
+            Assert.IsTrue(_device.IsCharging, "Device should be charging.");
+        }
+
+        [TestMethod]
+        public void Test_14()
+        {
+            string logFilePath = "log.txt";
+            Logger.Log("Test info message", Logger.LogType.Info);
+            string lastLog = File.ReadLines(logFilePath).Last();
+            StringAssert.Contains(lastLog, "Info");
+        }
+
+        [TestMethod]
+        public void Test_15()
+        {
+            string logFilePath = "log.txt";
+            Logger.Log("Test warning message", Logger.LogType.Warning);
+            string lastLog = File.ReadLines(logFilePath).Last();
+            StringAssert.Contains(lastLog, "Warning");
+        }
+    }
+
+    [TestClass]
+    public class SmartDehumidifierUnitTests
+    {
+        private SmartDehumidifier _smartDehumidifier;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            _smartDehumidifier = new SmartDehumidifier();
+        }
+
+        [TestMethod]
+        public void Test_16()
+        {
+            // Test Clamp with valid input
+            int result = SmartDehumidifier.Clamp(50, 0, 100);
+            Assert.AreEqual(50, result, "Clamp should return the input value if it's within range.");
+        }
+
+        [TestMethod]
+        public void Test_17()
+        {
+            // Test Clamp with out-of-range input
+            int resultLow = SmartDehumidifier.Clamp(-10, 0, 100);
+            Assert.AreEqual(0, resultLow, "Clamp should return the minimum value if input is below range.");
+
+            int resultHigh = SmartDehumidifier.Clamp(110, 0, 100);
+            Assert.AreEqual(100, resultHigh, "Clamp should return the maximum value if input is above range.");
+        }
+
+        [TestMethod]
+        public void Test_18()
+        {
+            // Test UI update with initial state
+            Assert.IsFalse(_smartDehumidifier.IsPowerOn, "Initial power state should be OFF.");
+            Assert.AreEqual("OFF", _smartDehumidifier.statusTextBox.Text, "UI should reflect the initial OFF state.");
+        }
+
+        [TestMethod]
+        public void Test_19()
+        {
+            // Test that power button click toggles the power state
+            _smartDehumidifier.powerButton.PerformClick();
+            Assert.IsTrue(_smartDehumidifier.IsPowerOn, "Power state should be ON after clicking the power button.");
+        }
+
+        [TestMethod]
+        public void Test_20()
+        {
+            // Test that UI updates when turning power ON
+            _smartDehumidifier.powerButton.PerformClick();
+            Assert.AreEqual("ON", _smartDehumidifier.statusTextBox.Text, "UI should show 'ON' when power is ON.");
+        }
+
+        [TestMethod]
+        public void Test_21()
+        {
+            // Test that UI updates when turning power OFF
+            _smartDehumidifier.powerButton.PerformClick();
+            _smartDehumidifier.powerButton.PerformClick();
+            Assert.AreEqual("OFF", _smartDehumidifier.statusTextBox.Text, "UI should show 'OFF' when power is OFF.");
+        }
+
+        [TestMethod]
+        public void Test_22()
+        {
+            // Test that dehumidifier status text updates on state change
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.On);
+            Assert.AreEqual("Dehumidifier is ON", _smartDehumidifier.statusTextBox.Text, "UI should reflect 'Dehumidifier is ON'.");
+        }
+
+        [TestMethod]
+        public void Test_23()
+        {
+            // Test state transition from ON to OFF
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.Off);
+            Assert.AreEqual(SmartDehumidifier.State.Off, _smartDehumidifier.CurrentState, "Dehumidifier state should be OFF.");
+        }
+    }
+
+    [TestClass]
+    public class SmartThermostatUnitTests
+    {
+        private SmartThermostat _smartThermostat;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            _smartThermostat = new SmartThermostat();
+        }
+
+        [TestMethod]
+        public void Test_24()
+        {
+            // Test initial power state
+            Assert.IsFalse(_smartThermostat.isPowerOn, "Initial power state should be OFF.");
+        }
+
+        [TestMethod]
+        public void Test_25()
+        {
+            // Test power toggle functionality
+            _smartThermostat.powerButton.PerformClick();
+            Assert.IsTrue(_smartThermostat.isPowerOn, "Power state should be ON after toggling.");
+            _smartThermostat.powerButton.PerformClick();
+            Assert.IsFalse(_smartThermostat.isPowerOn, "Power state should be OFF after toggling again.");
+        }
+
+        [TestMethod]
+        public void Test_26()
+        {
+            // Test temperature increase
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            int initialTemp = _smartThermostat.currentTemperature;
+            _smartThermostat.tempUpButton.PerformClick();
+            Assert.AreEqual(initialTemp + 1, _smartThermostat.currentTemperature, "Temperature should increase by 1.");
+        }
+
+        [TestMethod]
+        public void Test_27()
+        {
+            // Test temperature decrease
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            int initialTemp = _smartThermostat.currentTemperature;
+            _smartThermostat.tempDownButton.PerformClick();
+            Assert.AreEqual(initialTemp - 1, _smartThermostat.currentTemperature, "Temperature should decrease by 1.");
+        }
+
+        [TestMethod]
+        public void Test_28()
+        {
+            // Test UI updates when temperature increases
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            _smartThermostat.tempUpButton.PerformClick();
+            Assert.AreEqual((_smartThermostat.currentTemperature + 1).ToString(), _smartThermostat.tempDisplayLabel.Text, "UI should update with the new temperature.");
+        }
+
+        [TestMethod]
+        public void Test_29()
+        {
+            // Test UI updates when temperature decreases
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            _smartThermostat.tempDownButton.PerformClick();
+            Assert.AreEqual((_smartThermostat.currentTemperature - 1).ToString(), _smartThermostat.tempDisplayLabel.Text, "UI should update with the new temperature.");
+        }
+
+        [TestMethod]
+        public void Test_30()
+        {
+            // Test maximum temperature limit
+            _smartThermostat.UpdateTemperature(30); // Set to max
+            _smartThermostat.tempUpButton.PerformClick(); // Try to increase
+            Assert.AreEqual(30, _smartThermostat.currentTemperature, "Temperature should be capped at 30.");
+        }
+
+        [TestMethod]
+        public void Test_31()
+        {
+            // Test minimum temperature limit
+            _smartThermostat.UpdateTemperature(10); // Set to min
+            _smartThermostat.tempDownButton.PerformClick(); // Try to decrease
+            Assert.AreEqual(10, _smartThermostat.currentTemperature, "Temperature should be capped at 10.");
+        }
+    }
+
+    [TestClass]
+    public class IntegrationTests
+    {
+        private SmartThermostat _smartThermostat;
+        private SmartDehumidifier _smartDehumidifier;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            _smartThermostat = new SmartThermostat();
+            _smartDehumidifier = new SmartDehumidifier();
+        }
+
+        [TestMethod]
+        public void Test_32()
+        {
+            // Integration test for both devices being powered on
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.On); // Turn ON
+            Assert.IsTrue(_smartThermostat.isPowerOn && _smartDehumidifier.CurrentState == SmartDehumidifier.State.On, "Both devices should be ON together.");
+        }
+
+        [TestMethod]
+        public void Test_33()
+        {
+            // Test UI updates when turning ON both devices (integration test)
+            _smartThermostat.powerButton.PerformClick(); // Turn ON
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.On); // Turn ON
+            Assert.AreEqual("ON", _smartThermostat.statusTextBox.Text, "Thermostat UI should reflect ON state.");
+            Assert.AreEqual("ON", _smartDehumidifier.statusTextBox.Text, "Dehumidifier UI should reflect ON state.");
+        }
+
+        // Additional integration tests
+        [TestMethod]
+        public void Test_34()
+        {
+            // Implement additional tests
         }
     }
 }

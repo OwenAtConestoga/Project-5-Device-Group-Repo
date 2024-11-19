@@ -27,7 +27,6 @@ namespace CommandData2
         // Enum to represent device states
         public enum State
         {
-            Charging,
             On,
             Off
         }
