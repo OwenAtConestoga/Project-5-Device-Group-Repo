@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using ProjectV;
+using System.IO;
+using System.Text;
 
 namespace DeviceTests
 {
@@ -167,8 +169,11 @@ namespace DeviceTests
             Assert.IsTrue(fileExists, $"The log file should exist at the specified path: {logFilePath}");
         }
 
-
         
+
+
+
+
 
 
     }
