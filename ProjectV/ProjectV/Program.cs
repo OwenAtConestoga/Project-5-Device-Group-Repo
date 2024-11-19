@@ -88,13 +88,18 @@ namespace ProjectV
             Console.WriteLine("\n=== Tracker Hub Devices ===");
             trackerHub.ListDevices();
 
-            Console.WriteLine("\n=== Deactivation Of Devices ===");
+            Console.WriteLine("\n==========================================================================");
 
             // Instantiate Receiver
             var receiver = new Receiver(trackerHub, logger);
 
+            // show how we can turn on and off trackers, as well as display their state to the console 
+            //!!!!!!!!!!!!!!!!!!!!!! these functions should be performed inside the tracker hub class and not receiver !!!!!!!!!
+            receiver.TurnOnTracker(16);
+            receiver.CheckTrackerState(16);  
+
             receiver.TurnOffTracker(16);
-            receiver.CheckTrackerState(16);  // This will print if the tracker is ON or OFF
+            receiver.CheckTrackerState(16);  
             Console.WriteLine();
 
 
@@ -103,11 +108,22 @@ namespace ProjectV
 
             Console.WriteLine(); 
 
+            // remove the pet collar from the list of connected devices 
             trackerHub.RemoveDevice("Pet Collar Tracker");
             Console.WriteLine();
 
             trackerHub.ListDevices();
 
+            Console.WriteLine();
+
+            // show example of how we can receive a message from the home and parse it to turn on / off devices 
+            // using their device ID and name 
+            // HUBID, DEVICEID, DEVICENAME, TURN ON/OFF where 1 = ON and 0 = OFF 
+            string incomingMessage = "4, 15, Vehicle GPS Tracker, 1";
+            receiver.ParseIncomingMessage(incomingMessage);
+
+            incomingMessage = "4, 15, Vehicle GPS Tracker, 0";
+            receiver.ParseIncomingMessage(incomingMessage);
 
 
             // this line ensures that the console stays open

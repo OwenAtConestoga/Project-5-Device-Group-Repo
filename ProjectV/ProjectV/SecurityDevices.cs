@@ -164,12 +164,14 @@ internal class Tracker : SecurityDevice
     public void activateTracker()
     {
         isActivated = true;
+        isOn = true; 
         Logger?.LogOperation(deviceName, "Tracker activated");
     }
 
     public void deactivateTracker()
     {
         isActivated = false;
+        isOn = false;
         Logger?.LogOperation(deviceName, "Tracker deactivated");
     }
 }
