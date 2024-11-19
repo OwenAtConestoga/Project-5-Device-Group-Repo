@@ -58,6 +58,7 @@ namespace CommandData2
 
         private void UpdateTemperatureLabels()
         {
+            // Adjust numeric labels in the WPF UI
             fridgeTempLabel.Text = fridgeTemperature + "°";
             freezerTempLabel.Text = freezerTemperature + "°";
             Logger.Log("Fridge UI Updated", Logger.LogType.Info);
@@ -79,6 +80,7 @@ namespace CommandData2
         {
             UpdateState(State.On);
 
+            //Connect to Home layer and wait for TCP to connect
             await ConnectTcpAsync(serverIp, port);
 
             Task.Run(() => RunDevice());
@@ -93,7 +95,7 @@ namespace CommandData2
 
         private async Task ConnectTcpAsync(string serverIp, int port)
         {
-            try
+            try // Attempt the connection
             {
                 await _tcpClient.ConnectAsync(serverIp, port);
                 Logger.Log($"SmartFridge connected to home", Logger.LogType.Info);
@@ -116,6 +118,7 @@ namespace CommandData2
 
         public string GenerateDeviceData()
         {
+            // Generate string to send to Home layer
             int isOn = CurrentState == State.On ? 1 : 0;
             return $"0, 0, SmartFridge, {isOn}, {fridgeTemperature}, {freezerTemperature}";
         }
@@ -126,6 +129,7 @@ namespace CommandData2
             {
                 try
                 {
+                    // Send the generated data
                     var stream = _tcpClient.GetStream();
                     var encodedData = Encoding.UTF8.GetBytes(data);
 
@@ -148,6 +152,7 @@ namespace CommandData2
             {
                 try
                 {
+                    //Receive data from Home layer, and send it to the data handler to update variables
                     int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
 
                     if (bytesRead == 0)
@@ -170,6 +175,7 @@ namespace CommandData2
         private void HandleReceivedData(string data)
         {
             // Logic to parse and handle commands from the received data
+            //Uunfinished
             Logger.Log($"Processing received data: {data}", Logger.LogType.Info);
         }
 
@@ -179,6 +185,7 @@ namespace CommandData2
             {
                 try
                 {
+                    // Extra command for customizing data communication
                     var stream = _tcpClient.GetStream();
                     var encodedData = Encoding.UTF8.GetBytes(message);
 

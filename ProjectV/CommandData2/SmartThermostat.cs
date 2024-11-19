@@ -31,7 +31,6 @@ namespace CommandData2
 
         public enum State
         {
-            Charging,
             On,
             Off
         }
