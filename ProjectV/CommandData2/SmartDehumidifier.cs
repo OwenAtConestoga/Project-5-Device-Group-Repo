@@ -43,6 +43,14 @@ namespace CommandData2
             Logger.Log($"Dehumidifier state updated to {newState}", Logger.LogType.Info);
         }
 
+        private void UpdateDehumidifierLabels()
+        {
+            // Adjust numeric labels in the WPF UI
+            humidityLabel.Text = humidityLevel + "°";
+            int clampedWaterLevel = Math.Max(progressBar1.Minimum, Math.Min(progressBar1.Maximum, waterLevel));
+            progressBar1.Value = clampedWaterLevel;
+        }
+
         public async Task StartDeviceAsync(string serverIp, int port)
         {
             UpdateState(State.On);
@@ -136,8 +144,43 @@ namespace CommandData2
 
         private void HandleReceivedData(string data)
         {
-            // Parse and handle the received data
-            Logger.Log($"Processing received data: {data}", Logger.LogType.Info);
+            try
+            {
+                // Split the received data into parts
+                var segments = data.Split(',');
+
+                // Validate the data format
+                if (segments.Length < 6)
+                {
+                    Logger.Log("Invalid data received: insufficient parts", Logger.LogType.Error);
+                    return;
+                }
+
+                // Extract the relevant fields (isOn, waterLvl, humidityLvl)
+                if (int.TryParse(segments[3].Trim(), out var isOn) &&
+                    int.TryParse(segments[4].Trim(), out var waterLvl) &&
+                    int.TryParse(segments[5].Trim(), out var humidityLvl))
+                {
+                    // Update the state of the device
+                    var newState = isOn == 1 ? State.On : State.Off;
+                    UpdateState(newState);
+
+                    // Update the fields
+                    waterLevel = waterLvl;
+                    humidityLevel = humidityLvl;
+                    UpdateDehumidifierLabels();
+
+                    Logger.Log($"Updated Dehumidifier state: {newState}, Water Level: {waterLvl}°, Humidity: {humidityLvl}°", Logger.LogType.Info);
+                }
+                else
+                {
+                    Logger.Log("Invalid data format for state or temperature values", Logger.LogType.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error processing received data: {ex.Message}", Logger.LogType.Error);
+            }
         }
 
         public async Task SendCustomMessageAsync(string message)

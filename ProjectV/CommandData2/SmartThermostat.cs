@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CommandData2
 {
@@ -59,6 +60,11 @@ namespace CommandData2
         {
             CurrentState = newState;
             isPowerOn = CurrentState == State.On;
+        }
+
+        private void UpdateThermostatLabels()
+        {
+            temperatureLabel.Text = currentTemperature + "°";
         }
 
         public async Task StartDeviceAsync(string serverIp, int port)
@@ -154,8 +160,41 @@ namespace CommandData2
 
         private void HandleReceivedData(string data)
         {
-            // Parse and act on received data
-            Logger.Log($"Received data: {data}", Logger.LogType.Info);
+            try
+            {
+                // Split the received data into parts
+                var segments = data.Split(',');
+
+                // Validate the data format
+                if (segments.Length < 5)
+                {
+                    Logger.Log("Invalid data received: insufficient parts", Logger.LogType.Error);
+                    return;
+                }
+
+                // Extract the relevant fields (isOn, waterLvl)
+                if (int.TryParse(segments[3].Trim(), out var isOn) &&
+                    int.TryParse(segments[4].Trim(), out var temp))
+                {
+                    // Update the state of the device
+                    var newState = isOn == 1 ? State.On : State.Off;
+                    UpdateState(newState);
+
+                    // Update the temperature
+                    currentTemperature = temp;
+                    UpdateThermostatLabels();
+
+                    Logger.Log($"Updated Dehumidifier state: {newState}, Water Level: {temp}°, Humidity: {currentTemperature}°", Logger.LogType.Info);
+                }
+                else
+                {
+                    Logger.Log("Invalid data format for state or temperature values", Logger.LogType.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error processing received data: {ex.Message}", Logger.LogType.Error);
+            }
         }
 
         public async Task SendCustomMessageAsync(string message)

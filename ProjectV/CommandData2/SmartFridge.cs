@@ -61,7 +61,6 @@ namespace CommandData2
             // Adjust numeric labels in the WPF UI
             fridgeTempLabel.Text = fridgeTemperature + "°";
             freezerTempLabel.Text = freezerTemperature + "°";
-            Logger.Log("Fridge UI Updated", Logger.LogType.Info);
         }
 
         // Methods for device state management
@@ -174,9 +173,43 @@ namespace CommandData2
 
         private void HandleReceivedData(string data)
         {
-            // Logic to parse and handle commands from the received data
-            //Uunfinished
-            Logger.Log($"Processing received data: {data}", Logger.LogType.Info);
+            try
+            {
+                // Split the received data into parts
+                var segments = data.Split(',');
+
+                // Validate the data format
+                if (segments.Length < 6)
+                {
+                    Logger.Log("Invalid data received: insufficient parts", Logger.LogType.Error);
+                    return;
+                }
+
+                // Extract the relevant fields (isOn, fridgeTemp, freezerTemp)
+                if (int.TryParse(segments[3].Trim(), out var isOn) &&
+                    int.TryParse(segments[4].Trim(), out var fridgeTemp) &&
+                    int.TryParse(segments[5].Trim(), out var freezerTemp))
+                {
+                    // Update the state of the fridge
+                    var newState = isOn == 1 ? State.On : State.Off;
+                    UpdateState(newState);
+
+                    // Update the temperatures
+                    fridgeTemperature = fridgeTemp;
+                    freezerTemperature = freezerTemp;
+                    UpdateTemperatureLabels();
+
+                    Logger.Log($"Updated Fridge state: {newState}, Fridge Temp: {fridgeTemperature}°, Freezer Temp: {freezerTemperature}°", Logger.LogType.Info);
+                }
+                else
+                {
+                    Logger.Log("Invalid data format for state or temperature values", Logger.LogType.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log($"Error processing received data: {ex.Message}", Logger.LogType.Error);
+            }
         }
 
         public async Task SendCustomMessageAsync(string message)
