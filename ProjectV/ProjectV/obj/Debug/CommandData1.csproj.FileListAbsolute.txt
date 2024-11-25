@@ -1,0 +1,22 @@
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.AssemblyReference.cache
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\ProjectV.exe.config
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\ProjectV.exe
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\ProjectV.pdb
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\Newtonsoft.Json.dll
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.CopyComplete
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\ProjectV.exe
+C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\obj\Debug\ProjectV.pdb
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.AssemblyReference.cache
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\ProjectV.exe
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\ProjectV.pdb
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\bin\Debug\ProjectV.exe.config
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\bin\Debug\ProjectV.exe
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\bin\Debug\ProjectV.pdb
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\bin\Debug\Newtonsoft.Json.dll
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\ProjectV\obj\Debug\CommandData1.csproj.CopyComplete
