@@ -59,6 +59,7 @@ namespace CommandData2
 
             Task.Run(() => RunDevice());
             Task.Run(() => ReceiveDataAsync());
+            Console.WriteLine("Dehumidifier Connected");
         }
 
         public void StopDevice()
@@ -96,7 +97,7 @@ namespace CommandData2
             return $"0, 0, SmartDehumidifier, {isOn}, {humidityLevel}, {waterLevel}";
         }
 
-        private async Task SendDataAsync(string data)
+        public async Task SendDataAsync(string data)
         {
             if (_tcpClient.Connected)
             {
@@ -142,7 +143,7 @@ namespace CommandData2
             }
         }
 
-        private void HandleReceivedData(string data)
+        public void HandleReceivedData(string data)
         {
             try
             {
@@ -183,7 +184,7 @@ namespace CommandData2
             }
         }
 
-        public async Task SendCustomMessageAsync(string message)
+        /*public async Task SendCustomMessageAsync(string message)
         {
             if (_tcpClient.Connected)
             {
@@ -204,6 +205,6 @@ namespace CommandData2
             {
                 Logger.Log("TCP client not connected. Unable to send message.", Logger.LogType.Error);
             }
-        }
+        }*/
     }
 }

@@ -11,9 +11,9 @@ namespace CommandData2
     {
         private int fridgeTemperature = 4;
         private int freezerTemperature = -2;
-        private TcpClient _tcpClient;
+        public TcpClient _tcpClient;
         private Guid DeviceId;
-        private State CurrentState;
+        public State CurrentState;
 
         public SmartFridge()
         {
@@ -67,11 +67,6 @@ namespace CommandData2
         public void UpdateState(State newState)
         {
             CurrentState = newState;
-            PrintCurrentState();
-        }
-
-        public void PrintCurrentState()
-        {
             Console.WriteLine($"Current state: {CurrentState}\nDevice ID: {DeviceId}");
         }
 
@@ -84,6 +79,7 @@ namespace CommandData2
 
             Task.Run(() => RunDevice());
             Task.Run(() => ReceiveDataAsync());
+            Console.WriteLine("Fridge Connected");
         }
 
         public void StopDevice()
@@ -122,7 +118,7 @@ namespace CommandData2
             return $"0, 0, SmartFridge, {isOn}, {fridgeTemperature}, {freezerTemperature}";
         }
 
-        private async Task SendDataAsync(string data)
+        public async Task SendDataAsync(string data)
         {
             if (_tcpClient.Connected)
             {
@@ -171,7 +167,7 @@ namespace CommandData2
             }
         }
 
-        private void HandleReceivedData(string data)
+       public void HandleReceivedData(string data)
         {
             try
             {
@@ -212,7 +208,7 @@ namespace CommandData2
             }
         }
 
-        public async Task SendCustomMessageAsync(string message)
+        /*public async Task SendCustomMessageAsync(string message)
         {
             if (_tcpClient.Connected)
             {
@@ -234,6 +230,6 @@ namespace CommandData2
             {
                 Logger.Log("TCP client not connected. Unable to send message.", Logger.LogType.Error);
             }
-        }
+        }*/
     }
 }
