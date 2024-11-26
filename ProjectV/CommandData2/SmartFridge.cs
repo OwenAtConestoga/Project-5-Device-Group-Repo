@@ -11,14 +11,14 @@ namespace CommandData2
     {
         private int fridgeTemperature = 4;
         private int freezerTemperature = -2;
-        public TcpClient _tcpClient;
+        private readonly SharedTcpManager _tcpManager;
         private Guid DeviceId;
         public State CurrentState;
 
-        public SmartFridge()
+        public SmartFridge(SharedTcpManager tcpManager)
         {
             InitializeComponent();
-            _tcpClient = new TcpClient();
+            _tcpManager = tcpManager;
             DeviceId = Guid.NewGuid();
             CurrentState = State.Off; // Initialize to Off
             UpdateTemperatureLabels();
@@ -63,173 +63,33 @@ namespace CommandData2
             freezerTempLabel.Text = freezerTemperature + "°";
         }
 
-        // Methods for device state management
-        public void UpdateState(State newState)
+        public async Task SendDeviceDataAsync()
         {
-            CurrentState = newState;
-            Console.WriteLine($"Current state: {CurrentState}\nDevice ID: {DeviceId}");
+            string data = $"0, 0, SmartFridge, 1, {fridgeTemperature}, {freezerTemperature}";
+            await _tcpManager.SendAsync(data);
         }
 
-        public async Task StartDeviceAsync(string serverIp, int port)
+        public async Task HandleReceivedDataAsync()
         {
-            UpdateState(State.On);
-
-            //Connect to Home layer and wait for TCP to connect
-            await ConnectTcpAsync(serverIp, port);
-
-            Task.Run(() => RunDevice());
-            Task.Run(() => ReceiveDataAsync());
-            Console.WriteLine("Fridge Connected");
-        }
-
-        public void StopDevice()
-        {
-            UpdateState(State.Off);
-            _tcpClient.Close();
-        }
-
-        private async Task ConnectTcpAsync(string serverIp, int port)
-        {
-            try // Attempt the connection
+            string data = await _tcpManager.ReceiveAsync();
+            if (data != null)
             {
-                await _tcpClient.ConnectAsync(serverIp, port);
-                Logger.Log($"SmartFridge connected to home", Logger.LogType.Info);
-            }
-            catch (Exception e)
-            {
-                Logger.Log($"Exception occurred: {e.Message}", Logger.LogType.Error);
-            }
-        }
-
-        private void RunDevice()
-        {
-            while (CurrentState != State.Off)
-            {
-                var data = GenerateDeviceData();
-                SendDataAsync(data).Wait();
-                Task.Delay(1000).Wait();
-            }
-        }
-
-        public string GenerateDeviceData()
-        {
-            // Generate string to send to Home layer
-            int isOn = CurrentState == State.On ? 1 : 0;
-            return $"0, 0, SmartFridge, {isOn}, {fridgeTemperature}, {freezerTemperature}";
-        }
-
-        public async Task SendDataAsync(string data)
-        {
-            if (_tcpClient.Connected)
-            {
-                try
-                {
-                    // Send the generated data
-                    var stream = _tcpClient.GetStream();
-                    var encodedData = Encoding.UTF8.GetBytes(data);
-
-                    await stream.WriteAsync(encodedData, 0, encodedData.Length);
-                    Logger.Log($"Sent Data: {data}", Logger.LogType.Info);
-                }
-                catch (Exception e)
-                {
-                    Logger.Log($"Exception occurred: {e.Message}", Logger.LogType.Error);
-                }
-            }
-        }
-
-        private async Task ReceiveDataAsync()
-        {
-            var buffer = new byte[1024];
-            var stream = _tcpClient.GetStream();
-
-            while (_tcpClient.Connected && CurrentState != State.Off)
-            {
-                try
-                {
-                    //Receive data from Home layer, and send it to the data handler to update variables
-                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
-
-                    if (bytesRead == 0)
-                    {
-                        Console.WriteLine("Server disconnected.");
-                        break;
-                    }
-
-                    var receivedData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                    Logger.Log($"Received data: {receivedData}", Logger.LogType.Info);
-                    HandleReceivedData(receivedData);
-                }
-                catch (Exception e)
-                {
-                    Logger.Log($"Exception occurred: {e.Message}", Logger.LogType.Error);
-                }
-            }
-        }
-
-       public void HandleReceivedData(string data)
-        {
-            try
-            {
-                // Split the received data into parts
                 var segments = data.Split(',');
 
-                // Validate the data format
-                if (segments.Length < 6)
-                {
-                    Logger.Log("Invalid data received: insufficient parts", Logger.LogType.Error);
-                    return;
-                }
-
-                // Extract the relevant fields (isOn, fridgeTemp, freezerTemp)
-                if (int.TryParse(segments[3].Trim(), out var isOn) &&
+                if (segments.Length >= 6 &&
                     int.TryParse(segments[4].Trim(), out var fridgeTemp) &&
                     int.TryParse(segments[5].Trim(), out var freezerTemp))
                 {
-                    // Update the state of the fridge
-                    var newState = isOn == 1 ? State.On : State.Off;
-                    UpdateState(newState);
-
-                    // Update the temperatures
                     fridgeTemperature = fridgeTemp;
                     freezerTemperature = freezerTemp;
                     UpdateTemperatureLabels();
-
-                    Logger.Log($"Updated Fridge state: {newState}, Fridge Temp: {fridgeTemperature}°, Freezer Temp: {freezerTemperature}°", Logger.LogType.Info);
+                    Console.WriteLine($"Fridge updated: Fridge Temp {fridgeTemperature}°, Freezer Temp {freezerTemperature}°");
                 }
                 else
                 {
-                    Logger.Log("Invalid data format for state or temperature values", Logger.LogType.Error);
+                    Console.WriteLine("Invalid data received for fridge.");
                 }
-            }
-            catch (Exception ex)
-            {
-                Logger.Log($"Error processing received data: {ex.Message}", Logger.LogType.Error);
             }
         }
-
-        /*public async Task SendCustomMessageAsync(string message)
-        {
-            if (_tcpClient.Connected)
-            {
-                try
-                {
-                    // Extra command for customizing data communication
-                    var stream = _tcpClient.GetStream();
-                    var encodedData = Encoding.UTF8.GetBytes(message);
-
-                    await stream.WriteAsync(encodedData, 0, encodedData.Length);
-                    Logger.Log($"Custom message sent: {message}", Logger.LogType.Info);
-                }
-                catch (Exception e)
-                {
-                    Logger.Log($"Error sending custom message: {e.Message}", Logger.LogType.Error);
-                }
-            }
-            else
-            {
-                Logger.Log("TCP client not connected. Unable to send message.", Logger.LogType.Error);
-            }
-        }*/
     }
 }

@@ -40,7 +40,6 @@ namespace CommandData2
         public void UpdateState(State newState)
         {
             CurrentState = newState;
-            Logger.Log($"Dehumidifier state updated to {newState}", Logger.LogType.Info);
         }
 
         private void UpdateDehumidifierLabels()
@@ -56,7 +55,6 @@ namespace CommandData2
             UpdateState(State.On);
 
             await ConnectTcpAsync(serverIp, port);
-
             Task.Run(() => RunDevice());
             Task.Run(() => ReceiveDataAsync());
             Console.WriteLine("Dehumidifier Connected");
