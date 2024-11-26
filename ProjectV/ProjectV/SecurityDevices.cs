@@ -129,6 +129,8 @@ namespace ProjectV
 
 internal class Alarm : SecurityDevice
 {
+    private AlarmHub alarmHub;
+
     public bool isActivated { get; set; }
 
     public Alarm(int deviceID, string deviceName, SecurityHubLogger logger)
@@ -140,20 +142,75 @@ internal class Alarm : SecurityDevice
     public void activateAlarm()
     {
         isActivated = true;
+        isOn = true;
         Logger?.LogOperation(deviceName, "Alarm activated");
     }
 
     public void deactivateAlarm()
     {
         isActivated = false;
+        isOn = false;
         Logger?.LogOperation(deviceName, "Alarm deactivated");
     }
+
+    // Method to find and deactivate the tracker with a given ID
+    public void TurnOffAlarm(int alarmID)
+    {
+        // Retrieve the tracker by its ID
+        var device = alarmHub.GetDeviceById(alarmID); // Get device by ID
+        if (device != null)
+        {
+            // Check if the device is actually a Tracker and cast it to Tracker
+            if (device is Alarm alarm)
+            {
+                Console.WriteLine($"Deactivating Alarm ID {alarm.deviceID}: {alarm.deviceName}");
+                alarm.deactivateAlarm();  // Deactivate the alarm
+                                              //trackerHub.RemoveDevice(tracker.deviceName);
+            }
+            else
+            {
+                Console.WriteLine($"Device with ID {alarmID} is not a Alarm.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Alarm with ID {alarmID} not found.");
+        }
+    }
+
+    // Method to find and activate the alarm with a given ID
+    public void TurnOnAlarm(int alarmID)
+    {
+        // Retrieve the tracker by its ID
+        var device = alarmHub.GetDeviceById(alarmID); // Get device by ID
+        if (device != null)
+        {
+            // Check if the device is actually a Tracker and cast it to Tracker
+            if (device is Alarm alarm)
+            {
+                Console.WriteLine($"Activating Tracker ID {alarm.deviceID}: {alarm.deviceName}");
+                alarm.activateAlarm();  // activate the tracker
+                                            //trackerHub.RemoveDevice(tracker.deviceName);
+            }
+            else
+            {
+                Console.WriteLine($"Device with ID {alarmID} is not a Alarm.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Alarm with ID {alarmID} not found.");
+        }
+    }
+
 }
 
 internal class Tracker : SecurityDevice
 {
+    private TrackerHub trackerHub;
+
     public bool isActivated { get; set; }
-    public double location { get; set; }
+    // public double location { get; set; }
 
     public Tracker(int deviceID, string deviceName, SecurityHubLogger logger)
         : base(deviceID, deviceName, logger)
@@ -174,5 +231,58 @@ internal class Tracker : SecurityDevice
         isOn = false;
         Logger?.LogOperation(deviceName, "Tracker deactivated");
     }
+
+
+    // Method to find and deactivate the tracker with a given ID
+    public void TurnOffTracker(int trackerId)
+    {
+        // Retrieve the tracker by its ID
+        var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
+        if (device != null)
+        {
+            // Check if the device is actually a Tracker and cast it to Tracker
+            if (device is Tracker tracker)
+            {
+                Console.WriteLine($"Deactivating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
+                tracker.deactivateTracker();  // Deactivate the tracker
+                                              //trackerHub.RemoveDevice(tracker.deviceName);
+            }
+            else
+            {
+                Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Tracker with ID {trackerId} not found.");
+        }
+    }
+
+    // Method to find and activate the tracker with a given ID
+    public void TurnOnTracker(int trackerId)
+    {
+        // Retrieve the tracker by its ID
+        var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
+        if (device != null)
+        {
+            // Check if the device is actually a Tracker and cast it to Tracker
+            if (device is Tracker tracker)
+            {
+                Console.WriteLine($"Activating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
+                tracker.activateTracker();  // activate the tracker
+                                            //trackerHub.RemoveDevice(tracker.deviceName);
+            }
+            else
+            {
+                Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Tracker with ID {trackerId} not found.");
+        }
+    }
+
+
 }
 

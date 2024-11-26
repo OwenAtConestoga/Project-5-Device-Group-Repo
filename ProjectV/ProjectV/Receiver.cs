@@ -4,79 +4,81 @@ namespace ProjectV
 {
     public class Receiver
     {
+        private AlarmHub alarmHub; 
         private TrackerHub trackerHub;
         private SecurityHubLogger logger;
 
         // Constructor to accept the TrackerHub and logger
-        public Receiver(TrackerHub trackerHub, SecurityHubLogger logger)
+        public Receiver(AlarmHub alarmHub, TrackerHub trackerHub, SecurityHubLogger logger)
         {
             this.trackerHub = trackerHub;
+            this.alarmHub = alarmHub;
             this.logger = logger;
         }
 
-        // Method to find and deactivate the tracker with a given ID
-        public void TurnOffTracker(int trackerId)
-        {
-            // Retrieve the tracker by its ID
-            var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
-            if (device != null)
-            {
-                // Check if the device is actually a Tracker and cast it to Tracker
-                if (device is Tracker tracker)
-                {
-                    Console.WriteLine($"Deactivating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
-                    tracker.deactivateTracker();  // Deactivate the tracker
-                    //trackerHub.RemoveDevice(tracker.deviceName);
-                }
-                else
-                {
-                    Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Tracker with ID {trackerId} not found.");
-            }
-        }
+        //// Method to find and deactivate the tracker with a given ID
+        //public void TurnOffTracker(int trackerId)
+        //{
+        //    // Retrieve the tracker by its ID
+        //    var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
+        //    if (device != null)
+        //    {
+        //        // Check if the device is actually a Tracker and cast it to Tracker
+        //        if (device is Tracker tracker)
+        //        {
+        //            Console.WriteLine($"Deactivating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
+        //            tracker.deactivateTracker();  // Deactivate the tracker
+        //            //trackerHub.RemoveDevice(tracker.deviceName);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Tracker with ID {trackerId} not found.");
+        //    }
+        //}
 
-        // Method to find and activate the tracker with a given ID
-        public void TurnOnTracker(int trackerId)
-        {
-            // Retrieve the tracker by its ID
-            var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
-            if (device != null)
-            {
-                // Check if the device is actually a Tracker and cast it to Tracker
-                if (device is Tracker tracker)
-                {
-                    Console.WriteLine($"Activating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
-                    tracker.activateTracker();  // activate the tracker
-                    //trackerHub.RemoveDevice(tracker.deviceName);
-                }
-                else
-                {
-                    Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Tracker with ID {trackerId} not found.");
-            }
-        }
+        //// Method to find and activate the tracker with a given ID
+        //public void TurnOnTracker(int trackerId)
+        //{
+        //    // Retrieve the tracker by its ID
+        //    var device = trackerHub.GetDeviceById(trackerId); // Get device by ID
+        //    if (device != null)
+        //    {
+        //        // Check if the device is actually a Tracker and cast it to Tracker
+        //        if (device is Tracker tracker)
+        //        {
+        //            Console.WriteLine($"Activating Tracker ID {tracker.deviceID}: {tracker.deviceName}");
+        //            tracker.activateTracker();  // activate the tracker
+        //            //trackerHub.RemoveDevice(tracker.deviceName);
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"Device with ID {trackerId} is not a tracker.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Tracker with ID {trackerId} not found.");
+        //    }
+        //}
 
 
-        public void CheckTrackerState(int trackerId)
-        {
-            var tracker = trackerHub.GetDeviceById(trackerId);
-            if (tracker != null)
-            {
-                Console.WriteLine($"Tracker {tracker.deviceName} is currently {(tracker.isOn ? "ON" : "OFF")}.");
-            }
-            else
-            {
-                Console.WriteLine($"Tracker with ID {trackerId} not found.");
-            }
-        }
+        //public void CheckTrackerState(int trackerId)
+        //{
+        //    var tracker = trackerHub.GetDeviceById(trackerId);
+        //    if (tracker != null)
+        //    {
+        //        Console.WriteLine($"Tracker {tracker.deviceName} is currently {(tracker.isOn ? "ON" : "OFF")}.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"Tracker with ID {trackerId} not found.");
+        //    }
+        //}
 
         // parse the incoming message that is to be received from home 
         // will turn on or off specified devices 
@@ -87,7 +89,7 @@ namespace ProjectV
                 // split the incoming message into components
                 var parts = message.Split(','); 
 
-                if (parts.Length != 4) // ensure the message has 4 components
+                if (parts.Length != 5) // ensure the message has 5 components
                 {
                     Console.WriteLine("Invalid message format. Expected format: HubID, DeviceID, DeviceName, IsOn");
                     return;
@@ -98,32 +100,76 @@ namespace ProjectV
                 int deviceId = int.Parse(parts[1].Trim());
                 string deviceName = parts[2].Trim();
                 bool isOn = parts[3].Trim() == "1";
+                bool currentState = parts[4].Trim() == "1";
 
-                // retrieve the device by its ID or name
-                var device = trackerHub.GetDeviceById(deviceId);
+                //
+                //{
+                //    noHub = 0,   
+                //    Lock = 1,     
+                //    Sensor = 2,    
+                //    Camera = 3,     
+                //    Alarm = 4,
+                //    Tracker = 5
+                //}
+
+          
 
                 // if the device exists and is a tracker 
-                if (device != null && device is Tracker tracker)
-                {
-                    if (isOn && !tracker.isOn) // turn on the tracker if its off  
+                if (hubId == 5)
+                 {
+                    // retrieve the device by its ID or name
+                    var device = trackerHub.GetDeviceById(deviceId);
+                    if (device != null && device is Tracker tracker)
                     {
-                        Console.WriteLine($"Turning ON Tracker {tracker.deviceID}: {tracker.deviceName}");
-                        tracker.activateTracker();
+                        if (isOn && !tracker.isOn) // turn on the tracker if its off  
+                        {
+                            Console.WriteLine($"Turning ON Tracker {tracker.deviceID}: {tracker.deviceName}");
+                            tracker.activateTracker();
+                        }
+                        else if (!isOn && tracker.isOn) // turn off the tracker if it's on 
+                        {
+                            Console.WriteLine($"Turning OFF Tracker {tracker.deviceID}: {tracker.deviceName}");
+                            tracker.deactivateTracker();
+                        }
+                        else // print out that it's already on / off 
+                        {
+                            Console.WriteLine($"Tracker {tracker.deviceID}: {tracker.deviceName} is already {(isOn ? "ON" : "OFF")}.");
+                        }
                     }
-                    else if (!isOn && tracker.isOn) // turn off the tracker if it's on 
+                    else
                     {
-                        Console.WriteLine($"Turning OFF Tracker {tracker.deviceID}: {tracker.deviceName}");
-                        tracker.deactivateTracker();
-                    }
-                    else // print out that it's already on / off 
-                    {
-                        Console.WriteLine($"Tracker {tracker.deviceID}: {tracker.deviceName} is already {(isOn ? "ON" : "OFF")}.");
+                        Console.WriteLine($"Device with ID {deviceId} and Name {deviceName} not found or is not a tracker.");
                     }
                 }
-                else
+
+                // if the device exists and is a tracker 
+                else if (hubId == 4)
                 {
-                    Console.WriteLine($"Device with ID {deviceId} and Name {deviceName} not found or is not a tracker.");
+                    // retrieve the device by its ID or name
+                    var device = alarmHub.GetDeviceById(deviceId);
+                    if (device != null && device is Alarm alarm)
+                    {
+                        if (isOn && !alarm.isOn) // turn on the tracker if its off  
+                        {
+                            Console.WriteLine($"Turning ON Tracker {alarm.deviceID}: {alarm.deviceName}");
+                            alarm.activateAlarm();
+                        }
+                        else if (!isOn && alarm.isOn) // turn off the tracker if it's on 
+                        {
+                            Console.WriteLine($"Turning OFF Tracker {alarm.deviceID}: {alarm.deviceName}");
+                            alarm.deactivateAlarm();
+                        }
+                        else // print out that it's already on / off 
+                        {
+                            Console.WriteLine($"Alarm {alarm.deviceID}: {alarm.deviceName} is already {(isOn ? "ON" : "OFF")}.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Device with ID {deviceId} and Name {deviceName} not found or is not a Alarm.");
+                    }
                 }
+
             }
             catch (FormatException) // handle if a user enters a string for the ids instead of int 
             {
