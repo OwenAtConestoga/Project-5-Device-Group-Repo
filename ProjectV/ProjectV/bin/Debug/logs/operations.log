@@ -179,3 +179,1212 @@
 2024-11-26 15:00:10 | Vehicle GPS Tracker | Tracker deactivated
 2024-11-26 15:00:10 | Main Siren | Alarm activated
 2024-11-26 15:00:10 | Main Siren | Alarm deactivated
+2024-12-02 09:48:05 | AlarmHub | AlarmHub initialized
+2024-12-02 09:48:05 | TrackerHub | TrackerHub initialized
+2024-12-02 09:48:05 | Alarm | Hub activated
+2024-12-02 09:48:05 | Main Siren | New security device created: ID 12
+2024-12-02 09:48:05 | Main Siren | Alarm device created
+2024-12-02 09:48:05 | Alarm | Device added: Main Siren
+2024-12-02 09:48:05 | Tracker | Hub activated
+2024-12-02 09:48:05 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 09:48:05 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 09:48:05 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 09:48:05 | Tracker | Listing all devices
+2024-12-02 09:48:05 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 09:48:05 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 09:48:05 | Main Siren | Alarm activated
+2024-12-02 09:48:05 | Main Siren | Alarm deactivated
+2024-12-02 09:58:47 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 09:58:47 | AlarmHub | AlarmHub initialized
+2024-12-02 09:58:47 | TrackerHub | TrackerHub initialized
+2024-12-02 09:58:47 | Lock | Hub activated
+2024-12-02 09:58:47 | Front Door Lock | New security device created: ID 1
+2024-12-02 09:58:47 | Front Door Lock | Lock device created
+2024-12-02 09:58:47 | Lock | Device added: Front Door Lock
+2024-12-02 09:58:47 | Alarm | Hub activated
+2024-12-02 09:58:47 | Main Siren | New security device created: ID 12
+2024-12-02 09:58:47 | Main Siren | Alarm device created
+2024-12-02 09:58:47 | Alarm | Device added: Main Siren
+2024-12-02 09:58:47 | Tracker | Hub activated
+2024-12-02 09:58:47 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 09:58:47 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 09:58:47 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 09:58:47 | Tracker | Listing all devices
+2024-12-02 09:58:47 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 09:58:47 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 09:58:47 | Main Siren | Alarm activated
+2024-12-02 09:58:47 | Main Siren | Alarm deactivated
+2024-12-02 09:58:47 | Front Door Lock | Lock is now locked
+2024-12-02 09:58:47 | Front Door Lock | Lock is now locked
+2024-12-02 09:59:45 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 09:59:45 | AlarmHub | AlarmHub initialized
+2024-12-02 09:59:45 | TrackerHub | TrackerHub initialized
+2024-12-02 09:59:45 | Lock | Hub activated
+2024-12-02 09:59:45 | Front Door Lock | New security device created: ID 1
+2024-12-02 09:59:45 | Front Door Lock | Lock device created
+2024-12-02 09:59:45 | Lock | Device added: Front Door Lock
+2024-12-02 09:59:45 | Alarm | Hub activated
+2024-12-02 09:59:45 | Main Siren | New security device created: ID 12
+2024-12-02 09:59:45 | Main Siren | Alarm device created
+2024-12-02 09:59:45 | Alarm | Device added: Main Siren
+2024-12-02 09:59:45 | Tracker | Hub activated
+2024-12-02 09:59:45 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 09:59:45 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 09:59:45 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 09:59:45 | Tracker | Listing all devices
+2024-12-02 09:59:45 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 09:59:45 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 09:59:45 | Main Siren | Alarm activated
+2024-12-02 09:59:45 | Main Siren | Alarm deactivated
+2024-12-02 09:59:45 | Front Door Lock | Lock is now locked
+2024-12-02 09:59:45 | Front Door Lock | Lock is now locked
+2024-12-02 10:00:43 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:00:43 | AlarmHub | AlarmHub initialized
+2024-12-02 10:00:43 | TrackerHub | TrackerHub initialized
+2024-12-02 10:00:43 | Lock | Hub activated
+2024-12-02 10:00:43 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:00:43 | Front Door Lock | Lock device created
+2024-12-02 10:00:43 | Lock | Device added: Front Door Lock
+2024-12-02 10:00:43 | Alarm | Hub activated
+2024-12-02 10:00:43 | Main Siren | New security device created: ID 12
+2024-12-02 10:00:43 | Main Siren | Alarm device created
+2024-12-02 10:00:43 | Alarm | Device added: Main Siren
+2024-12-02 10:00:43 | Tracker | Hub activated
+2024-12-02 10:00:43 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:00:43 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:00:43 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:00:43 | Tracker | Listing all devices
+2024-12-02 10:00:43 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:00:43 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:00:43 | Main Siren | Alarm activated
+2024-12-02 10:00:43 | Main Siren | Alarm deactivated
+2024-12-02 10:02:32 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:02:32 | AlarmHub | AlarmHub initialized
+2024-12-02 10:02:32 | TrackerHub | TrackerHub initialized
+2024-12-02 10:02:32 | Lock | Hub activated
+2024-12-02 10:02:32 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:02:32 | Front Door Lock | Lock device created
+2024-12-02 10:02:32 | Lock | Device added: Front Door Lock
+2024-12-02 10:02:32 | Alarm | Hub activated
+2024-12-02 10:02:32 | Main Siren | New security device created: ID 12
+2024-12-02 10:02:32 | Main Siren | Alarm device created
+2024-12-02 10:02:32 | Alarm | Device added: Main Siren
+2024-12-02 10:02:32 | Tracker | Hub activated
+2024-12-02 10:02:32 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:02:32 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:02:32 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:02:32 | Tracker | Listing all devices
+2024-12-02 10:02:32 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:02:32 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:02:32 | Main Siren | Alarm activated
+2024-12-02 10:02:32 | Main Siren | Alarm deactivated
+2024-12-02 10:02:32 | Front Door Lock | Lock is now locked
+2024-12-02 10:02:43 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:02:43 | AlarmHub | AlarmHub initialized
+2024-12-02 10:02:43 | TrackerHub | TrackerHub initialized
+2024-12-02 10:02:43 | Lock | Hub activated
+2024-12-02 10:02:43 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:02:43 | Front Door Lock | Lock device created
+2024-12-02 10:02:43 | Lock | Device added: Front Door Lock
+2024-12-02 10:02:43 | Alarm | Hub activated
+2024-12-02 10:02:43 | Main Siren | New security device created: ID 12
+2024-12-02 10:02:43 | Main Siren | Alarm device created
+2024-12-02 10:02:43 | Alarm | Device added: Main Siren
+2024-12-02 10:02:43 | Tracker | Hub activated
+2024-12-02 10:02:43 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:02:43 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:02:43 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:02:43 | Tracker | Listing all devices
+2024-12-02 10:02:43 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:02:43 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:02:43 | Main Siren | Alarm activated
+2024-12-02 10:02:43 | Main Siren | Alarm deactivated
+2024-12-02 10:02:43 | Front Door Lock | Lock is now locked
+2024-12-02 10:02:43 | Front Door Lock | Lock is now locked
+2024-12-02 10:04:04 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:04:04 | AlarmHub | AlarmHub initialized
+2024-12-02 10:04:04 | TrackerHub | TrackerHub initialized
+2024-12-02 10:04:04 | Lock | Hub activated
+2024-12-02 10:04:04 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:04:04 | Front Door Lock | Lock device created
+2024-12-02 10:04:04 | Lock | Device added: Front Door Lock
+2024-12-02 10:04:04 | Alarm | Hub activated
+2024-12-02 10:04:04 | Main Siren | New security device created: ID 12
+2024-12-02 10:04:04 | Main Siren | Alarm device created
+2024-12-02 10:04:04 | Alarm | Device added: Main Siren
+2024-12-02 10:04:04 | Tracker | Hub activated
+2024-12-02 10:04:04 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:04:04 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:04:04 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:04:04 | Tracker | Listing all devices
+2024-12-02 10:04:04 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:04:04 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:04:04 | Main Siren | Alarm activated
+2024-12-02 10:04:04 | Main Siren | Alarm deactivated
+2024-12-02 10:04:04 | Front Door Lock | Lock is now locked
+2024-12-02 10:04:04 | Front Door Lock | Lock is now locked
+2024-12-02 10:04:32 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:04:32 | AlarmHub | AlarmHub initialized
+2024-12-02 10:04:32 | TrackerHub | TrackerHub initialized
+2024-12-02 10:04:32 | Lock | Hub activated
+2024-12-02 10:04:32 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:04:32 | Front Door Lock | Lock device created
+2024-12-02 10:04:32 | Lock | Device added: Front Door Lock
+2024-12-02 10:04:32 | Alarm | Hub activated
+2024-12-02 10:04:32 | Main Siren | New security device created: ID 12
+2024-12-02 10:04:32 | Main Siren | Alarm device created
+2024-12-02 10:04:32 | Alarm | Device added: Main Siren
+2024-12-02 10:04:32 | Tracker | Hub activated
+2024-12-02 10:04:32 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:04:32 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:04:32 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:04:32 | Tracker | Listing all devices
+2024-12-02 10:04:32 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:04:32 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:04:32 | Main Siren | Alarm activated
+2024-12-02 10:04:32 | Main Siren | Alarm deactivated
+2024-12-02 10:06:52 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:06:52 | AlarmHub | AlarmHub initialized
+2024-12-02 10:06:52 | TrackerHub | TrackerHub initialized
+2024-12-02 10:06:52 | Lock | Hub activated
+2024-12-02 10:06:52 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:06:52 | Front Door Lock | Lock device created
+2024-12-02 10:06:52 | Lock | Device added: Front Door Lock
+2024-12-02 10:06:52 | Alarm | Hub activated
+2024-12-02 10:06:52 | Main Siren | New security device created: ID 12
+2024-12-02 10:06:52 | Main Siren | Alarm device created
+2024-12-02 10:06:52 | Alarm | Device added: Main Siren
+2024-12-02 10:06:52 | Tracker | Hub activated
+2024-12-02 10:06:52 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:06:52 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:06:52 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:06:52 | Tracker | Listing all devices
+2024-12-02 10:06:52 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:06:52 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:06:52 | Main Siren | Alarm activated
+2024-12-02 10:06:52 | Main Siren | Alarm deactivated
+2024-12-02 10:07:12 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:07:12 | AlarmHub | AlarmHub initialized
+2024-12-02 10:07:12 | TrackerHub | TrackerHub initialized
+2024-12-02 10:07:12 | Lock | Hub activated
+2024-12-02 10:07:12 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:07:12 | Front Door Lock | Lock device created
+2024-12-02 10:07:12 | Lock | Device added: Front Door Lock
+2024-12-02 10:07:12 | Alarm | Hub activated
+2024-12-02 10:07:12 | Main Siren | New security device created: ID 12
+2024-12-02 10:07:12 | Main Siren | Alarm device created
+2024-12-02 10:07:12 | Alarm | Device added: Main Siren
+2024-12-02 10:07:12 | Tracker | Hub activated
+2024-12-02 10:07:12 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:07:12 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:07:12 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:07:12 | Tracker | Listing all devices
+2024-12-02 10:07:12 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:07:12 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:07:12 | Main Siren | Alarm activated
+2024-12-02 10:07:12 | Main Siren | Alarm deactivated
+2024-12-02 10:10:28 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:10:28 | AlarmHub | AlarmHub initialized
+2024-12-02 10:10:28 | TrackerHub | TrackerHub initialized
+2024-12-02 10:10:28 | Lock | Hub activated
+2024-12-02 10:10:28 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:10:28 | Front Door Lock | Lock device created
+2024-12-02 10:10:28 | Lock | Device added: Front Door Lock
+2024-12-02 10:10:28 | Alarm | Hub activated
+2024-12-02 10:10:28 | Main Siren | New security device created: ID 12
+2024-12-02 10:10:28 | Main Siren | Alarm device created
+2024-12-02 10:10:28 | Alarm | Device added: Main Siren
+2024-12-02 10:10:28 | Tracker | Hub activated
+2024-12-02 10:10:28 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:10:28 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:10:28 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:10:28 | Tracker | Listing all devices
+2024-12-02 10:10:28 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:10:28 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:10:28 | Main Siren | Alarm activated
+2024-12-02 10:10:28 | Main Siren | Alarm deactivated
+2024-12-02 10:11:08 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:11:08 | AlarmHub | AlarmHub initialized
+2024-12-02 10:11:08 | TrackerHub | TrackerHub initialized
+2024-12-02 10:11:08 | Lock | Hub activated
+2024-12-02 10:11:08 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:11:08 | Front Door Lock | Lock device created
+2024-12-02 10:11:08 | Lock | Device added: Front Door Lock
+2024-12-02 10:11:08 | Alarm | Hub activated
+2024-12-02 10:11:08 | Main Siren | New security device created: ID 12
+2024-12-02 10:11:08 | Main Siren | Alarm device created
+2024-12-02 10:11:08 | Alarm | Device added: Main Siren
+2024-12-02 10:11:08 | Tracker | Hub activated
+2024-12-02 10:11:08 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:11:08 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:11:08 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:11:08 | Tracker | Listing all devices
+2024-12-02 10:11:09 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:11:09 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:11:09 | Main Siren | Alarm activated
+2024-12-02 10:11:09 | Main Siren | Alarm deactivated
+2024-12-02 10:13:01 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:13:01 | AlarmHub | AlarmHub initialized
+2024-12-02 10:13:01 | TrackerHub | TrackerHub initialized
+2024-12-02 10:13:01 | Lock | Hub activated
+2024-12-02 10:13:01 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:13:01 | Front Door Lock | Lock device created
+2024-12-02 10:13:01 | Lock | Device added: Front Door Lock
+2024-12-02 10:13:01 | Alarm | Hub activated
+2024-12-02 10:13:01 | Main Siren | New security device created: ID 12
+2024-12-02 10:13:01 | Main Siren | Alarm device created
+2024-12-02 10:13:01 | Alarm | Device added: Main Siren
+2024-12-02 10:13:01 | Tracker | Hub activated
+2024-12-02 10:13:01 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:13:01 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:13:01 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:13:01 | Tracker | Listing all devices
+2024-12-02 10:13:01 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:13:01 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:13:01 | Main Siren | Alarm activated
+2024-12-02 10:13:01 | Main Siren | Alarm deactivated
+2024-12-02 10:13:01 | Front Door Lock | Lock is now ON
+2024-12-02 10:14:37 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:14:37 | AlarmHub | AlarmHub initialized
+2024-12-02 10:14:37 | TrackerHub | TrackerHub initialized
+2024-12-02 10:14:37 | Lock | Hub activated
+2024-12-02 10:14:37 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:14:37 | Front Door Lock | Lock device created
+2024-12-02 10:14:37 | Lock | Device added: Front Door Lock
+2024-12-02 10:14:37 | Alarm | Hub activated
+2024-12-02 10:14:37 | Main Siren | New security device created: ID 12
+2024-12-02 10:14:37 | Main Siren | Alarm device created
+2024-12-02 10:14:37 | Alarm | Device added: Main Siren
+2024-12-02 10:14:37 | Tracker | Hub activated
+2024-12-02 10:14:37 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:14:37 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:14:37 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:14:37 | Tracker | Listing all devices
+2024-12-02 10:14:37 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:14:37 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:14:37 | Main Siren | Alarm activated
+2024-12-02 10:14:37 | Main Siren | Alarm deactivated
+2024-12-02 10:14:37 | Front Door Lock | Lock is now ON
+2024-12-02 10:14:37 | Front Door Lock | Lock is now OFF
+2024-12-02 10:15:36 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:15:36 | AlarmHub | AlarmHub initialized
+2024-12-02 10:15:36 | TrackerHub | TrackerHub initialized
+2024-12-02 10:15:36 | Lock | Hub activated
+2024-12-02 10:15:36 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:15:36 | Front Door Lock | Lock device created
+2024-12-02 10:15:36 | Lock | Device added: Front Door Lock
+2024-12-02 10:15:36 | Alarm | Hub activated
+2024-12-02 10:15:36 | Main Siren | New security device created: ID 12
+2024-12-02 10:15:36 | Main Siren | Alarm device created
+2024-12-02 10:15:36 | Alarm | Device added: Main Siren
+2024-12-02 10:15:36 | Tracker | Hub activated
+2024-12-02 10:15:36 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:15:36 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:15:36 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:15:36 | Tracker | Listing all devices
+2024-12-02 10:15:36 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:15:36 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:15:36 | Main Siren | Alarm activated
+2024-12-02 10:15:36 | Main Siren | Alarm deactivated
+2024-12-02 10:15:36 | Front Door Lock | Lock is now ON
+2024-12-02 10:15:36 | Front Door Lock | Lock is now OFF
+2024-12-02 10:15:36 | Front Door Lock | Lock is now locked
+2024-12-02 10:16:29 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:16:29 | AlarmHub | AlarmHub initialized
+2024-12-02 10:16:29 | TrackerHub | TrackerHub initialized
+2024-12-02 10:16:29 | Lock | Hub activated
+2024-12-02 10:16:29 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:16:29 | Front Door Lock | Lock device created
+2024-12-02 10:16:29 | Lock | Device added: Front Door Lock
+2024-12-02 10:16:29 | Alarm | Hub activated
+2024-12-02 10:16:29 | Main Siren | New security device created: ID 12
+2024-12-02 10:16:29 | Main Siren | Alarm device created
+2024-12-02 10:16:29 | Alarm | Device added: Main Siren
+2024-12-02 10:16:29 | Tracker | Hub activated
+2024-12-02 10:16:29 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:16:29 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:16:29 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:16:29 | Tracker | Listing all devices
+2024-12-02 10:16:29 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:16:29 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:16:29 | Main Siren | Alarm activated
+2024-12-02 10:16:29 | Main Siren | Alarm deactivated
+2024-12-02 10:16:29 | Front Door Lock | Lock is now ON
+2024-12-02 10:16:29 | Front Door Lock | Lock is now OFF
+2024-12-02 10:17:01 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:17:01 | AlarmHub | AlarmHub initialized
+2024-12-02 10:17:01 | TrackerHub | TrackerHub initialized
+2024-12-02 10:17:01 | Lock | Hub activated
+2024-12-02 10:17:01 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:17:01 | Front Door Lock | Lock device created
+2024-12-02 10:17:01 | Lock | Device added: Front Door Lock
+2024-12-02 10:17:01 | Alarm | Hub activated
+2024-12-02 10:17:01 | Main Siren | New security device created: ID 12
+2024-12-02 10:17:01 | Main Siren | Alarm device created
+2024-12-02 10:17:01 | Alarm | Device added: Main Siren
+2024-12-02 10:17:01 | Tracker | Hub activated
+2024-12-02 10:17:01 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:17:01 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:17:01 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:17:01 | Tracker | Listing all devices
+2024-12-02 10:17:01 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:17:01 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:17:01 | Main Siren | Alarm activated
+2024-12-02 10:17:01 | Main Siren | Alarm deactivated
+2024-12-02 10:17:01 | Front Door Lock | Lock is now ON
+2024-12-02 10:17:36 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:17:37 | AlarmHub | AlarmHub initialized
+2024-12-02 10:17:37 | TrackerHub | TrackerHub initialized
+2024-12-02 10:17:37 | Lock | Hub activated
+2024-12-02 10:17:37 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:17:37 | Front Door Lock | Lock device created
+2024-12-02 10:17:37 | Lock | Device added: Front Door Lock
+2024-12-02 10:17:37 | Alarm | Hub activated
+2024-12-02 10:17:37 | Main Siren | New security device created: ID 12
+2024-12-02 10:17:37 | Main Siren | Alarm device created
+2024-12-02 10:17:37 | Alarm | Device added: Main Siren
+2024-12-02 10:17:37 | Tracker | Hub activated
+2024-12-02 10:17:37 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:17:37 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:17:37 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:17:37 | Tracker | Listing all devices
+2024-12-02 10:17:37 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:17:37 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:17:37 | Main Siren | Alarm activated
+2024-12-02 10:17:37 | Main Siren | Alarm deactivated
+2024-12-02 10:17:37 | Front Door Lock | Lock is now ON
+2024-12-02 10:17:37 | Front Door Lock | Lock is now unlocked
+2024-12-02 10:17:37 | Front Door Lock | Lock is now unlocked
+2024-12-02 10:17:45 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:17:45 | AlarmHub | AlarmHub initialized
+2024-12-02 10:17:45 | TrackerHub | TrackerHub initialized
+2024-12-02 10:17:45 | Lock | Hub activated
+2024-12-02 10:17:45 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:17:45 | Front Door Lock | Lock device created
+2024-12-02 10:17:45 | Lock | Device added: Front Door Lock
+2024-12-02 10:17:45 | Alarm | Hub activated
+2024-12-02 10:17:45 | Main Siren | New security device created: ID 12
+2024-12-02 10:17:45 | Main Siren | Alarm device created
+2024-12-02 10:17:45 | Alarm | Device added: Main Siren
+2024-12-02 10:17:45 | Tracker | Hub activated
+2024-12-02 10:17:45 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:17:45 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:17:45 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:17:45 | Tracker | Listing all devices
+2024-12-02 10:17:45 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:17:45 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:17:45 | Main Siren | Alarm activated
+2024-12-02 10:17:45 | Main Siren | Alarm deactivated
+2024-12-02 10:17:45 | Front Door Lock | Lock is now ON
+2024-12-02 10:17:45 | Front Door Lock | Lock is now unlocked
+2024-12-02 10:18:41 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:18:41 | AlarmHub | AlarmHub initialized
+2024-12-02 10:18:41 | TrackerHub | TrackerHub initialized
+2024-12-02 10:18:41 | Lock | Hub activated
+2024-12-02 10:18:41 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:18:41 | Front Door Lock | Lock device created
+2024-12-02 10:18:41 | Lock | Device added: Front Door Lock
+2024-12-02 10:18:41 | Alarm | Hub activated
+2024-12-02 10:18:41 | Main Siren | New security device created: ID 12
+2024-12-02 10:18:41 | Main Siren | Alarm device created
+2024-12-02 10:18:41 | Alarm | Device added: Main Siren
+2024-12-02 10:18:41 | Tracker | Hub activated
+2024-12-02 10:18:41 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:18:41 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:18:41 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:18:41 | Tracker | Listing all devices
+2024-12-02 10:18:41 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:18:41 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:18:41 | Main Siren | Alarm activated
+2024-12-02 10:18:41 | Main Siren | Alarm deactivated
+2024-12-02 10:18:41 | Front Door Lock | Lock is now ON
+2024-12-02 10:18:41 | Front Door Lock | Lock is now unlocked
+2024-12-02 10:19:30 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:19:30 | AlarmHub | AlarmHub initialized
+2024-12-02 10:19:30 | TrackerHub | TrackerHub initialized
+2024-12-02 10:19:30 | Lock | Hub activated
+2024-12-02 10:19:30 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:19:30 | Front Door Lock | Lock device created
+2024-12-02 10:19:30 | Lock | Device added: Front Door Lock
+2024-12-02 10:19:30 | Alarm | Hub activated
+2024-12-02 10:19:30 | Main Siren | New security device created: ID 12
+2024-12-02 10:19:30 | Main Siren | Alarm device created
+2024-12-02 10:19:30 | Alarm | Device added: Main Siren
+2024-12-02 10:19:30 | Tracker | Hub activated
+2024-12-02 10:19:30 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:19:30 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:19:30 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:19:30 | Tracker | Listing all devices
+2024-12-02 10:19:30 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:19:30 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:19:30 | Main Siren | Alarm activated
+2024-12-02 10:19:30 | Main Siren | Alarm deactivated
+2024-12-02 10:19:30 | Front Door Lock | Lock is now ON
+2024-12-02 10:19:30 | Front Door Lock | Lock is now unlocked
+2024-12-02 10:19:30 | Front Door Lock | Lock is now locked
+2024-12-02 10:21:06 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:21:06 | AlarmHub | AlarmHub initialized
+2024-12-02 10:21:06 | TrackerHub | TrackerHub initialized
+2024-12-02 10:21:06 | Lock | Hub activated
+2024-12-02 10:21:06 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:21:06 | Front Door Lock | Lock device created
+2024-12-02 10:21:06 | Lock | Device added: Front Door Lock
+2024-12-02 10:21:06 | Alarm | Hub activated
+2024-12-02 10:21:06 | Main Siren | New security device created: ID 12
+2024-12-02 10:21:06 | Main Siren | Alarm device created
+2024-12-02 10:21:06 | Alarm | Device added: Main Siren
+2024-12-02 10:21:06 | Tracker | Hub activated
+2024-12-02 10:21:06 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:21:06 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:21:06 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:21:06 | Tracker | Listing all devices
+2024-12-02 10:21:06 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:21:06 | Vehicle GPS Tracker | Tracker deactivated
+2024-12-02 10:21:06 | Main Siren | Alarm activated
+2024-12-02 10:21:06 | Main Siren | Alarm deactivated
+2024-12-02 10:21:06 | Front Door Lock | Lock is now ON
+2024-12-02 10:21:06 | Front Door Lock | Lock is now locked
+2024-12-02 10:24:17 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:24:17 | AlarmHub | AlarmHub initialized
+2024-12-02 10:24:17 | TrackerHub | TrackerHub initialized
+2024-12-02 10:24:17 | Lock | Hub activated
+2024-12-02 10:24:17 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:24:17 | Front Door Lock | Lock device created
+2024-12-02 10:24:17 | Lock | Device added: Front Door Lock
+2024-12-02 10:24:17 | Alarm | Hub activated
+2024-12-02 10:24:17 | Main Siren | New security device created: ID 12
+2024-12-02 10:24:17 | Main Siren | Alarm device created
+2024-12-02 10:24:17 | Alarm | Device added: Main Siren
+2024-12-02 10:24:17 | Tracker | Hub activated
+2024-12-02 10:24:17 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:24:17 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:24:17 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:24:17 | Tracker | Listing all devices
+2024-12-02 10:24:17 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:24:17 | Main Siren | Device 12 turned ON
+2024-12-02 10:24:17 | Main Siren | Alarm deactivated
+2024-12-02 10:24:17 | Front Door Lock | Lock is now ON
+2024-12-02 10:24:17 | Front Door Lock | Lock is now locked
+2024-12-02 10:26:28 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:26:28 | AlarmHub | AlarmHub initialized
+2024-12-02 10:26:28 | TrackerHub | TrackerHub initialized
+2024-12-02 10:26:28 | Lock | Hub activated
+2024-12-02 10:26:28 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:26:28 | Front Door Lock | Lock device created
+2024-12-02 10:26:28 | Lock | Device added: Front Door Lock
+2024-12-02 10:26:28 | Alarm | Hub activated
+2024-12-02 10:26:28 | Main Siren | New security device created: ID 12
+2024-12-02 10:26:28 | Main Siren | Alarm device created
+2024-12-02 10:26:28 | Alarm | Device added: Main Siren
+2024-12-02 10:26:28 | Tracker | Hub activated
+2024-12-02 10:26:28 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:26:28 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:26:28 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:26:28 | Tracker | Listing all devices
+2024-12-02 10:26:28 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:26:28 | Main Siren | Alarm Turned ON
+2024-12-02 10:26:28 | Main Siren | Alarm activated
+2024-12-02 10:26:28 | Main Siren | Alarm Turned OFF
+2024-12-02 10:26:28 | Front Door Lock | Lock is now ON
+2024-12-02 10:26:28 | Front Door Lock | Lock is now locked
+2024-12-02 10:27:03 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:27:03 | AlarmHub | AlarmHub initialized
+2024-12-02 10:27:03 | TrackerHub | TrackerHub initialized
+2024-12-02 10:27:03 | Lock | Hub activated
+2024-12-02 10:27:03 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:27:03 | Front Door Lock | Lock device created
+2024-12-02 10:27:03 | Lock | Device added: Front Door Lock
+2024-12-02 10:27:03 | Alarm | Hub activated
+2024-12-02 10:27:03 | Main Siren | New security device created: ID 12
+2024-12-02 10:27:03 | Main Siren | Alarm device created
+2024-12-02 10:27:03 | Alarm | Device added: Main Siren
+2024-12-02 10:27:03 | Tracker | Hub activated
+2024-12-02 10:27:03 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:27:03 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:27:03 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:27:03 | Tracker | Listing all devices
+2024-12-02 10:27:03 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:27:03 | Main Siren | Alarm Turned ON
+2024-12-02 10:27:03 | Main Siren | Alarm activated
+2024-12-02 10:27:03 | Main Siren | Alarm deactivated
+2024-12-02 10:27:03 | Front Door Lock | Lock is now ON
+2024-12-02 10:27:03 | Front Door Lock | Lock is now locked
+2024-12-02 10:27:18 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:27:18 | AlarmHub | AlarmHub initialized
+2024-12-02 10:27:18 | TrackerHub | TrackerHub initialized
+2024-12-02 10:27:18 | Lock | Hub activated
+2024-12-02 10:27:18 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:27:18 | Front Door Lock | Lock device created
+2024-12-02 10:27:18 | Lock | Device added: Front Door Lock
+2024-12-02 10:27:18 | Alarm | Hub activated
+2024-12-02 10:27:18 | Main Siren | New security device created: ID 12
+2024-12-02 10:27:18 | Main Siren | Alarm device created
+2024-12-02 10:27:18 | Alarm | Device added: Main Siren
+2024-12-02 10:27:18 | Tracker | Hub activated
+2024-12-02 10:27:18 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:27:18 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:27:18 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:27:18 | Tracker | Listing all devices
+2024-12-02 10:27:18 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:27:18 | Main Siren | Alarm Turned ON
+2024-12-02 10:27:18 | Main Siren | Alarm activated
+2024-12-02 10:27:18 | Main Siren | Alarm Turned OFF
+2024-12-02 10:27:18 | Front Door Lock | Lock is now ON
+2024-12-02 10:27:18 | Front Door Lock | Lock is now locked
+2024-12-02 10:27:44 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:27:44 | AlarmHub | AlarmHub initialized
+2024-12-02 10:27:44 | TrackerHub | TrackerHub initialized
+2024-12-02 10:27:44 | Lock | Hub activated
+2024-12-02 10:27:44 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:27:44 | Front Door Lock | Lock device created
+2024-12-02 10:27:44 | Lock | Device added: Front Door Lock
+2024-12-02 10:27:44 | Alarm | Hub activated
+2024-12-02 10:27:44 | Main Siren | New security device created: ID 12
+2024-12-02 10:27:44 | Main Siren | Alarm device created
+2024-12-02 10:27:44 | Alarm | Device added: Main Siren
+2024-12-02 10:27:44 | Tracker | Hub activated
+2024-12-02 10:27:44 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:27:44 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:27:44 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:27:44 | Tracker | Listing all devices
+2024-12-02 10:27:44 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:27:44 | Main Siren | Alarm Turned ON
+2024-12-02 10:27:44 | Main Siren | Alarm activated
+2024-12-02 10:27:44 | Main Siren | Alarm Turned OFF
+2024-12-02 10:27:44 | Front Door Lock | Lock is now ON
+2024-12-02 10:27:44 | Front Door Lock | Lock is now locked
+2024-12-02 10:47:22 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:47:22 | AlarmHub | AlarmHub initialized
+2024-12-02 10:47:22 | TrackerHub | TrackerHub initialized
+2024-12-02 10:47:22 | Lock | Hub activated
+2024-12-02 10:47:22 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:47:22 | Front Door Lock | Lock device created
+2024-12-02 10:47:22 | Lock | Device added: Front Door Lock
+2024-12-02 10:47:22 | Alarm | Hub activated
+2024-12-02 10:47:22 | Main Siren | New security device created: ID 12
+2024-12-02 10:47:22 | Main Siren | Alarm device created
+2024-12-02 10:47:22 | Alarm | Device added: Main Siren
+2024-12-02 10:47:22 | Tracker | Hub activated
+2024-12-02 10:47:22 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:47:22 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:47:22 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:47:22 | Tracker | Listing all devices
+2024-12-02 10:47:22 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 10:47:22 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:47:22 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 10:47:22 | Main Siren | Alarm Turned ON
+2024-12-02 10:47:22 | Main Siren | Alarm activated
+2024-12-02 10:47:22 | Main Siren | Alarm Turned OFF
+2024-12-02 10:47:22 | Front Door Lock | Lock is now ON
+2024-12-02 10:47:22 | Front Door Lock | Lock is now locked
+2024-12-02 10:58:03 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:58:03 | SensorHub | SensorHub initialized
+2024-12-02 10:58:03 | CameraHub | CameraHub initialized
+2024-12-02 10:58:03 | AlarmHub | AlarmHub initialized
+2024-12-02 10:58:03 | TrackerHub | TrackerHub initialized
+2024-12-02 10:58:03 | Lock | Hub activated
+2024-12-02 10:58:03 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:58:03 | Front Door Lock | Lock device created
+2024-12-02 10:58:03 | Lock | Device added: Front Door Lock
+2024-12-02 10:58:03 | Sensor | Hub activated
+2024-12-02 10:58:03 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 10:58:03 | Living Room Motion Sensor | Sensor device created
+2024-12-02 10:58:03 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 10:58:03 | Camera | Hub activated
+2024-12-02 10:58:03 | Front Door Camera | New security device created: ID 8
+2024-12-02 10:58:03 | Front Door Camera | Camera device created
+2024-12-02 10:58:03 | Camera | Device added: Front Door Camera
+2024-12-02 10:58:03 | Alarm | Hub activated
+2024-12-02 10:58:03 | Main Siren | New security device created: ID 12
+2024-12-02 10:58:03 | Main Siren | Alarm device created
+2024-12-02 10:58:03 | Alarm | Device added: Main Siren
+2024-12-02 10:58:03 | Tracker | Hub activated
+2024-12-02 10:58:03 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:58:03 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:58:03 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:58:03 | Tracker | Listing all devices
+2024-12-02 10:58:03 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 10:58:03 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:58:03 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 10:58:03 | Main Siren | Alarm Turned ON
+2024-12-02 10:58:03 | Main Siren | Alarm activated
+2024-12-02 10:58:03 | Main Siren | Alarm Turned OFF
+2024-12-02 10:58:03 | Front Door Camera | Device 8 turned ON
+2024-12-02 10:58:03 | Front Door Camera | Motion detected by camera
+2024-12-02 10:58:03 | Front Door Camera | Device 8 turned OFF
+2024-12-02 10:58:03 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 10:58:03 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 10:58:03 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 10:58:03 | Front Door Lock | Lock is now ON
+2024-12-02 10:58:03 | Front Door Lock | Lock is now locked
+2024-12-02 10:58:03 | Front Door Lock | Lock is now OFF
+2024-12-02 10:58:58 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:58:58 | SensorHub | SensorHub initialized
+2024-12-02 10:58:58 | CameraHub | CameraHub initialized
+2024-12-02 10:58:58 | AlarmHub | AlarmHub initialized
+2024-12-02 10:58:58 | TrackerHub | TrackerHub initialized
+2024-12-02 10:58:58 | Lock | Hub activated
+2024-12-02 10:58:58 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:58:58 | Front Door Lock | Lock device created
+2024-12-02 10:58:58 | Lock | Device added: Front Door Lock
+2024-12-02 10:58:58 | Sensor | Hub activated
+2024-12-02 10:58:58 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 10:58:58 | Living Room Motion Sensor | Sensor device created
+2024-12-02 10:58:58 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 10:58:58 | Camera | Hub activated
+2024-12-02 10:58:58 | Front Door Camera | New security device created: ID 8
+2024-12-02 10:58:58 | Front Door Camera | Camera device created
+2024-12-02 10:58:58 | Camera | Device added: Front Door Camera
+2024-12-02 10:58:58 | Alarm | Hub activated
+2024-12-02 10:58:58 | Main Siren | New security device created: ID 12
+2024-12-02 10:58:58 | Main Siren | Alarm device created
+2024-12-02 10:58:58 | Alarm | Device added: Main Siren
+2024-12-02 10:58:58 | Tracker | Hub activated
+2024-12-02 10:58:58 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:58:58 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:58:58 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:58:58 | Tracker | Listing all devices
+2024-12-02 10:58:58 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 10:58:58 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:58:58 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 10:58:58 | Main Siren | Alarm Turned ON
+2024-12-02 10:58:58 | Main Siren | Alarm activated
+2024-12-02 10:58:58 | Main Siren | Alarm Turned OFF
+2024-12-02 10:58:58 | Front Door Camera | Device 8 turned ON
+2024-12-02 10:58:58 | Front Door Camera | Motion detected by camera
+2024-12-02 10:58:58 | Front Door Camera | Device 8 turned OFF
+2024-12-02 10:58:58 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 10:58:58 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 10:58:58 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 10:58:58 | Front Door Lock | Lock is now ON
+2024-12-02 10:58:58 | Front Door Lock | Lock is now locked
+2024-12-02 10:58:58 | Front Door Lock | Lock is now OFF
+2024-12-02 10:59:29 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 10:59:29 | SensorHub | SensorHub initialized
+2024-12-02 10:59:29 | CameraHub | CameraHub initialized
+2024-12-02 10:59:29 | AlarmHub | AlarmHub initialized
+2024-12-02 10:59:29 | TrackerHub | TrackerHub initialized
+2024-12-02 10:59:29 | Lock | Hub activated
+2024-12-02 10:59:29 | Front Door Lock | New security device created: ID 1
+2024-12-02 10:59:29 | Front Door Lock | Lock device created
+2024-12-02 10:59:29 | Lock | Device added: Front Door Lock
+2024-12-02 10:59:29 | Sensor | Hub activated
+2024-12-02 10:59:29 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 10:59:29 | Living Room Motion Sensor | Sensor device created
+2024-12-02 10:59:29 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 10:59:29 | Camera | Hub activated
+2024-12-02 10:59:29 | Front Door Camera | New security device created: ID 8
+2024-12-02 10:59:29 | Front Door Camera | Camera device created
+2024-12-02 10:59:29 | Camera | Device added: Front Door Camera
+2024-12-02 10:59:29 | Alarm | Hub activated
+2024-12-02 10:59:29 | Main Siren | New security device created: ID 12
+2024-12-02 10:59:29 | Main Siren | Alarm device created
+2024-12-02 10:59:29 | Alarm | Device added: Main Siren
+2024-12-02 10:59:29 | Tracker | Hub activated
+2024-12-02 10:59:29 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 10:59:29 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 10:59:29 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 10:59:29 | Tracker | Listing all devices
+2024-12-02 10:59:29 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 10:59:29 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 10:59:29 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 10:59:29 | Main Siren | Alarm Turned ON
+2024-12-02 10:59:29 | Main Siren | Alarm activated
+2024-12-02 10:59:29 | Main Siren | Alarm Turned OFF
+2024-12-02 10:59:29 | Front Door Camera | Device 8 turned ON
+2024-12-02 10:59:29 | Front Door Camera | Motion detected by camera
+2024-12-02 10:59:29 | Front Door Camera | Device 8 turned OFF
+2024-12-02 10:59:29 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 10:59:29 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 10:59:29 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 10:59:29 | Front Door Lock | Lock is now ON
+2024-12-02 10:59:29 | Front Door Lock | Lock is now locked
+2024-12-02 10:59:29 | Front Door Lock | Lock is now OFF
+2024-12-02 11:00:39 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:00:39 | SensorHub | SensorHub initialized
+2024-12-02 11:00:39 | CameraHub | CameraHub initialized
+2024-12-02 11:00:39 | AlarmHub | AlarmHub initialized
+2024-12-02 11:00:39 | TrackerHub | TrackerHub initialized
+2024-12-02 11:00:39 | Lock | Hub activated
+2024-12-02 11:00:39 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:00:39 | Front Door Lock | Lock device created
+2024-12-02 11:00:39 | Lock | Device added: Front Door Lock
+2024-12-02 11:00:39 | Sensor | Hub activated
+2024-12-02 11:00:39 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:00:39 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:00:39 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:00:39 | Camera | Hub activated
+2024-12-02 11:00:39 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:00:39 | Front Door Camera | Camera device created
+2024-12-02 11:00:39 | Camera | Device added: Front Door Camera
+2024-12-02 11:00:39 | Alarm | Hub activated
+2024-12-02 11:00:39 | Main Siren | New security device created: ID 12
+2024-12-02 11:00:39 | Main Siren | Alarm device created
+2024-12-02 11:00:39 | Alarm | Device added: Main Siren
+2024-12-02 11:00:39 | Tracker | Hub activated
+2024-12-02 11:00:39 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:00:39 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:00:39 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:00:39 | Tracker | Listing all devices
+2024-12-02 11:00:39 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:00:39 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:00:39 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:00:39 | Main Siren | Device 12 turned ON
+2024-12-02 11:00:39 | Main Siren | Alarm activated
+2024-12-02 11:00:39 | Main Siren | Device 12 turned OFF
+2024-12-02 11:00:39 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:00:39 | Front Door Camera | Motion detected by camera
+2024-12-02 11:00:39 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:00:39 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:00:39 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:00:39 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:00:39 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:00:39 | Front Door Lock | Lock is now locked
+2024-12-02 11:00:39 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:01:45 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:01:45 | SensorHub | SensorHub initialized
+2024-12-02 11:01:45 | CameraHub | CameraHub initialized
+2024-12-02 11:01:45 | AlarmHub | AlarmHub initialized
+2024-12-02 11:01:45 | TrackerHub | TrackerHub initialized
+2024-12-02 11:01:45 | Lock | Hub activated
+2024-12-02 11:01:45 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:01:45 | Front Door Lock | Lock device created
+2024-12-02 11:01:45 | Lock | Device added: Front Door Lock
+2024-12-02 11:01:45 | Sensor | Hub activated
+2024-12-02 11:01:45 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:01:45 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:01:45 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:01:45 | Camera | Hub activated
+2024-12-02 11:01:45 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:01:45 | Front Door Camera | Camera device created
+2024-12-02 11:01:45 | Camera | Device added: Front Door Camera
+2024-12-02 11:01:45 | Alarm | Hub activated
+2024-12-02 11:01:45 | Main Siren | New security device created: ID 12
+2024-12-02 11:01:45 | Main Siren | Alarm device created
+2024-12-02 11:01:45 | Alarm | Device added: Main Siren
+2024-12-02 11:01:45 | Tracker | Hub activated
+2024-12-02 11:01:45 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:01:45 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:01:45 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:01:45 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:01:45 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:01:45 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:01:45 | Tracker | Listing all devices
+2024-12-02 11:01:45 | Main Siren | Device 12 turned ON
+2024-12-02 11:01:45 | Main Siren | Alarm activated
+2024-12-02 11:01:45 | Main Siren | Device 12 turned OFF
+2024-12-02 11:01:45 | Alarm | Listing all devices
+2024-12-02 11:01:45 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:01:45 | Front Door Camera | Motion detected by camera
+2024-12-02 11:01:45 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:01:45 | Camera | Listing all devices
+2024-12-02 11:01:45 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:01:45 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:01:45 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:01:45 | Sensor | Listing all devices
+2024-12-02 11:01:45 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:01:45 | Front Door Lock | Lock is now locked
+2024-12-02 11:01:45 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:01:45 | Lock | Listing all devices
+2024-12-02 11:02:28 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:02:28 | SensorHub | SensorHub initialized
+2024-12-02 11:02:28 | CameraHub | CameraHub initialized
+2024-12-02 11:02:28 | AlarmHub | AlarmHub initialized
+2024-12-02 11:02:28 | TrackerHub | TrackerHub initialized
+2024-12-02 11:02:28 | Lock | Hub activated
+2024-12-02 11:02:28 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:02:28 | Front Door Lock | Lock device created
+2024-12-02 11:02:28 | Lock | Device added: Front Door Lock
+2024-12-02 11:02:28 | Sensor | Hub activated
+2024-12-02 11:02:28 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:02:28 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:02:28 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:02:28 | Camera | Hub activated
+2024-12-02 11:02:28 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:02:28 | Front Door Camera | Camera device created
+2024-12-02 11:02:28 | Camera | Device added: Front Door Camera
+2024-12-02 11:02:28 | Alarm | Hub activated
+2024-12-02 11:02:28 | Main Siren | New security device created: ID 12
+2024-12-02 11:02:28 | Main Siren | Alarm device created
+2024-12-02 11:02:28 | Alarm | Device added: Main Siren
+2024-12-02 11:02:28 | Tracker | Hub activated
+2024-12-02 11:02:28 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:02:28 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:02:28 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:02:28 | Tracker | Listing all devices
+2024-12-02 11:02:28 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:02:28 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:02:28 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:02:28 | Alarm | Listing all devices
+2024-12-02 11:02:28 | Main Siren | Device 12 turned ON
+2024-12-02 11:02:28 | Main Siren | Alarm activated
+2024-12-02 11:02:28 | Main Siren | Device 12 turned OFF
+2024-12-02 11:02:28 | Camera | Listing all devices
+2024-12-02 11:02:28 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:02:28 | Front Door Camera | Motion detected by camera
+2024-12-02 11:02:28 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:02:28 | Sensor | Listing all devices
+2024-12-02 11:02:28 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:02:28 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:02:28 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:02:28 | Lock | Listing all devices
+2024-12-02 11:02:28 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:02:28 | Front Door Lock | Lock is now locked
+2024-12-02 11:02:28 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:06:45 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:06:45 | SensorHub | SensorHub initialized
+2024-12-02 11:06:45 | CameraHub | CameraHub initialized
+2024-12-02 11:06:45 | AlarmHub | AlarmHub initialized
+2024-12-02 11:06:45 | TrackerHub | TrackerHub initialized
+2024-12-02 11:06:45 | Lock | Hub activated
+2024-12-02 11:06:45 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:06:45 | Front Door Lock | Lock device created
+2024-12-02 11:06:45 | Lock | Device added: Front Door Lock
+2024-12-02 11:06:45 | Sensor | Hub activated
+2024-12-02 11:06:45 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:06:45 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:06:45 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:06:45 | Camera | Hub activated
+2024-12-02 11:06:45 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:06:45 | Front Door Camera | Camera device created
+2024-12-02 11:06:45 | Camera | Device added: Front Door Camera
+2024-12-02 11:06:45 | Alarm | Hub activated
+2024-12-02 11:06:45 | Main Siren | New security device created: ID 12
+2024-12-02 11:06:45 | Main Siren | Alarm device created
+2024-12-02 11:06:45 | Alarm | Device added: Main Siren
+2024-12-02 11:06:45 | Tracker | Hub activated
+2024-12-02 11:06:45 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:06:45 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:06:45 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:06:45 | Tracker | Listing all devices
+2024-12-02 11:06:45 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:06:45 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:06:45 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:06:45 | Alarm | Listing all devices
+2024-12-02 11:06:45 | Main Siren | Device 12 turned ON
+2024-12-02 11:06:45 | Main Siren | Alarm activated
+2024-12-02 11:06:45 | Main Siren | Device 12 turned OFF
+2024-12-02 11:06:45 | Camera | Listing all devices
+2024-12-02 11:06:45 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:06:45 | Front Door Camera | Motion detected by camera
+2024-12-02 11:06:45 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:06:45 | Sensor | Listing all devices
+2024-12-02 11:06:45 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:06:45 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:06:45 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:06:45 | Lock | Listing all devices
+2024-12-02 11:06:45 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:06:45 | Front Door Lock | Lock is now locked
+2024-12-02 11:06:45 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:08:03 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:08:03 | SensorHub | SensorHub initialized
+2024-12-02 11:08:03 | CameraHub | CameraHub initialized
+2024-12-02 11:08:03 | AlarmHub | AlarmHub initialized
+2024-12-02 11:08:03 | TrackerHub | TrackerHub initialized
+2024-12-02 11:08:03 | Lock | Hub activated
+2024-12-02 11:08:03 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:08:03 | Front Door Lock | Lock device created
+2024-12-02 11:08:03 | Lock | Device added: Front Door Lock
+2024-12-02 11:08:03 | Sensor | Hub activated
+2024-12-02 11:08:03 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:08:03 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:08:03 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:08:03 | Camera | Hub activated
+2024-12-02 11:08:03 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:08:03 | Front Door Camera | Camera device created
+2024-12-02 11:08:03 | Camera | Device added: Front Door Camera
+2024-12-02 11:08:03 | Alarm | Hub activated
+2024-12-02 11:08:03 | Main Siren | New security device created: ID 12
+2024-12-02 11:08:03 | Main Siren | Alarm device created
+2024-12-02 11:08:03 | Alarm | Device added: Main Siren
+2024-12-02 11:08:03 | Tracker | Hub activated
+2024-12-02 11:08:03 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:08:03 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:08:03 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:08:03 | Tracker | Listing all devices
+2024-12-02 11:08:03 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:08:03 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:08:03 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:08:03 | Alarm | Listing all devices
+2024-12-02 11:08:03 | Main Siren | Device 12 turned ON
+2024-12-02 11:08:03 | Main Siren | Alarm activated
+2024-12-02 11:08:03 | Main Siren | Device 12 turned OFF
+2024-12-02 11:08:03 | Camera | Listing all devices
+2024-12-02 11:08:03 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:08:03 | Front Door Camera | Motion detected by camera
+2024-12-02 11:08:03 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:08:03 | Sensor | Listing all devices
+2024-12-02 11:08:03 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:08:03 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:08:03 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:08:03 | Lock | Listing all devices
+2024-12-02 11:08:03 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:08:03 | Front Door Lock | Lock is now locked
+2024-12-02 11:08:03 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:09:30 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:09:30 | SensorHub | SensorHub initialized
+2024-12-02 11:09:30 | CameraHub | CameraHub initialized
+2024-12-02 11:09:30 | AlarmHub | AlarmHub initialized
+2024-12-02 11:09:30 | TrackerHub | TrackerHub initialized
+2024-12-02 11:09:30 | Lock | Hub activated
+2024-12-02 11:09:30 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:09:30 | Front Door Lock | Lock device created
+2024-12-02 11:09:30 | Lock | Device added: Front Door Lock
+2024-12-02 11:09:30 | Sensor | Hub activated
+2024-12-02 11:09:30 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:09:30 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:09:30 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:09:30 | Camera | Hub activated
+2024-12-02 11:09:30 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:09:30 | Front Door Camera | Camera device created
+2024-12-02 11:09:30 | Camera | Device added: Front Door Camera
+2024-12-02 11:09:30 | Alarm | Hub activated
+2024-12-02 11:09:30 | Main Siren | New security device created: ID 12
+2024-12-02 11:09:30 | Main Siren | Alarm device created
+2024-12-02 11:09:30 | Alarm | Device added: Main Siren
+2024-12-02 11:09:30 | Tracker | Hub activated
+2024-12-02 11:09:30 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:09:30 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:09:30 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:09:30 | Tracker | Listing all devices
+2024-12-02 11:09:30 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:09:30 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:09:30 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:09:30 | Alarm | Listing all devices
+2024-12-02 11:09:30 | Main Siren | Device 12 turned ON
+2024-12-02 11:09:30 | Main Siren | Alarm activated
+2024-12-02 11:09:30 | Main Siren | Device 12 turned OFF
+2024-12-02 11:09:30 | Camera | Listing all devices
+2024-12-02 11:09:30 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:09:30 | Front Door Camera | Motion detected by camera
+2024-12-02 11:09:30 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:09:30 | Sensor | Listing all devices
+2024-12-02 11:09:30 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:09:30 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:09:30 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:09:30 | Lock | Listing all devices
+2024-12-02 11:09:30 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:09:30 | Front Door Lock | Lock is now locked
+2024-12-02 11:09:30 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:11:04 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:11:04 | SensorHub | SensorHub initialized
+2024-12-02 11:11:04 | CameraHub | CameraHub initialized
+2024-12-02 11:11:04 | AlarmHub | AlarmHub initialized
+2024-12-02 11:11:04 | TrackerHub | TrackerHub initialized
+2024-12-02 11:11:04 | Lock | Hub activated
+2024-12-02 11:11:04 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:11:04 | Front Door Lock | Lock device created
+2024-12-02 11:11:04 | Lock | Device added: Front Door Lock
+2024-12-02 11:11:04 | Sensor | Hub activated
+2024-12-02 11:11:04 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:11:04 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:11:04 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:11:04 | Camera | Hub activated
+2024-12-02 11:11:04 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:11:04 | Front Door Camera | Camera device created
+2024-12-02 11:11:04 | Camera | Device added: Front Door Camera
+2024-12-02 11:11:04 | Alarm | Hub activated
+2024-12-02 11:11:04 | Main Siren | New security device created: ID 12
+2024-12-02 11:11:04 | Main Siren | Alarm device created
+2024-12-02 11:11:04 | Alarm | Device added: Main Siren
+2024-12-02 11:11:04 | Tracker | Hub activated
+2024-12-02 11:11:04 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:11:04 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:11:04 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:11:04 | Tracker | Listing all devices
+2024-12-02 11:11:04 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:11:04 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:11:04 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:11:04 | Alarm | Listing all devices
+2024-12-02 11:11:04 | Main Siren | Device 12 turned ON
+2024-12-02 11:11:04 | Main Siren | Alarm activated
+2024-12-02 11:11:04 | Main Siren | Device 12 turned OFF
+2024-12-02 11:11:04 | Camera | Listing all devices
+2024-12-02 11:11:04 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:11:04 | Front Door Camera | Motion detected by camera
+2024-12-02 11:11:04 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:11:04 | Sensor | Listing all devices
+2024-12-02 11:11:04 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:11:04 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:11:04 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:11:04 | Lock | Listing all devices
+2024-12-02 11:11:04 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:11:04 | Front Door Lock | Lock is now locked
+2024-12-02 11:11:04 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:15:32 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:15:32 | SensorHub | SensorHub initialized
+2024-12-02 11:15:32 | CameraHub | CameraHub initialized
+2024-12-02 11:15:32 | AlarmHub | AlarmHub initialized
+2024-12-02 11:15:32 | TrackerHub | TrackerHub initialized
+2024-12-02 11:15:32 | Lock | Hub activated
+2024-12-02 11:15:32 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:15:32 | Front Door Lock | Lock device created
+2024-12-02 11:15:32 | Lock | Device added: Front Door Lock
+2024-12-02 11:15:32 | Sensor | Hub activated
+2024-12-02 11:15:32 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:15:32 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:15:32 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:15:32 | Camera | Hub activated
+2024-12-02 11:15:32 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:15:32 | Front Door Camera | Camera device created
+2024-12-02 11:15:32 | Camera | Device added: Front Door Camera
+2024-12-02 11:15:32 | Alarm | Hub activated
+2024-12-02 11:15:32 | Main Siren | New security device created: ID 12
+2024-12-02 11:15:32 | Main Siren | Alarm device created
+2024-12-02 11:15:32 | Alarm | Device added: Main Siren
+2024-12-02 11:15:32 | Tracker | Hub activated
+2024-12-02 11:15:32 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:15:32 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:15:32 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:15:32 | Tracker | Listing all devices
+2024-12-02 11:15:32 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:15:32 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:15:32 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:15:32 | Alarm | Listing all devices
+2024-12-02 11:15:32 | Main Siren | Device 12 turned ON
+2024-12-02 11:15:32 | Main Siren | Alarm activated
+2024-12-02 11:15:32 | Main Siren | Device 12 turned OFF
+2024-12-02 11:15:32 | Camera | Listing all devices
+2024-12-02 11:15:32 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:15:32 | Front Door Camera | Motion detected by camera
+2024-12-02 11:15:32 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:15:32 | Sensor | Listing all devices
+2024-12-02 11:15:32 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:15:32 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:15:32 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:15:32 | Lock | Listing all devices
+2024-12-02 11:15:32 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:15:32 | Front Door Lock | Lock is now locked
+2024-12-02 11:15:32 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:15:48 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:15:48 | SensorHub | SensorHub initialized
+2024-12-02 11:15:48 | CameraHub | CameraHub initialized
+2024-12-02 11:15:48 | AlarmHub | AlarmHub initialized
+2024-12-02 11:15:48 | TrackerHub | TrackerHub initialized
+2024-12-02 11:15:48 | Lock | Hub activated
+2024-12-02 11:15:48 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:15:48 | Front Door Lock | Lock device created
+2024-12-02 11:15:48 | Lock | Device added: Front Door Lock
+2024-12-02 11:15:48 | Sensor | Hub activated
+2024-12-02 11:15:48 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:15:48 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:15:48 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:15:48 | Camera | Hub activated
+2024-12-02 11:15:48 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:15:48 | Front Door Camera | Camera device created
+2024-12-02 11:15:48 | Camera | Device added: Front Door Camera
+2024-12-02 11:15:48 | Alarm | Hub activated
+2024-12-02 11:15:48 | Main Siren | New security device created: ID 12
+2024-12-02 11:15:48 | Main Siren | Alarm device created
+2024-12-02 11:15:48 | Alarm | Device added: Main Siren
+2024-12-02 11:15:48 | Tracker | Hub activated
+2024-12-02 11:15:48 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:15:48 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:15:48 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:15:48 | Tracker | Listing all devices
+2024-12-02 11:15:48 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:15:48 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:15:48 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:15:48 | Alarm | Listing all devices
+2024-12-02 11:15:48 | Main Siren | Device 12 turned ON
+2024-12-02 11:15:48 | Main Siren | Alarm activated
+2024-12-02 11:15:48 | Main Siren | Device 12 turned OFF
+2024-12-02 11:15:48 | Camera | Listing all devices
+2024-12-02 11:15:48 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:15:48 | Front Door Camera | Motion detected by camera
+2024-12-02 11:15:48 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:15:48 | Sensor | Listing all devices
+2024-12-02 11:15:48 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:15:48 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:15:48 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:15:48 | Lock | Listing all devices
+2024-12-02 11:15:48 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:15:48 | Front Door Lock | Lock is now locked
+2024-12-02 11:15:48 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:16:20 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:16:20 | SensorHub | SensorHub initialized
+2024-12-02 11:16:20 | CameraHub | CameraHub initialized
+2024-12-02 11:16:20 | AlarmHub | AlarmHub initialized
+2024-12-02 11:16:20 | TrackerHub | TrackerHub initialized
+2024-12-02 11:16:20 | Lock | Hub activated
+2024-12-02 11:16:20 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:16:20 | Front Door Lock | Lock device created
+2024-12-02 11:16:20 | Lock | Device added: Front Door Lock
+2024-12-02 11:16:20 | Sensor | Hub activated
+2024-12-02 11:16:20 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:16:20 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:16:20 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:16:20 | Camera | Hub activated
+2024-12-02 11:16:20 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:16:20 | Front Door Camera | Camera device created
+2024-12-02 11:16:20 | Camera | Device added: Front Door Camera
+2024-12-02 11:16:20 | Alarm | Hub activated
+2024-12-02 11:16:20 | Main Siren | New security device created: ID 12
+2024-12-02 11:16:20 | Main Siren | Alarm device created
+2024-12-02 11:16:20 | Alarm | Device added: Main Siren
+2024-12-02 11:16:20 | Tracker | Hub activated
+2024-12-02 11:16:20 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:16:20 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:16:20 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:16:20 | Tracker | Listing all devices
+2024-12-02 11:16:20 | Alarm | Listing all devices
+2024-12-02 11:16:20 | Main Siren | Device 12 turned ON
+2024-12-02 11:16:20 | Main Siren | Alarm activated
+2024-12-02 11:16:20 | Main Siren | Device 12 turned OFF
+2024-12-02 11:16:20 | Camera | Listing all devices
+2024-12-02 11:16:20 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:16:20 | Front Door Camera | Motion detected by camera
+2024-12-02 11:16:20 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:16:20 | Sensor | Listing all devices
+2024-12-02 11:16:20 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:16:20 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:16:20 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:16:20 | Lock | Listing all devices
+2024-12-02 11:16:20 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:16:20 | Front Door Lock | Lock is now locked
+2024-12-02 11:16:20 | Front Door Lock | Device 1 turned OFF
+2024-12-02 11:16:32 | LockHub | LockHub initialized with IsActive set to False
+2024-12-02 11:16:32 | SensorHub | SensorHub initialized
+2024-12-02 11:16:32 | CameraHub | CameraHub initialized
+2024-12-02 11:16:32 | AlarmHub | AlarmHub initialized
+2024-12-02 11:16:32 | TrackerHub | TrackerHub initialized
+2024-12-02 11:16:32 | Lock | Hub activated
+2024-12-02 11:16:32 | Front Door Lock | New security device created: ID 1
+2024-12-02 11:16:32 | Front Door Lock | Lock device created
+2024-12-02 11:16:32 | Lock | Device added: Front Door Lock
+2024-12-02 11:16:32 | Sensor | Hub activated
+2024-12-02 11:16:32 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-02 11:16:32 | Living Room Motion Sensor | Sensor device created
+2024-12-02 11:16:32 | Sensor | Device added: Living Room Motion Sensor
+2024-12-02 11:16:32 | Camera | Hub activated
+2024-12-02 11:16:32 | Front Door Camera | New security device created: ID 8
+2024-12-02 11:16:32 | Front Door Camera | Camera device created
+2024-12-02 11:16:32 | Camera | Device added: Front Door Camera
+2024-12-02 11:16:32 | Alarm | Hub activated
+2024-12-02 11:16:32 | Main Siren | New security device created: ID 12
+2024-12-02 11:16:32 | Main Siren | Alarm device created
+2024-12-02 11:16:32 | Alarm | Device added: Main Siren
+2024-12-02 11:16:32 | Tracker | Hub activated
+2024-12-02 11:16:32 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-02 11:16:32 | Vehicle GPS Tracker | Tracker device created
+2024-12-02 11:16:32 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-02 11:16:32 | Tracker | Listing all devices
+2024-12-02 11:16:32 | Vehicle GPS Tracker | Device 15 turned ON
+2024-12-02 11:16:32 | Vehicle GPS Tracker | Tracker activated
+2024-12-02 11:16:32 | Vehicle GPS Tracker | Device 15 turned OFF
+2024-12-02 11:16:32 | Alarm | Listing all devices
+2024-12-02 11:16:32 | Main Siren | Device 12 turned ON
+2024-12-02 11:16:32 | Main Siren | Alarm activated
+2024-12-02 11:16:32 | Main Siren | Device 12 turned OFF
+2024-12-02 11:16:32 | Camera | Listing all devices
+2024-12-02 11:16:32 | Front Door Camera | Device 8 turned ON
+2024-12-02 11:16:32 | Front Door Camera | Motion detected by camera
+2024-12-02 11:16:32 | Front Door Camera | Device 8 turned OFF
+2024-12-02 11:16:32 | Sensor | Listing all devices
+2024-12-02 11:16:32 | Living Room Motion Sensor | Device 4 turned ON
+2024-12-02 11:16:32 | Living Room Motion Sensor | Sensor triggered
+2024-12-02 11:16:32 | Living Room Motion Sensor | Device 4 turned OFF
+2024-12-02 11:16:32 | Lock | Listing all devices
+2024-12-02 11:16:32 | Front Door Lock | Device 1 turned ON
+2024-12-02 11:16:32 | Front Door Lock | Lock is now locked
+2024-12-02 11:16:32 | Front Door Lock | Device 1 turned OFF
