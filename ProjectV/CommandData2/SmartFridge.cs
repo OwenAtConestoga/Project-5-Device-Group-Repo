@@ -1,7 +1,5 @@
 ﻿using Devices;
 using System;
-using System.Net.Sockets;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,6 +27,11 @@ namespace CommandData2
         {
             On,
             Off
+        }
+
+        public void UpdateState(State newState)
+        {
+            CurrentState = newState;
         }
 
         // UI Button Handlers
@@ -69,27 +72,35 @@ namespace CommandData2
             await _tcpManager.SendAsync(data);
         }
 
-        public async Task HandleReceivedDataAsync()
+        public async Task HandleReceivedDataAsync(string data)
         {
-            string data = await _tcpManager.ReceiveAsync();
-            if (data != null)
+            var segments = data.Split(',');
+            if (segments.Length == 6)
             {
-                var segments = data.Split(',');
-
-                if (segments.Length >= 6 &&
-                    int.TryParse(segments[4].Trim(), out var fridgeTemp) &&
-                    int.TryParse(segments[5].Trim(), out var freezerTemp))
+                // Try to parse the fridge and freezer temperatures from the segments
+                if (int.TryParse(segments[3].Trim(), out var isOn) &&
+                    int.TryParse(segments[4].Trim(), out int parsedFridgeTemp) &&
+                    int.TryParse(segments[5].Trim(), out int parsedFreezerTemp))
                 {
-                    fridgeTemperature = fridgeTemp;
-                    freezerTemperature = freezerTemp;
+                    // Update fridge and freezer temperatures
+                    fridgeTemperature = parsedFridgeTemp;
+                    freezerTemperature = parsedFreezerTemp;
+
+                    // Update the UI with the new temperature values
                     UpdateTemperatureLabels();
                     Console.WriteLine($"Fridge updated: Fridge Temp {fridgeTemperature}°, Freezer Temp {freezerTemperature}°");
                 }
                 else
                 {
-                    Console.WriteLine("Invalid data received for fridge.");
+                    Console.WriteLine("Invalid temperature data received for fridge.");
                 }
             }
+            else
+            {
+                Console.WriteLine("Invalid data format for SmartFridge.");
+            }
         }
+
+
     }
 }

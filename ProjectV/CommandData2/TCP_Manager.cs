@@ -34,7 +34,6 @@ namespace Devices
                 try
                 {
                     byte[] dataToSend = Encoding.ASCII.GetBytes(data); // Convert the data to a byte array
-                    Console.WriteLine("Sending data...");
                     _networkStream.Write(dataToSend, 0, dataToSend.Length); // Synchronously write the data to the stream
                     Console.WriteLine($"Data sent: {data}");
                 }
@@ -57,13 +56,40 @@ namespace Devices
                 try
                 {
                     byte[] buffer = new byte[1024];
-                    int bytesRead = await _networkStream.ReadAsync(buffer, 0, buffer.Length);
-                    if (bytesRead > 0)
+                    StringBuilder receivedData = new StringBuilder();
+                    while (true)
                     {
-                        string receivedData = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                        Console.WriteLine($"Data received: {receivedData}");
-                        return receivedData;
+                        // Check if data is available before attempting to read
+                        if (_networkStream.DataAvailable)
+                        {
+                            Console.WriteLine("1");
+                            int bytesRead = await _networkStream.ReadAsync(buffer, 0, buffer.Length);
+                            Console.WriteLine("2");
+                            // If no data is read, break the loop (end of data or no more data)
+                            if (bytesRead == 0)
+                            {
+                                Console.WriteLine("break");
+                                break;
+                            }
+
+                            // Append received data
+                            receivedData.Append(Encoding.UTF8.GetString(buffer, 0, bytesRead));
+
+                            // Check if the message ends with a newline character
+                            if (receivedData.ToString().EndsWith("\n"))
+                            {
+                                Console.WriteLine("break");
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            Thread.Sleep(100);
+                        }
                     }
+                    string completeData = receivedData.ToString();
+                    Console.WriteLine($"Data received: {receivedData}");
+                    return completeData;
                 }
                 catch (Exception ex)
                 {
@@ -86,38 +112,6 @@ namespace Devices
             {
                 Console.WriteLine($"Error closing connection: {ex.Message}");
             }
-        }
-
-        // Method to start receiving and sending data asynchronously in separate loops
-        public async Task MonitorAndUpdateDevicesAsync(string dataToSend)
-        {
-            // Start receiving data in a loop
-            var receiveTask = Task.Run(async () =>
-            {
-                while (_tcpClient.Connected)
-                {
-                    var receivedData = await ReceiveAsync();
-                    if (receivedData != null)
-                    {
-                        // Handle the received data
-                        Console.WriteLine($"Handling received data: {receivedData}");
-                    }
-                    await Task.Delay(1000); // Wait 1 second before checking for new data
-                }
-            });
-
-            // Periodically send data every 30 seconds
-            var sendTask = Task.Run(async () =>
-            {
-                while (_tcpClient.Connected)
-                {
-                    await SendAsync(dataToSend);
-                    await Task.Delay(30000); // Wait 30 seconds before sending again
-                }
-            });
-
-            // Wait for both tasks to finish
-            await Task.WhenAll(receiveTask, sendTask);
         }
     }
 }
