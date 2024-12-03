@@ -8,7 +8,18 @@ namespace ProjectV
     public abstract class HomeSecurityHub
     {
         public string Name { get; set; }
+        //public enum HId
+        //{
+        //    noHub = 0,   
+        //    Lock = 1,     
+        //    Sensor = 2,    
+        //    Camera = 3,     
+        //    Alarm = 4,
+        //    Tracker = 5
+        //}
+
         public int Id { get; set; }
+
         public bool IsActive { get; set; }
         public List<SecurityDevice> ConnectedDevices { get; set; }
         protected readonly SecurityHubLogger Logger;

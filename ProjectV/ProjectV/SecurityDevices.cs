@@ -56,8 +56,6 @@ namespace ProjectV
             Logger?.LogOperation(deviceName, $"New security device created: ID {deviceID}");
             Console.WriteLine("New security device created!");
         }
-
-
     }
 
     // subclass for Camera
@@ -81,6 +79,7 @@ namespace ProjectV
 
     internal class Lock : SecurityDevice
     {
+        private LockHub lockHub; 
         public bool isLocked { get; set; }
 
         public Lock(int deviceID, string deviceName, SecurityHubLogger logger)
@@ -100,6 +99,7 @@ namespace ProjectV
             isLocked = false;
             Logger?.LogOperation(deviceName, "Lock is now unlocked");
         }
+
     }
 
 
@@ -129,6 +129,8 @@ namespace ProjectV
 
 internal class Alarm : SecurityDevice
 {
+    private AlarmHub alarmHub;
+
     public bool isActivated { get; set; }
 
     public Alarm(int deviceID, string deviceName, SecurityHubLogger logger)
@@ -152,8 +154,10 @@ internal class Alarm : SecurityDevice
 
 internal class Tracker : SecurityDevice
 {
+    private TrackerHub trackerHub;
+
     public bool isActivated { get; set; }
-    public double location { get; set; }
+    // public double location { get; set; }
 
     public Tracker(int deviceID, string deviceName, SecurityHubLogger logger)
         : base(deviceID, deviceName, logger)
@@ -164,15 +168,14 @@ internal class Tracker : SecurityDevice
     public void activateTracker()
     {
         isActivated = true;
-        isOn = true; 
         Logger?.LogOperation(deviceName, "Tracker activated");
     }
 
     public void deactivateTracker()
     {
         isActivated = false;
-        isOn = false;
         Logger?.LogOperation(deviceName, "Tracker deactivated");
     }
+
 }
 
