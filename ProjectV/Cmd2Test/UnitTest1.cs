@@ -429,4 +429,97 @@ namespace Devices.Tests
             Assert.IsTrue(stopwatch.ElapsedMilliseconds <= 2000, "State transitions should complete within 2 seconds.");
         }
     }
+    [TestClass]
+    public class ExtendedDeviceTests
+    {
+        private Device _device;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            _device = new Device();
+        }
+
+        [TestMethod]
+        public void Test_41()
+        {
+            // Verify that negative values for state are not accepted
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _device.UpdateState((Device.State)(-1)));
+        }
+
+        [TestMethod]
+        public void Test_42()
+        {
+            // Ensure the maximum possible state value can be set without error
+            _device.UpdateState((Device.State)int.MaxValue);
+            Assert.AreEqual((Device.State)int.MaxValue, _device.CurrentState);
+        }
+
+        [TestMethod]
+        public void Test_43()
+        {
+            // Validate underflow handling for state updates
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _device.UpdateState((Device.State)(int.MinValue)));
+        }
+
+        [TestMethod]
+        public async Task Test_44()
+        {
+            // Attempt to start the device on an invalid port and validate exception
+            await Assert.ThrowsExceptionAsync<ArgumentOutOfRangeException>(() => _device.StartDeviceAsync("127.0.0.1", -1));
+        }
+
+        [TestMethod]
+        public async Task Test_45()
+        {
+            // Attempt to start the device on a port above 65535
+            await Assert.ThrowsExceptionAsync<ArgumentOutOfRangeException>(() => _device.StartDeviceAsync("127.0.0.1", 70000));
+        }
+
+        [TestMethod]
+        public void Test_46()
+        {
+            // Test sending numeric data as a string
+            _device.Connect("127.0.0.1", 8080);
+            _device.SendData("123456");
+            Assert.IsTrue(_device.DataLog.Contains("123456"));
+        }
+
+        [TestMethod]
+        public async Task Test_47()
+        {
+            // Test sending a large data payload
+            string largeData = new string('A', 1024 * 1024); // 1 MB data
+            await _device.StartDeviceAsync("127.0.0.1", 8080);
+            _device.SendData(largeData);
+            Assert.IsTrue(_device.DataLog.Contains(largeData));
+        }
+
+        [TestMethod]
+        public void Test_48()
+        {
+            // Validate that empty data cannot be sent
+            _device.Connect("127.0.0.1", 8080);
+            Assert.ThrowsException<ArgumentException>(() => _device.SendData(string.Empty));
+        }
+
+        [TestMethod]
+        public void Test_49()
+        {
+            // Validate the upper boundary for data length
+            string maxLengthData = new string('B', 10000); // Assume max data size is 10,000
+            _device.Connect("127.0.0.1", 8080);
+            _device.SendData(maxLengthData);
+            Assert.IsTrue(_device.DataLog.Contains(maxLengthData));
+        }
+
+        [TestMethod]
+        public void Test_50()
+        {
+            // Ensure that data exceeding the maximum length is rejected
+            string exceedingData = new string('C', 10001); // Exceeding max data size by 1
+            _device.Connect("127.0.0.1", 8080);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _device.SendData(exceedingData));
+        }
+    }
 }
