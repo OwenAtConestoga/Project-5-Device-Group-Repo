@@ -60,7 +60,7 @@
             this.temperatureLabel.Name = "temperatureLabel";
             this.temperatureLabel.Size = new System.Drawing.Size(130, 73);
             this.temperatureLabel.TabIndex = 1;
-            this.temperatureLabel.Text = "72°";
+            this.temperatureLabel.Text = "20°";
             // 
             // temperatureTitle
             // 

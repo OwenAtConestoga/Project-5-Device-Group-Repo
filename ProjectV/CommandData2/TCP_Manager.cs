@@ -8,16 +8,16 @@ namespace Devices
 {
     public class SharedTcpManager
     {
-        private TcpClient _tcpClient;
-        private NetworkStream _networkStream;
+        private TcpClient tcpClient;
+        private NetworkStream networkStream;
 
         // Constructor to initialize TcpClient and NetworkStream
         public SharedTcpManager(string serverAddress, int port)
         {
             try
             {
-                _tcpClient = new TcpClient(serverAddress, port);
-                _networkStream = _tcpClient.GetStream();
+                tcpClient = new TcpClient(serverAddress, port);
+                networkStream = tcpClient.GetStream();
                 Console.WriteLine($"Connected to server at {serverAddress}:{port}");
             }
             catch (Exception ex)
@@ -29,12 +29,12 @@ namespace Devices
 
         public async Task SendAsync(string data)
         {
-            if (_tcpClient.Connected && _networkStream != null)
+            if (tcpClient.Connected && networkStream != null)
             {
                 try
                 {
                     byte[] dataToSend = Encoding.ASCII.GetBytes(data); // Convert the data to a byte array
-                    _networkStream.Write(dataToSend, 0, dataToSend.Length); // Synchronously write the data to the stream
+                    networkStream.Write(dataToSend, 0, dataToSend.Length); // Synchronously write the data to the stream
                     Console.WriteLine($"Data sent: {data}");
                 }
                 catch (Exception ex)
@@ -47,11 +47,9 @@ namespace Devices
                 Console.WriteLine("TCP Client is not connected.");
             }
         }
-
-        // Receive data asynchronously
         public async Task<string> ReceiveAsync()
         {
-            if (_tcpClient.Connected && _networkStream != null)
+            if (tcpClient.Connected && networkStream != null)
             {
                 try
                 {
@@ -60,10 +58,10 @@ namespace Devices
                     while (true)
                     {
                         // Check if data is available before attempting to read
-                        if (_networkStream.DataAvailable)
+                        if (networkStream.DataAvailable)
                         {
                             Console.WriteLine("1");
-                            int bytesRead = await _networkStream.ReadAsync(buffer, 0, buffer.Length);
+                            int bytesRead = await networkStream.ReadAsync(buffer, 0, buffer.Length);
                             Console.WriteLine("2");
                             // If no data is read, break the loop (end of data or no more data)
                             if (bytesRead == 0)
@@ -104,8 +102,8 @@ namespace Devices
         {
             try
             {
-                _networkStream?.Close();
-                _tcpClient?.Close();
+                networkStream?.Close();
+                tcpClient?.Close();
                 Console.WriteLine("TCP connection closed.");
             }
             catch (Exception ex)

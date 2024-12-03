@@ -1,7 +1,9 @@
 ﻿using CommandData2;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Net.Sockets;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,17 +12,22 @@ namespace Devices
 {
     class Program
     {
+        private static System.Threading.Timer timer; // Timer object for periodic updates
+        private static SmartFridge smartFridge;
+        private static SmartDehumidifier smartDehumidifier;
+        private static SmartThermostat smartThermostat;
+
         [STAThread]
         static async Task Main(string[] args)
         {
-            string serverIP = "127.0.0.1";
+            string serverIP = "10.144.110.33";
             int serverPort = 5000;
             var tcpManager = new SharedTcpManager(serverIP, serverPort);
 
             // Initialize devices
-            var smartFridge = new SmartFridge(tcpManager);
-            var smartDehumidifier = new SmartDehumidifier(tcpManager);
-            var smartThermostat = new SmartThermostat(tcpManager);
+            smartFridge = new SmartFridge(tcpManager);
+            smartDehumidifier = new SmartDehumidifier(tcpManager);
+            smartThermostat = new SmartThermostat(tcpManager);
 
             // Start device UI
             Console.WriteLine("Running UIs");
@@ -29,25 +36,21 @@ namespace Devices
             Task.Run(() => Application.Run(smartThermostat));
 
             // Monitor and send periodic updates
-            var monitorTask = MonitorDevicesAsync(serverIP, serverPort, smartFridge, smartDehumidifier, smartThermostat);
-            var updateTask = SendDeviceUpdatesAsync(smartFridge, smartDehumidifier, smartThermostat);
-            await Task.WhenAll(monitorTask, updateTask);
+            timer = new System.Threading.Timer(SendDeviceUpdates, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
 
-            // Cleanup
+            var monitorTask = MonitorDevicesAsync(serverIP, serverPort, smartFridge, smartDehumidifier, smartThermostat);
+            await Task.WhenAll(monitorTask);
             AppDomain.CurrentDomain.ProcessExit += (s, e) => tcpManager.CloseConnection();
         }
 
-        private static async Task SendDeviceUpdatesAsync(SmartFridge smartFridge, SmartDehumidifier smartDehumidifier, SmartThermostat smartThermostat)
+        private static void SendDeviceUpdates(object state)
         {
-            while (true)
-            {
-                // Periodically send device updates
-                Console.WriteLine("Sending update...");
-                await smartFridge.SendDeviceDataAsync();
-                await smartDehumidifier.SendDeviceDataAsync();
-                await smartThermostat.SendDeviceDataAsync();
-                Thread.Sleep(30000); //Loop every 30s
-            }
+            // Send updates to the devices
+            Console.WriteLine("Sending update...");
+            smartFridge.SendDeviceDataAsync().Wait();
+            smartDehumidifier.SendDeviceDataAsync().Wait();
+            smartThermostat.SendDeviceDataAsync().Wait();
+            Console.WriteLine("Finished sending update.");
         }
 
         private static async Task MonitorDevicesAsync(string serverIp, int serverPort, SmartFridge fridge, SmartDehumidifier dehumidifier, SmartThermostat thermostat)
@@ -82,6 +85,7 @@ namespace Devices
                 Thread.Sleep(100); // Rate Limiting
             }
         }
+
         private static int ValidateReceivedData(string data)
         {
             if (string.IsNullOrWhiteSpace(data))

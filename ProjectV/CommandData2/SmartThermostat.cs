@@ -33,17 +33,22 @@ namespace CommandData2
 
         private void powerButton_Click(object sender, EventArgs e)
         {
-            
+            if (CurrentState == State.On)
+                UpdateState(State.Off);
+            else
+                UpdateState(State.On);
         }
 
         private void tempUpButton_Click(object sender, EventArgs e)
         {
-
+            currentTemperature++;
+            UpdateThermostatLabels();
         }
 
         private void tempDownButton_Click(object sender, EventArgs e)
         {
-            
+            currentTemperature--;
+            UpdateThermostatLabels();
         }
 
         private void UpdateThermostatLabels()

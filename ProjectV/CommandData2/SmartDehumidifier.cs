@@ -29,7 +29,10 @@ namespace CommandData2
 
         private void powerButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (CurrentState == State.On)
+                UpdateState(State.Off);
+            else
+                UpdateState(State.On);
         }
 
         public void UpdateState(State newState)
@@ -53,8 +56,8 @@ namespace CommandData2
 
         public async Task HandleReceivedDataAsync(string data)
         {
-                // Split the received data into parts
-                var segments = data.Split(',');
+            // Split the received data into parts
+            var segments = data.Split(',');
 
             // Validate the data format
             if (segments.Length == 6) // Expecting 6 parts for Dehumidifier
