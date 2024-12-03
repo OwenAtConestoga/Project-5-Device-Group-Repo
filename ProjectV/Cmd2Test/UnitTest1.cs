@@ -350,11 +350,83 @@ namespace Devices.Tests
             Assert.AreEqual("ON", _smartDehumidifier.statusTextBox.Text, "Dehumidifier UI should reflect ON state.");
         }
 
-        // Additional integration tests
+        // Performance tests
         [TestMethod]
         public void Test_34()
         {
-            // Implement additional tests
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            await _device.StartDeviceAsync("127.0.0.1", 8080);
+            stopwatch.Stop();
+            Assert.IsTrue(_device.IsConnected, "Device should be connected.");
+            Assert.IsTrue(stopwatch.ElapsedMilliseconds <= 2000, "Startup time should be less than or equal to 2 seconds.");
+        }
+
+        [TestMethod]
+        public async Task Test_35()
+        {
+            string largeData = new string('A', 1024 * 1024); // 1 MB of data
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            await _device.SendDataAsync(largeData);
+            stopwatch.Stop();
+            Assert.IsTrue(stopwatch.ElapsedMilliseconds <= 3000, "Data transmission should be less than or equal to 3 seconds.");
+        }
+
+        [TestMethod]
+        public async Task Test_36()
+        {
+            const int deviceCount = 100;
+            var tasks = Enumerable.Range(0, deviceCount).Select(async _ =>
+            {
+                var device = new Device();
+                await device.StartDeviceAsync("127.0.0.1", 8080);
+                Assert.IsTrue(device.IsConnected, "Each device should connect successfully.");
+            });
+            await Task.WhenAll(tasks);
+        }
+
+        [TestMethod]
+        public void Test_37()
+        {
+            _smartThermostat.powerButton.PerformClick();
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.On);
+            Assert.IsTrue(_smartThermostat.isPowerOn, "Thermostat should be ON.");
+            Assert.AreEqual(SmartDehumidifier.State.On, _smartDehumidifier.CurrentState, "Dehumidifier should be ON.");
+            Assert.AreEqual("ON", _smartThermostat.statusTextBox.Text);
+            Assert.AreEqual("Dehumidifier is ON", _smartDehumidifier.statusTextBox.Text);
+        }
+        [TestMethod]
+        public void Test_38()
+        {
+            _smartThermostat.powerButton.PerformClick();
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.On);
+            _smartDehumidifier.UpdateState(SmartDehumidifier.State.Off);
+            Assert.IsTrue(_smartThermostat.isPowerOn, "Thermostat should remain ON.");
+            Assert.AreEqual(SmartDehumidifier.State.Off, _smartDehumidifier.CurrentState, "Dehumidifier should transition to OFF state.");
+        }
+        
+        [TestMethod]
+        public async Task Test_39()
+        {
+            await _device.StartDeviceAsync("127.0.0.1", 8080);
+            Assert.IsTrue(_device.IsConnected, "Device should be connected initially.");
+            _device.SimulateDisconnection(); // Assume this method simulates disconnection
+            Assert.IsFalse(_device.IsConnected, "Device should be disconnected.");
+            await Task.Delay(5000); // Simulate reconnection delay
+            Assert.IsTrue(_device.IsConnected, "Device should reconnect within 5 seconds.");
+        }
+
+        [TestMethod]
+        public async Task Test_40()
+        {
+            const int deviceCount = 50;
+            var thermostats = Enumerable.Range(0, deviceCount).Select(_ => new SmartThermostat()).ToList();
+            var dehumidifiers = Enumerable.Range(0, deviceCount).Select(_ => new SmartDehumidifier()).ToList();
+            var tasks = thermostats.Select(t => Task.Run(() => t.powerButton.PerformClick()))
+                .Concat(dehumidifiers.Select(d => Task.Run(() => d.UpdateState(SmartDehumidifier.State.On))));
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+            await Task.WhenAll(tasks);
+            stopwatch.Stop();
+            Assert.IsTrue(stopwatch.ElapsedMilliseconds <= 2000, "State transitions should complete within 2 seconds.");
         }
     }
 }
