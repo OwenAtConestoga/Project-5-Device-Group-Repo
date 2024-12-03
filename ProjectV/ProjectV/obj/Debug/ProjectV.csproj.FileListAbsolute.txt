@@ -1,0 +1,5 @@
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.AssemblyReference.cache
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Documents\projectv\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.CoreCompileInputs.cache
+C:\Users\oweno\Documents\Year 3\projectvrepo\Project-5-Device-Group-Repo\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.AssemblyReference.cache
+C:\Users\oweno\Documents\Year 3\projectvrepo\Project-5-Device-Group-Repo\ProjectV\ProjectV\obj\Debug\ProjectV.csproj.CoreCompileInputs.cache

@@ -1,0 +1,3 @@
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\CommandData2\obj\Debug\CommandData2.csproj.AssemblyReference.cache
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\CommandData2\obj\Debug\CommandData2.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Desktop\Project 5\Project-5-Device-Group-Repo-tcp-testingwithothergroup\ProjectV\CommandData2\obj\Debug\CommandData2.csproj.CoreCompileInputs.cache

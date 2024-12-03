@@ -1,0 +1,333 @@
+2024-11-19 22:39:56 | Logger | Created log directory: C:\Users\filip\Desktop\Project-5-Device-Group-Repo-main\ProjectV\ProjectV\bin\Debug\logs
+2024-12-03 09:14:38 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:14:38 | Lock | Hub activated
+2024-12-03 09:14:38 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:14:38 | Front Door Lock | Lock device created
+2024-12-03 09:14:38 | Lock | Device added: Front Door Lock
+2024-12-03 09:14:38 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:14:38 | Back Door Lock | Lock device created
+2024-12-03 09:14:38 | Lock | Device added: Back Door Lock
+2024-12-03 09:15:09 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:15:09 | Lock | Hub activated
+2024-12-03 09:15:09 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:15:09 | Front Door Lock | Lock device created
+2024-12-03 09:15:09 | Lock | Device added: Front Door Lock
+2024-12-03 09:15:09 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:15:09 | Back Door Lock | Lock device created
+2024-12-03 09:15:09 | Lock | Device added: Back Door Lock
+2024-12-03 09:16:07 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:16:07 | Lock | Hub activated
+2024-12-03 09:16:07 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:16:07 | Front Door Lock | Lock device created
+2024-12-03 09:16:07 | Lock | Device added: Front Door Lock
+2024-12-03 09:16:07 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:16:07 | Back Door Lock | Lock device created
+2024-12-03 09:16:07 | Lock | Device added: Back Door Lock
+2024-12-03 09:21:01 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:21:01 | Lock | Hub activated
+2024-12-03 09:21:01 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:21:01 | Front Door Lock | Lock device created
+2024-12-03 09:21:01 | Lock | Device added: Front Door Lock
+2024-12-03 09:21:01 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:21:01 | Back Door Lock | Lock device created
+2024-12-03 09:21:01 | Lock | Device added: Back Door Lock
+2024-12-03 09:23:25 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:23:25 | Lock | Hub activated
+2024-12-03 09:23:25 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:23:25 | Front Door Lock | Lock device created
+2024-12-03 09:23:25 | Lock | Device added: Front Door Lock
+2024-12-03 09:23:25 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:23:25 | Back Door Lock | Lock device created
+2024-12-03 09:23:25 | Lock | Device added: Back Door Lock
+2024-12-03 09:29:52 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 09:29:52 | Lock | Hub activated
+2024-12-03 09:29:52 | Front Door Lock | New security device created: ID 1
+2024-12-03 09:29:52 | Front Door Lock | Lock device created
+2024-12-03 09:29:52 | Lock | Device added: Front Door Lock
+2024-12-03 09:29:52 | Back Door Lock | New security device created: ID 2
+2024-12-03 09:29:52 | Back Door Lock | Lock device created
+2024-12-03 09:29:52 | Lock | Device added: Back Door Lock
+2024-12-03 10:09:09 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:09:09 | Lock | Hub activated
+2024-12-03 10:09:09 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:09:09 | Front Door Lock | Lock device created
+2024-12-03 10:09:09 | Lock | Device added: Front Door Lock
+2024-12-03 10:09:09 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:09:09 | Back Door Lock | Lock device created
+2024-12-03 10:09:09 | Lock | Device added: Back Door Lock
+2024-12-03 10:09:09 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:09:46 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:09:46 | Lock | Hub activated
+2024-12-03 10:09:46 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:09:46 | Front Door Lock | Lock device created
+2024-12-03 10:09:46 | Lock | Device added: Front Door Lock
+2024-12-03 10:09:46 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:09:46 | Back Door Lock | Lock device created
+2024-12-03 10:09:46 | Lock | Device added: Back Door Lock
+2024-12-03 10:09:46 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:10:59 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:10:59 | Lock | Hub activated
+2024-12-03 10:10:59 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:10:59 | Front Door Lock | Lock device created
+2024-12-03 10:10:59 | Lock | Device added: Front Door Lock
+2024-12-03 10:10:59 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:10:59 | Back Door Lock | Lock device created
+2024-12-03 10:10:59 | Lock | Device added: Back Door Lock
+2024-12-03 10:11:00 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:24:21 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:24:21 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:24:21 | Lock | Hub activated
+2024-12-03 10:24:21 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:24:21 | Front Door Lock | Lock device created
+2024-12-03 10:24:21 | Lock | Device added: Front Door Lock
+2024-12-03 10:24:21 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:24:21 | Back Door Lock | Lock device created
+2024-12-03 10:24:21 | Lock | Device added: Back Door Lock
+2024-12-03 10:34:50 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:34:50 | Lock | Hub activated
+2024-12-03 10:34:50 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:34:50 | Front Door Lock | Lock device created
+2024-12-03 10:34:50 | Lock | Device added: Front Door Lock
+2024-12-03 10:34:50 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:34:50 | Back Door Lock | Lock device created
+2024-12-03 10:34:50 | Lock | Device added: Back Door Lock
+2024-12-03 10:38:11 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:38:11 | Lock | Hub activated
+2024-12-03 10:38:11 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:38:11 | Front Door Lock | Lock device created
+2024-12-03 10:38:11 | Lock | Device added: Front Door Lock
+2024-12-03 10:38:11 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:38:11 | Back Door Lock | Lock device created
+2024-12-03 10:38:11 | Lock | Device added: Back Door Lock
+2024-12-03 10:38:20 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:38:20 | Lock | Hub activated
+2024-12-03 10:38:20 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:38:20 | Front Door Lock | Lock device created
+2024-12-03 10:38:20 | Lock | Device added: Front Door Lock
+2024-12-03 10:38:20 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:38:20 | Back Door Lock | Lock device created
+2024-12-03 10:38:20 | Lock | Device added: Back Door Lock
+2024-12-03 10:38:39 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:38:39 | Lock | Hub activated
+2024-12-03 10:38:39 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:38:39 | Front Door Lock | Lock device created
+2024-12-03 10:38:39 | Lock | Device added: Front Door Lock
+2024-12-03 10:38:39 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:38:39 | Back Door Lock | Lock device created
+2024-12-03 10:38:39 | Lock | Device added: Back Door Lock
+2024-12-03 10:42:26 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:42:26 | Lock | Hub activated
+2024-12-03 10:42:26 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:42:26 | Front Door Lock | Lock device created
+2024-12-03 10:42:26 | Lock | Device added: Front Door Lock
+2024-12-03 10:42:26 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:42:26 | Back Door Lock | Lock device created
+2024-12-03 10:42:26 | Lock | Device added: Back Door Lock
+2024-12-03 10:42:51 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:42:51 | Lock | Hub activated
+2024-12-03 10:42:51 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:42:51 | Front Door Lock | Lock device created
+2024-12-03 10:42:51 | Lock | Device added: Front Door Lock
+2024-12-03 10:42:51 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:42:51 | Back Door Lock | Lock device created
+2024-12-03 10:42:51 | Lock | Device added: Back Door Lock
+2024-12-03 10:43:26 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:43:26 | Lock | Hub activated
+2024-12-03 10:43:26 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:43:26 | Front Door Lock | Lock device created
+2024-12-03 10:43:26 | Lock | Device added: Front Door Lock
+2024-12-03 10:43:26 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:43:26 | Back Door Lock | Lock device created
+2024-12-03 10:43:26 | Lock | Device added: Back Door Lock
+2024-12-03 10:43:38 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:43:38 | Lock | Hub activated
+2024-12-03 10:43:38 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:43:38 | Front Door Lock | Lock device created
+2024-12-03 10:43:38 | Lock | Device added: Front Door Lock
+2024-12-03 10:43:38 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:43:38 | Back Door Lock | Lock device created
+2024-12-03 10:43:38 | Lock | Device added: Back Door Lock
+2024-12-03 10:47:39 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 10:47:39 | Lock | Hub activated
+2024-12-03 10:47:39 | Front Door Lock | New security device created: ID 1
+2024-12-03 10:47:39 | Front Door Lock | Lock device created
+2024-12-03 10:47:39 | Lock | Device added: Front Door Lock
+2024-12-03 10:47:39 | Back Door Lock | New security device created: ID 2
+2024-12-03 10:47:39 | Back Door Lock | Lock device created
+2024-12-03 10:47:39 | Lock | Device added: Back Door Lock
+2024-12-03 11:01:05 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:01:05 | Lock | Hub activated
+2024-12-03 11:01:05 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:01:05 | Front Door Lock | Lock device created
+2024-12-03 11:01:05 | Lock | Device added: Front Door Lock
+2024-12-03 11:01:05 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:01:05 | Back Door Lock | Lock device created
+2024-12-03 11:01:05 | Lock | Device added: Back Door Lock
+2024-12-03 11:01:53 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:01:53 | Lock | Hub activated
+2024-12-03 11:01:53 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:01:53 | Front Door Lock | Lock device created
+2024-12-03 11:01:53 | Lock | Device added: Front Door Lock
+2024-12-03 11:01:53 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:01:53 | Back Door Lock | Lock device created
+2024-12-03 11:01:53 | Lock | Device added: Back Door Lock
+2024-12-03 11:08:31 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:08:31 | SensorHub | SensorHub initialized
+2024-12-03 11:08:31 | CameraHub | CameraHub initialized
+2024-12-03 11:08:31 | AlarmHub | AlarmHub initialized
+2024-12-03 11:08:31 | TrackerHub | TrackerHub initialized
+2024-12-03 11:08:31 | Lock | Hub activated
+2024-12-03 11:08:31 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:08:31 | Front Door Lock | Lock device created
+2024-12-03 11:08:31 | Lock | Device added: Front Door Lock
+2024-12-03 11:08:31 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:08:31 | Back Door Lock | Lock device created
+2024-12-03 11:08:31 | Lock | Device added: Back Door Lock
+2024-12-03 11:08:31 | Sensor | Hub activated
+2024-12-03 11:08:31 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-03 11:08:31 | Living Room Motion Sensor | Sensor device created
+2024-12-03 11:08:31 | Sensor | Device added: Living Room Motion Sensor
+2024-12-03 11:08:31 | Kitchen Window Sensor | New security device created: ID 5
+2024-12-03 11:08:31 | Kitchen Window Sensor | Sensor device created
+2024-12-03 11:08:31 | Sensor | Device added: Kitchen Window Sensor
+2024-12-03 11:08:31 | Camera | Hub activated
+2024-12-03 11:08:31 | Front Door Camera | New security device created: ID 8
+2024-12-03 11:08:31 | Front Door Camera | Camera device created
+2024-12-03 11:08:31 | Camera | Device added: Front Door Camera
+2024-12-03 11:08:31 | Back Door Camera | New security device created: ID 9
+2024-12-03 11:08:31 | Back Door Camera | Camera device created
+2024-12-03 11:08:31 | Camera | Device added: Back Door Camera
+2024-12-03 11:08:31 | Alarm | Hub activated
+2024-12-03 11:08:31 | Main Siren | New security device created: ID 12
+2024-12-03 11:08:31 | Main Siren | Alarm device created
+2024-12-03 11:08:31 | Alarm | Device added: Main Siren
+2024-12-03 11:08:31 | Backup Siren | New security device created: ID 13
+2024-12-03 11:08:31 | Backup Siren | Alarm device created
+2024-12-03 11:08:31 | Alarm | Device added: Backup Siren
+2024-12-03 11:08:31 | Tracker | Hub activated
+2024-12-03 11:08:31 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-03 11:08:31 | Vehicle GPS Tracker | Tracker device created
+2024-12-03 11:08:31 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-03 11:08:31 | Pet Collar Tracker | New security device created: ID 16
+2024-12-03 11:08:31 | Pet Collar Tracker | Tracker device created
+2024-12-03 11:08:31 | Tracker | Device added: Pet Collar Tracker
+2024-12-03 11:09:25 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:09:25 | SensorHub | SensorHub initialized
+2024-12-03 11:09:25 | CameraHub | CameraHub initialized
+2024-12-03 11:09:25 | AlarmHub | AlarmHub initialized
+2024-12-03 11:09:25 | TrackerHub | TrackerHub initialized
+2024-12-03 11:09:25 | Lock | Hub activated
+2024-12-03 11:09:25 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:09:25 | Front Door Lock | Lock device created
+2024-12-03 11:09:25 | Lock | Device added: Front Door Lock
+2024-12-03 11:09:25 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:09:25 | Back Door Lock | Lock device created
+2024-12-03 11:09:25 | Lock | Device added: Back Door Lock
+2024-12-03 11:09:25 | Sensor | Hub activated
+2024-12-03 11:09:25 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-03 11:09:25 | Living Room Motion Sensor | Sensor device created
+2024-12-03 11:09:25 | Sensor | Device added: Living Room Motion Sensor
+2024-12-03 11:09:25 | Kitchen Window Sensor | New security device created: ID 5
+2024-12-03 11:09:25 | Kitchen Window Sensor | Sensor device created
+2024-12-03 11:09:25 | Sensor | Device added: Kitchen Window Sensor
+2024-12-03 11:09:25 | Camera | Hub activated
+2024-12-03 11:09:25 | Front Door Camera | New security device created: ID 8
+2024-12-03 11:09:25 | Front Door Camera | Camera device created
+2024-12-03 11:09:25 | Camera | Device added: Front Door Camera
+2024-12-03 11:09:25 | Back Door Camera | New security device created: ID 9
+2024-12-03 11:09:25 | Back Door Camera | Camera device created
+2024-12-03 11:09:25 | Camera | Device added: Back Door Camera
+2024-12-03 11:09:25 | Alarm | Hub activated
+2024-12-03 11:09:25 | Main Siren | New security device created: ID 12
+2024-12-03 11:09:25 | Main Siren | Alarm device created
+2024-12-03 11:09:25 | Alarm | Device added: Main Siren
+2024-12-03 11:09:25 | Backup Siren | New security device created: ID 13
+2024-12-03 11:09:25 | Backup Siren | Alarm device created
+2024-12-03 11:09:25 | Alarm | Device added: Backup Siren
+2024-12-03 11:09:25 | Tracker | Hub activated
+2024-12-03 11:09:25 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-03 11:09:25 | Vehicle GPS Tracker | Tracker device created
+2024-12-03 11:09:25 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-03 11:09:25 | Pet Collar Tracker | New security device created: ID 16
+2024-12-03 11:09:25 | Pet Collar Tracker | Tracker device created
+2024-12-03 11:09:25 | Tracker | Device added: Pet Collar Tracker
+2024-12-03 11:10:17 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:10:17 | SensorHub | SensorHub initialized
+2024-12-03 11:10:17 | CameraHub | CameraHub initialized
+2024-12-03 11:10:17 | AlarmHub | AlarmHub initialized
+2024-12-03 11:10:17 | TrackerHub | TrackerHub initialized
+2024-12-03 11:10:17 | Lock | Hub activated
+2024-12-03 11:10:17 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:10:17 | Front Door Lock | Lock device created
+2024-12-03 11:10:17 | Lock | Device added: Front Door Lock
+2024-12-03 11:10:17 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:10:17 | Back Door Lock | Lock device created
+2024-12-03 11:10:17 | Lock | Device added: Back Door Lock
+2024-12-03 11:10:17 | Sensor | Hub activated
+2024-12-03 11:10:17 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-03 11:10:17 | Living Room Motion Sensor | Sensor device created
+2024-12-03 11:10:17 | Sensor | Device added: Living Room Motion Sensor
+2024-12-03 11:10:17 | Kitchen Window Sensor | New security device created: ID 5
+2024-12-03 11:10:17 | Kitchen Window Sensor | Sensor device created
+2024-12-03 11:10:17 | Sensor | Device added: Kitchen Window Sensor
+2024-12-03 11:10:17 | Camera | Hub activated
+2024-12-03 11:10:17 | Front Door Camera | New security device created: ID 8
+2024-12-03 11:10:17 | Front Door Camera | Camera device created
+2024-12-03 11:10:17 | Camera | Device added: Front Door Camera
+2024-12-03 11:10:17 | Back Door Camera | New security device created: ID 9
+2024-12-03 11:10:17 | Back Door Camera | Camera device created
+2024-12-03 11:10:17 | Camera | Device added: Back Door Camera
+2024-12-03 11:10:17 | Alarm | Hub activated
+2024-12-03 11:10:17 | Main Siren | New security device created: ID 12
+2024-12-03 11:10:17 | Main Siren | Alarm device created
+2024-12-03 11:10:17 | Alarm | Device added: Main Siren
+2024-12-03 11:10:17 | Backup Siren | New security device created: ID 13
+2024-12-03 11:10:17 | Backup Siren | Alarm device created
+2024-12-03 11:10:17 | Alarm | Device added: Backup Siren
+2024-12-03 11:10:17 | Tracker | Hub activated
+2024-12-03 11:10:17 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-03 11:10:17 | Vehicle GPS Tracker | Tracker device created
+2024-12-03 11:10:17 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-03 11:10:17 | Pet Collar Tracker | New security device created: ID 16
+2024-12-03 11:10:17 | Pet Collar Tracker | Tracker device created
+2024-12-03 11:10:17 | Tracker | Device added: Pet Collar Tracker
+2024-12-03 11:11:15 | LockHub | LockHub initialized with IsActive set to False
+2024-12-03 11:11:15 | SensorHub | SensorHub initialized
+2024-12-03 11:11:15 | CameraHub | CameraHub initialized
+2024-12-03 11:11:15 | AlarmHub | AlarmHub initialized
+2024-12-03 11:11:15 | TrackerHub | TrackerHub initialized
+2024-12-03 11:11:15 | Lock | Hub activated
+2024-12-03 11:11:15 | Front Door Lock | New security device created: ID 1
+2024-12-03 11:11:15 | Front Door Lock | Lock device created
+2024-12-03 11:11:15 | Lock | Device added: Front Door Lock
+2024-12-03 11:11:15 | Back Door Lock | New security device created: ID 2
+2024-12-03 11:11:15 | Back Door Lock | Lock device created
+2024-12-03 11:11:15 | Lock | Device added: Back Door Lock
+2024-12-03 11:11:15 | Sensor | Hub activated
+2024-12-03 11:11:15 | Living Room Motion Sensor | New security device created: ID 4
+2024-12-03 11:11:15 | Living Room Motion Sensor | Sensor device created
+2024-12-03 11:11:15 | Sensor | Device added: Living Room Motion Sensor
+2024-12-03 11:11:15 | Kitchen Window Sensor | New security device created: ID 5
+2024-12-03 11:11:15 | Kitchen Window Sensor | Sensor device created
+2024-12-03 11:11:15 | Sensor | Device added: Kitchen Window Sensor
+2024-12-03 11:11:15 | Camera | Hub activated
+2024-12-03 11:11:15 | Front Door Camera | New security device created: ID 8
+2024-12-03 11:11:15 | Front Door Camera | Camera device created
+2024-12-03 11:11:15 | Camera | Device added: Front Door Camera
+2024-12-03 11:11:15 | Back Door Camera | New security device created: ID 9
+2024-12-03 11:11:15 | Back Door Camera | Camera device created
+2024-12-03 11:11:15 | Camera | Device added: Back Door Camera
+2024-12-03 11:11:15 | Alarm | Hub activated
+2024-12-03 11:11:15 | Main Siren | New security device created: ID 12
+2024-12-03 11:11:15 | Main Siren | Alarm device created
+2024-12-03 11:11:15 | Alarm | Device added: Main Siren
+2024-12-03 11:11:15 | Backup Siren | New security device created: ID 13
+2024-12-03 11:11:15 | Backup Siren | Alarm device created
+2024-12-03 11:11:15 | Alarm | Device added: Backup Siren
+2024-12-03 11:11:15 | Tracker | Hub activated
+2024-12-03 11:11:15 | Vehicle GPS Tracker | New security device created: ID 15
+2024-12-03 11:11:15 | Vehicle GPS Tracker | Tracker device created
+2024-12-03 11:11:15 | Tracker | Device added: Vehicle GPS Tracker
+2024-12-03 11:11:15 | Pet Collar Tracker | New security device created: ID 16
+2024-12-03 11:11:15 | Pet Collar Tracker | Tracker device created
+2024-12-03 11:11:15 | Tracker | Device added: Pet Collar Tracker
