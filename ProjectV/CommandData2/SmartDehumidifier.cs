@@ -1,5 +1,6 @@
 ﻿using Devices;
 using System;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,6 +34,7 @@ namespace CommandData2
                 UpdateState(State.Off);
             else
                 UpdateState(State.On);
+            UpdateDehumidifierLabels();
         }
 
         public void UpdateState(State newState)
@@ -45,6 +47,17 @@ namespace CommandData2
             humidityLabel.Text = humidityLevel + "°";
             int clampedWaterLevel = Math.Max(progressBar1.Minimum, Math.Min(progressBar1.Maximum, waterLevel));
             progressBar1.Value = clampedWaterLevel;
+
+            if (CurrentState == State.On)
+            {
+                statusTextBox.Text =  "ON";
+                statusTextBox.BackColor = Color.Green;
+            }
+            else
+            {
+                statusTextBox.Text =  "OFF";
+                statusTextBox.BackColor = Color.Maroon;
+            }
         }
 
         public async Task SendDeviceDataAsync()

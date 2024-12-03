@@ -20,7 +20,8 @@ namespace Devices
         [STAThread]
         static async Task Main(string[] args)
         {
-            string serverIP = "10.144.110.33";
+            //string serverIP = "10.144.110.33";
+            string serverIP = "127.0.0.1";
             int serverPort = 5000;
             var tcpManager = new SharedTcpManager(serverIP, serverPort);
 
