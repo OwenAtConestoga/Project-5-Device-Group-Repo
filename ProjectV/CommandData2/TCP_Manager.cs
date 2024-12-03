@@ -60,9 +60,7 @@ namespace Devices
                         // Check if data is available before attempting to read
                         if (networkStream.DataAvailable)
                         {
-                            Console.WriteLine("1");
                             int bytesRead = await networkStream.ReadAsync(buffer, 0, buffer.Length);
-                            Console.WriteLine("2");
                             // If no data is read, break the loop (end of data or no more data)
                             if (bytesRead == 0)
                             {
@@ -87,11 +85,13 @@ namespace Devices
                     }
                     string completeData = receivedData.ToString();
                     Console.WriteLine($"Data received: {receivedData}");
+                    Logger.Log("Data received from server", Logger.LogType.Info);
                     return completeData;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Error receiving data: {ex.Message}");
+                    Logger.Log("Error receiving data from server", Logger.LogType.Error);
                 }
             }
             return null;
@@ -109,6 +109,7 @@ namespace Devices
             catch (Exception ex)
             {
                 Console.WriteLine($"Error closing connection: {ex.Message}");
+                Logger.Log("Error closing TCP connection", Logger.LogType.Error);
             }
         }
     }

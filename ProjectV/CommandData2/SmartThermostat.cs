@@ -54,6 +54,7 @@ namespace CommandData2
         private void UpdateThermostatLabels()
         {
             temperatureLabel.Text = currentTemperature + "°";
+            Logger.Log("Thermostat Device Updated", Logger.LogType.Info);
         }
 
         public async Task SendDeviceDataAsync()

@@ -20,8 +20,8 @@ namespace Devices
         [STAThread]
         static async Task Main(string[] args)
         {
-            //string serverIP = "10.144.110.33";
-            string serverIP = "127.0.0.1";
+            string serverIP = "10.144.110.117";
+            //string serverIP = "127.0.0.1"; // debug
             int serverPort = 5000;
             var tcpManager = new SharedTcpManager(serverIP, serverPort);
 
@@ -32,16 +32,18 @@ namespace Devices
 
             // Start device UI
             Console.WriteLine("Running UIs");
+            Logger.Log("UI Started", Logger.LogType.Info);
             Task.Run(() => Application.Run(smartFridge));
             Task.Run(() => Application.Run(smartDehumidifier));
             Task.Run(() => Application.Run(smartThermostat));
 
             // Monitor and send periodic updates
-            timer = new System.Threading.Timer(SendDeviceUpdates, null, TimeSpan.Zero, TimeSpan.FromSeconds(5));
+            timer = new System.Threading.Timer(SendDeviceUpdates, null, TimeSpan.Zero, TimeSpan.FromSeconds(10));
 
-            var monitorTask = MonitorDevicesAsync(serverIP, serverPort, smartFridge, smartDehumidifier, smartThermostat);
+            var monitorTask = MonitorDevicesAsync(tcpManager, serverIP, serverPort, smartFridge, smartDehumidifier, smartThermostat);
             await Task.WhenAll(monitorTask);
             AppDomain.CurrentDomain.ProcessExit += (s, e) => tcpManager.CloseConnection();
+            Logger.Log("Connection closed", Logger.LogType.Info);
         }
 
         private static void SendDeviceUpdates(object state)
@@ -52,19 +54,17 @@ namespace Devices
             smartDehumidifier.SendDeviceDataAsync().Wait();
             smartThermostat.SendDeviceDataAsync().Wait();
             Console.WriteLine("Finished sending update.");
+            Logger.Log("Update sent to server", Logger.LogType.Info);
         }
 
-        private static async Task MonitorDevicesAsync(string serverIp, int serverPort, SmartFridge fridge, SmartDehumidifier dehumidifier, SmartThermostat thermostat)
+        private static async Task MonitorDevicesAsync(SharedTcpManager tcpManager, string serverIp, int serverPort, SmartFridge fridge, SmartDehumidifier dehumidifier, SmartThermostat thermostat)
         {
-            // Initialize TCP manager with given IP and port.
-            var tcpManager = new SharedTcpManager(serverIp, serverPort);
-
             while (true)
             {
                 // Receive data
                 Console.WriteLine("Waiting for incoming data...");
                 string data = await tcpManager.ReceiveAsync();
-                Console.WriteLine("8");
+                Logger.Log("Data received from server", Logger.LogType.Info);
                 switch (ValidateReceivedData(data))
                 {
                     case 0: // SmartFridge

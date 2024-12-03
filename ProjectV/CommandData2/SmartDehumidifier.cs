@@ -44,7 +44,7 @@ namespace CommandData2
 
         private void UpdateDehumidifierLabels()
         {
-            humidityLabel.Text = humidityLevel + "°";
+            humidityLabel.Text = humidityLevel + "%";
             int clampedWaterLevel = Math.Max(progressBar1.Minimum, Math.Min(progressBar1.Maximum, waterLevel));
             progressBar1.Value = clampedWaterLevel;
 
@@ -58,6 +58,7 @@ namespace CommandData2
                 statusTextBox.Text =  "OFF";
                 statusTextBox.BackColor = Color.Maroon;
             }
+            Logger.Log("Dehumidifier Device Updated", Logger.LogType.Info);
         }
 
         public async Task SendDeviceDataAsync()

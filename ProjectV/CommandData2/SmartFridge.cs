@@ -64,6 +64,7 @@ namespace CommandData2
             // Adjust numeric labels in the WPF UI
             fridgeTempLabel.Text = fridgeTemperature + "°";
             freezerTempLabel.Text = freezerTemperature + "°";
+            Logger.Log("Fridge Device Updated", Logger.LogType.Info);
         }
 
         public async Task SendDeviceDataAsync()
